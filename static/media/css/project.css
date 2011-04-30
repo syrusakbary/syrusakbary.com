@@ -1,0 +1,46 @@
+.project_detail #section  {
+    text-align: center;
+    padding: 0 0 50px 0;
+    display: block;
+    position: relative;
+}
+
+.project_detail #section h1 {
+    font-size: 54px;
+    line-height: normal;
+    margin: 0;
+}
+.project_detail #section  {
+}
+#logo-small {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+.button-s {
+    padding: 10px;
+    background: -webkit-linear-gradient(white, #E0E6EA);
+    border: 1px solid #99A0AA;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    display: block;
+    color: #555;
+    margin:0 0 12px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.project_list #section  {
+    text-align: center;
+}
+
+#section h1 {
+    margin-bottom: 10px
+}
+
+#projects li {
+    border-left: 2px solid #818489;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}

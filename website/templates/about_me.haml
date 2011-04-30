@@ -1,0 +1,77 @@
+- extends "base.haml"
+- set title="Sobre mi"
+- block content
+    #section.grid_11
+        %h1 Sobre mi
+    -# .description Qué difícil es describirse a uno mismo...</div>
+    
+    #about-me.grid_11
+        %h3.s un poco sobre mi
+        %p Nací el 7 de Noviembre de 1988 en Madrid, España.
+        %p
+            Desde pequeño me sentí atraído por la reina de las ciencias abstractas: las matemáticas.
+            %br
+            Siempre he sido muy curioso, me encanta aprender y crecer, defiendo el derecho a equivocarse y la obligación de aprender de ello. Me encanta hacerlo, equivoquémonos pues.. ya que si no sería imposible el aprendizaje.
+        %p Di los primeros pasos en Internet cuando comenzó a implantarse en España, allá por 1999. Vi en esta nueva forma de comunicación una enorme utilidad (las cosas son lo que son para nosotros de la forma en que nos pueden ser útiles, a excepción, obviamente, de lo invisible a los ojos)
+        %p
+            Disfruto de lo que hago. Soy inquieto, atrevido, entusiasta y seguramente la persona a la que
+            %a.basic{'href':'{{url("portfolio_list")}}'} contactarás
+            después de haber visto alguno de
+            %a.basic{'href':'{{url("portfolio_list")}}'} mis geniales trabajos
+            .
+    .grid_5
+        %img{'src':'{{ media_url("images/me.png")}}'}
+    
+    .clear
+    .grid_6
+        %h3.s habilidades
+        %ul.detailed_list
+            %li
+                %dl
+                    %dt.grid_3.alpha Lenguajes de programacion
+                    %dd.grid_3.omega PHP
+                    %dd.grid_3.omega Python
+                    %dd.grid_3.omega Java
+                    %dd.grid_3.omega Javascript
+                    %dd.grid_3.omega Actionscript
+                    %dd.grid_3.omega C++
+                    %dd.grid_3.omega Haskell
+                    %dd.grid_3.omega Matlab
+                    %dd.grid_3.omega Maple
+                .clear
+            %li
+                %dl
+                    %dt.grid_3.alpha Semánticas
+                    %dd.grid_3.omega HTML5
+                    %dd.grid_3.omega HAML
+                    %dd.grid_3.omega CSS2 & CSS 3
+                    %dd.grid_3.omega LaTeX
+                .clear
+            %li
+                %dl
+                    %dt.grid_3.alpha Plataformas
+                    %dd.grid_3.omega Django
+                    %dd.grid_3.omega jQuery
+                    %dd.grid_3.omega Kohana
+                .clear
+            %li
+                %dl
+                    %dt.grid_3.alpha Bases de datos
+                    %dd.grid_3.omega MySQL
+                    %dd.grid_3.omega PostgreSQL
+                    %dd.grid_3.omega MongoDB
+                    %dd.grid_3.omega Redis
+                .clear
+            %li
+                %dl
+                    %dt.grid_3.alpha Software
+                    %dd.grid_3.omega Apache
+                    %dd.grid_3.omega GIT
+                    %dd.grid_3.omega Fireworks
+                    %dd.grid_3.omega Flash
+                    %dd.grid_3.omega Coda
+                    %dd.grid_3.omega Eclipse
+                    %dd.grid_3.omega Office 2011
+                .clear
+    .grid_6
+        %h3.s educación

@@ -1,0 +1,9 @@
+*.pyc
+static/sketches/*
+.git2/*
+syrusakbary.esproj/*
+apache2/*
+apache/*
+static/admin/*
+website/local_settings.py
+syrusakbary.conf

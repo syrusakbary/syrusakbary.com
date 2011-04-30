@@ -1,0 +1,168 @@
+    <script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+    <script type="text/javascript" src="{% media_url "js/Three.js" %}"></script>
+    <script type="text/javascript" src="{% media_url "js/RequestAnimationFrame.js" %}"></script> 
+
+    <script type="text/javascript">
+
+    var camera, scene, renderer;
+ 
+			var fov = 75,
+			texture_placeholder,
+			isUserInteracting = false,
+			onMouseDownMouseX = 0, onMouseDownMouseY = 0,
+			lon = 90, onMouseDownLon = 0,
+			lat = 0, onMouseDownLat = 0,
+			phi = 0, theta = 0;
+ 
+			init();
+            animate();
+			function init() {
+ 
+				var container, mesh;
+ 
+				container = document.getElementById( 'container' );
+ 
+				camera = new THREE.Camera( 40, 1, 1, 2000 );
+				camera.position.z = 300;
+ 
+				scene = new THREE.Scene();
+                //scene.fog = new THREE.FogExp2( 0x000000, 0.0008 );
+				texture_placeholder = document.createElement( 'canvas' );
+				texture_placeholder.width = 1000;
+				texture_placeholder.height = 1000;
+ 
+				var context = texture_placeholder.getContext( '2d' );
+				context.fillStyle = 'rgb( 200, 200, 200 )';
+				context.fillRect( 0, 0, texture_placeholder.width, texture_placeholder.height );
+
+ 
+				//mesh = new THREE.Mesh( new Cube( 100, 100, 300, 7, 7, 7, materials, true ), new THREE.MeshFaceMaterial() );
+				//mesh.overdraw = true;
+				r = 300;
+				
+				var plane = new Plane( 210, 64, 4, 4);
+                var material = loadTexture('{% media_url "/images/programador2.png" %}');
+				mesh = new THREE.Mesh( plane, material );
+				p = Math.PI;
+				t = 0;
+				mesh.position.x = r*Math.sin( p ) * Math.cos( t );
+				mesh.position.y = r*Math.sin( p ) * Math.sin( t );
+				mesh.position.z = r*Math.cos( p );
+				mesh.rotation.x = -t;
+				mesh.rotation.y = p;
+				mesh.rotation.z = t;
+				mesh.doubleSided = true;mesh.overdraw = true;
+				scene.addObject(mesh);
+				 				
+				mesh = new THREE.Mesh( plane, material );
+				p = Math.PI/3;
+				t = Math.PI/3;
+				mesh.position.x = r*Math.sin( p ) * Math.cos( t );
+				mesh.position.y = r*Math.sin( p ) * Math.sin( t );
+				mesh.position.z = r*Math.cos( p );
+				mesh.rotation.x = -t;
+				mesh.rotation.y = p;
+				mesh.rotation.z = t;
+				mesh.doubleSided = true;
+				mesh.overdraw = true;
+				scene.addObject(mesh);
+
+				mesh = new THREE.Mesh( plane, material );
+				p = -Math.PI/3;
+				t = Math.PI/3;
+				mesh.position.x = r*Math.sin( p ) * Math.cos( t );
+				mesh.position.y = r*Math.sin( p ) * Math.sin( t );
+				mesh.position.z = r*Math.cos( p );
+				mesh.rotation.x = -t;
+				mesh.rotation.y = p;
+				mesh.rotation.z = t;
+				mesh.doubleSided = true;
+				mesh.overdraw = true;
+				scene.addObject(mesh);
+				
+				mesh = new THREE.Mesh( plane, material );
+				p = -Math.PI/3;
+				t = -Math.PI/2;
+				mesh.position.x = r*Math.sin( p ) * Math.cos( t );
+				mesh.position.y = r*Math.sin( p ) * Math.sin( t );
+				mesh.position.z = r*Math.cos( p );
+				mesh.rotation.x = -t;
+				mesh.rotation.y = p;
+				mesh.rotation.z = t;
+				mesh.doubleSided = true;
+				mesh.overdraw = true;
+				scene.addObject(mesh);
+
+				
+				mesh = new THREE.Mesh( plane, material );
+				p = 2*Math.PI/3;
+				t = 3*Math.PI/2;
+				mesh.position.x = r*Math.sin( p ) * Math.cos( t );
+				mesh.position.y = r*Math.sin( p ) * Math.sin( t );
+				mesh.position.z = r*Math.cos( p );
+				mesh.rotation.x = -t;
+				mesh.rotation.y = p;
+				mesh.rotation.z = t;
+				mesh.doubleSided = true;
+				mesh.overdraw = true;
+				scene.addObject(mesh);
+
+
+				renderer = new THREE.CanvasRenderer();
+				renderer.setSize( 600, 400 );
+ 
+				container.appendChild( renderer.domElement );
+ 
+ 
+			}
+ 
+			function loadTexture( path ) {
+ 
+				var texture = new THREE.Texture( texture_placeholder ),
+					material = new THREE.MeshBasicMaterial( { map: texture  } ),
+					image = new Image();
+ 
+				image.onload = function () {
+ 
+					texture.needsUpdate = true;
+					material.map.image = this;
+					
+					render();
+ 
+				};
+ 
+				image.src = path;
+				return material;
+ 
+			}
+			function loadT ( path, mapping, callback ) {
+
+		var image = new Image(),
+			texture = new THREE.Texture( image, mapping );
+
+		image.onload = function () { texture.needsUpdate = true; if( callback ) callback( this ); };
+		image.src = path;
+
+		return texture;
+
+	}  
+ 			function animate() {
+ 
+				requestAnimationFrame( animate );
+ 
+				render();
+ 
+			}
+ 
+			function render() {
+                phi=Math.PI/2;
+                theta += .01;        
+                rad=1000;        
+				camera.position.x = rad * Math.sin( phi ) * Math.cos( theta );
+				camera.position.y = rad * Math.cos( phi );
+				camera.position.z = rad * Math.sin( phi ) * Math.sin( theta );
+ 
+				renderer.render( scene, camera );
+ 
+			}
+</script>

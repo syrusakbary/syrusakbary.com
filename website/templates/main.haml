@@ -1,0 +1,75 @@
+- extends "base.haml"
+
+- block title
+  = super()
+
+- set body_class="main"
+- block content
+  #section.grid_5
+      %h1 Hola!
+      .description Como ya habrás podido adivinar, mi nombre es Syrus Akbary y entre muchas -muchísimas- otras cosas soy...
+      %a.button{'href':'{{ url("about_me") }}' } Más sobre mi
+      %a.button ¡Contacta conmigo!
+      
+  #i-am.grid_10.push_1
+      %a.prev Anterior
+      %ul.what.grid_10
+          %li.enterprising
+              %strong.hn emprendedor
+              %div
+                  %span
+                      adoro
+                      %br
+                      los nuevos proyectos
+
+          %li.creative.rot270
+              %strong.hn creativo
+              .creative_box
+          
+          %li.curious.rot270
+              %strong.hn activo
+              %div
+                  %span
+                      ...más bien
+                      %br
+                      imparable
+          
+          %li.programmer.rot90
+              %strong.hn programador
+              %div
+                  %span metodico y modular
+      
+      %a.next Siguiente
+
+- block footer
+    #footer.container_16
+        .grid_5
+            %h2.s contacta
+            %ul.connections
+                %li
+                    %b.title.email Email
+                    %span.desc me@syrusakbary.com
+                %li
+                    %b.title.phone Teléfono
+                    %span.desc 625828468
+        .grid_5
+            %h2.s últimos artículos
+            %ul.last_posts
+                %li
+                    .date
+                        %span.day 12
+                        %span.month ABR
+                    .title Lorem ipsum
+                %li
+                    .date
+                        %span.day 02
+                        %span.month MAR
+                    .title Estreno de la web
+                
+        .grid_6.last_tweet
+             %h2.s twitter
+             %span.desc.tweet_timeline
+
+- block scripts
+    = super()
+    = js("js/main.js")

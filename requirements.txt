@@ -1,0 +1,5 @@
+Django
+Jinja2==2.5.5
+Djinja
+boto
+-e git+https://github.com/sunlightlabs/django-mediasync.git/#egg=mediasync

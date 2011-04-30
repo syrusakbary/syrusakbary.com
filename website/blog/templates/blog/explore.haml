@@ -1,0 +1,33 @@
+- extends "base.haml"
+- set title="Blog"
+- block content
+    #section.grid_16
+        %h1 Mi blog
+    .grid_12
+        #articles.box
+            .article
+                %h2.title Lorem ipsum
+                .meta
+                    %span.published Publicado el 12 de Febrero de 2010
+                    .share
+                        -#<iframe allowtransparency="true" frameborder="0" role="presentation" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.html?url=http://medinalia.com&count=horizontal" width="110" height="20"></iframe>
+                        -#<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmedinalia.com&amp;layout=button_count&amp;show_faces=false&amp;width=110&amp;action=like&amp;font=lucida+grande&amp;colorscheme=light&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:20px;" allowTransparency="true"></iframe>
+                .story Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam placerat enim sed tellus. In adipiscing iaculis metus. Cras arcu quam, adipiscing sed, volutpat et, lobortis vel, elit. Etiam ligula. Cras pede nisl, rutrum sit amet, pharetra vitae, eleifend vel, erat. Curabitur viverra tortor in lacus. Proin at nunc. Duis dictum. Ut id tellus. Mauris libero neque, posuere vel, adipiscing sollicitudin, tempor mattis, nisl. Praesent volutpat. Donec eget lacus id libero viverra ullamcorper. Pellentesque accumsan mauris eu risus accumsan tempor. Ut tristique consequat erat. Donec leo. Proin tempor condimentum velit. Vivamus ultricies leo. Nunc a erat at nisl elementum sodales.
+
+
+	#side.grid_4
+	    %form.section
+	       %span.glass.left
+	           %i
+	       %input.search{'type':'text','placeholder':'Buscar'}
+	       
+	   .section
+	       %h2.s top artículos
+	       Uno
+	       %br Dos
+	       
+	   .section
+	       %h2.s tags
+	       
+- block scripts
+    = super()

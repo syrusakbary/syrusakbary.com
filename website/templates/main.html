@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}{{super()}}{% endblock %}
+{% set body_class='main' %}
+{% block content %}
+<div id="section" class="grid_5"><h1>Hola!</h1>
+<div class="description">Como ya habrás podido adivinar, mi nombre es Syrus Akbary y entre muchas -muchísimas- otras cosas soy...
+</div>
+<a class="button" href="{{ url("about_me") }}">Más sobre mi</a>
+<a class="button">¡Contacta conmigo!</a>
+</div>
+<div id="i-am" class="grid_10 push_1">
+    <a class="prev">Anterior</a>
+    <ul class="what grid_10">
+        <li class="enterprising ">
+            <strong class="hn">emprendedor</strong>
+            <div><span>adoro<br />los nuevos proyectos</span></div>
+        </li>
+        <li class="creative rot270">
+            <strong class="hn">creativo</strong>
+            <div class="creative_box"></div>
+        </li>
+        <li class="curious rot270">
+            <strong class="hn">curioso</strong>
+            <div><span>me<br />encanta<br />aprender</span><span class="newthings rot90">cosas<br />nuevas</span></div>
+        </li>
+        <li class="active rot180">
+            <strong class="hn">activo</strong>
+            <div><span>...más bien<br>imparable</span></div>
+        </li>
+        <li class="programmer rot90">
+            <strong class="hn">programador</strong>
+            <div><span>metódico y modular</span></div>
+        </li>
+    </ul>
+    <a class="next">Siguiente</a>
+</div>
+{% endblock %}
+{% block footer %}
+
+ <div id="footer" class="container_16">
+<div class="grid_5">
+ 		<h2 class="s">contacta</h2>
+<ul class="connections">
+    <li><b class="email title">Email</b> <span class="desc">me@syrusakbary.com</span></li>
+    <li><b class="phone title">Teléfono</b> <span class="desc">625828468</span></li>
+    <li><b class="address title">Dirección</b> <span class="desc">C/Avenida Quinta 22</span></li>
+</ul>
+ 	</div>
+<div class="grid_5">
+		<h2 class="s">últimos artículos</h2>
+	<ul class="last_posts">
+		<li><div class="date"><span class="day">12</span><span class="month">ABR</span></div><span class="title">Lorem ipsum</span></li>
+		<li><div class="date"><span class="day">03</span><span class="month">MAR</span></div><span class="title">Estreno de la web</span></li>
+	</ul>
+</div>
+ <div class="grid_6 last_tweet">
+ 		<h2 class="s">twitter</h2>
+     <span class="desc tweet_timeline"></span>
+ </div>
+ 	
+     
+     <div class="clear"></div>
+</div>
+{% endblock %}
+{#% block footer %}
+
+ <div id="footer" class="container_16">
+ <div class="hr"></div>
+     <ul class="connections grid_7">
+         <li><b class="grid_3 alpha email title">Email</b> <span class="grid_4 omega desc">me@syrusakbary.com</span></li>
+         <li><b class="grid_3 alpha phone title">Teléfono</b> <span class="grid_4 omega desc">625828468</span></li>
+         <li><b class="grid_3 alpha address title">Dirección</b> <span class="grid_4 omega desc">C/Avenida Quinta 22</span></li>
+     </ul>
+     <div class="last_tweet grid_8">
+         <a class="grid_2 alpha title" href="http://twitter.com/syrusakbary">Twitter</a>
+         <span class="grid_6 omega desc tweet_timeline"></span>
+     </div>
+     <div class="clear"></div>
+</div>
+{% endblock %#}
+
+{% block scripts %}
+{{super()}}
+{{ js("js/main.js")}}
+{% endblock %}

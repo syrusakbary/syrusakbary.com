@@ -1,0 +1,94 @@
+.box {
+    background: #E8EBF0;
+    border-radius: 6px;
+    -moz-border-radius:6px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), 0 1px 3px rgba(17, 37, 50, .25);
+    -webkit-box-shadow: inset 0 1px 0  rgba(255, 255, 255, .75), 0 1px 3px  rgba(17, 37, 50, .25);
+/*     box-shadow: 0 2px 3px rgba(0,0,0,.4);   */
+    -moz-box-shadow: inset 0 1px 0  rgba(255, 255, 255, .75), 0 1px 3px  rgba(17, 37, 50, .25);  
+
+}
+.date {
+	width: 40px;
+	height: 40px;
+    background:url('../images/date.png') repeat-x;
+    text-align: center;
+    float: left;
+    display: block;
+    margin: 0 12px 0 0;
+}
+.date .day {
+	display: block;
+    color: #FFF;
+	font-size: 20px;
+}
+.date .month {
+	display: block;
+	margin-top: -7px;
+	color: #AAA;
+	font-size: 12px;
+}
+.article .title {
+    font-size: 28px;
+    color: #333;
+    text-shadow: #FFF 0 1px 0;    
+}
+
+.article {
+    padding:24px 32px 32px;
+}
+.meta {
+height: 20px;
+}
+.meta .published{
+    color: #666;
+    font-size: 12px;
+    float: left;
+}
+
+.article .story {
+    clear: both;
+    margin-top: 12px;
+    font-size: 14px;
+    color:#333;
+}
+.meta .share {
+float: right;
+margin-top: -2px;}
+
+
+#side {
+}
+
+#side .search {
+    font-size: 14px;
+    background: white;
+    border: none;
+    margin: 0;
+    height: 13px;
+    border-radius: 14px;
+    -moz-border-radius: 14px;
+    width:196px;
+    padding: 6px 12px;
+    opacity: .5;
+    -webkit-transition: opacity 200ms linear;
+    -moz-transition: opacity 200ms linear;
+}
+#side .search:focus {
+    opacity: 1;
+}
+
+.section {
+    margin-bottom: 30px;
+    clear: both;
+    color: #333;
+}
+.section .title {
+
+ /*
+   color: #FFF;
+    text-shadow: #333 0px 1px 2px;
+    font-size: 22px;
+*/
+    margin: 0 0 5px 0;
+}

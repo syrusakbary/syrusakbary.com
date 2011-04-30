@@ -1,0 +1,65 @@
+#footer {
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+#footer h2 {
+}
+#footer strong {
+	width: 100%;
+	display: block;
+	border-bottom: 2px solid #818489;
+	text-align: right;
+	color: #666;
+	font: 23px/1.5 "Museo 300";
+	margin: 0 0 20px 0;
+}
+#footer .connections li {
+    margin-bottom:5px;
+    clear: left;
+    float: left;
+}
+#footer .last_posts li{
+	float: left;
+	clear: left;
+	width: 100%;
+	margin: 0 0 12px;
+}
+#footer .connections .title {
+    background:url('../images/contact.png') no-repeat top right;
+    text-indent: -5000px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin: -3px 10px -3px 0;
+}
+
+#footer .connections .desc {
+    font-size: 16px;
+    color: #ECEFF4;
+    text-shadow: rgba(0,0,0,.5) 0px -1px 0px;
+}
+
+#footer .connections .title.email {
+    background-position: right top;
+}
+
+#footer .connections .title.phone {
+    background-position: right -16px ;
+}
+
+#footer .connections .title.address {
+    background-position: right -32px ;
+}
+
+.last_tweet .title {
+    text-indent: -5000px;
+    background:url('../images/social.png') no-repeat top right;
+    height: 48px;
+}
+.last_tweet .desc {
+}
+.last_tweet a{
+	color: #222;
+}
+.last_tweet a:hover{
+}

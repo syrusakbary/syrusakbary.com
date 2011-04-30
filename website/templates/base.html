@@ -1,0 +1,106 @@
+{% load 'media' %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//{{ LANGUAGE_CODE }}">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ LANGUAGE_CODE }}">
+<head>
+    {% block head %}
+    <title>{% block title %}Syrus Akbary{% if title %} - {{title}}{% endif %}{% endblock %}</title>
+    <meta property="og:site_name" content="Syrus Akbary"/>
+    <meta property="og:image" content="{{ media_url("/images/logo128-black.png") }}"/>
+    {{ css("css/all.css")}}
+    {#<!--[if IE 8]>{{ css("css/ie.css") }}<![endif]-->#}
+    {% endblock %}
+    <link rel="shortcut icon" href="{{ media_url("/images/favicon.png") }}" /> 
+</head>
+<body class="{{body_class}}">
+
+   <!--  <div class="wrapper">  -->
+   <div class="flash"></div>
+   {#% block header %}
+	<div id="header" class="container_16">
+	   <div class="grid_16 wrapper"> 
+    	<a href="/" id="logo" title="Página principal"> 
+      		<img width="356" height="51" src="{{ media_url("/images/logo.png") }}" alt="Exercita Logo"> 
+		</a>
+		<ul id="navbar">
+			<li><a href="{{ url("main") }}" {% if active("main") %}class="active" {% endif %}><img src="{{ media_url("/images/home.png") }}" width="16" height="16" alt="Página principal"></a></li>
+			<li><a href="{{ url("blog") }}" {% if active("blog") %}class="active" {% endif %}">Blog</a></li>
+			<li><a href="{{ url("main") }}">Portfolio</a></li>
+			<li><a href="{{ url("projects") }}" {% if active("projects") %}class="active" {% endif %}">Proyectos</a></li>
+			<li><a href="{{ url("about_me") }}" {% if active("about_me") %}class="active" {% endif %}">Sobre mi</a></li>
+			<li><a href="{{ url("main") }}">Lab</a></li>
+		</ul>
+		<div class="clear"></div>
+		</div>
+	</div>
+	{% endblock %#}
+	{#
+	<div id="contact">
+		<a>Contacta conmigo!</a>
+		<div class="expand"><form>
+			<input type="text">
+			<input type="text">
+			<textarea></textarea>
+		</form></div>
+	</div>
+	#}
+   {% block header %}
+	<div id="header">
+	   <div class="container_16 wrapper"> 
+    	<a href="/" id="logo" title="Página principal"> 
+      		<img width="203" height="30" src="{{ media_url("/images/logo-small.png") }}" alt="Exercita Logo"> 
+		</a>
+		<ul id="navbar">
+			<li><a href="{{ url("main") }}" {% if active("main") %}class="active" {% endif %}><img src="{{ media_url("/images/home.png") }}" width="16" height="16" alt="Página principal"></a></li>
+			<li><a href="{{ url("blog") }}" {% if active("blog") %}class="active" {% endif %}">Blog</a></li>
+			<li><a href="{{ url("portfolio_list") }}">Portfolio</a></li>
+			<li><a href="{{ url("project_list") }}" {% if active("project_list") %}class="active" {% endif %}">Proyectos</a></li>
+			<li><a href="{{ url("about_me") }}" {% if active("about_me") %}class="active" {% endif %}">Sobre mi</a></li>
+			<li><a href="{{ url("main") }}">Lab</a></li>
+		</ul>
+		<div class="clear"></div>
+		</div>
+	</div>
+	{% endblock %}
+
+	<div id="content" class="{% block content_class %}container_16{% endblock %}">
+	   {% block content %}{% endblock %}
+	</div>
+	{% if messages %}
+        <ul class="messagelist">{% for message in messages %}<li>{{ message }}</li>{% endfor %}</ul>
+    {% endif %}
+    <div class="clear"></div>
+    </div>
+    {% block footer %}
+   {% endblock %}
+   {% block scripts %}
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+   <script>!window.jQuery && document.write(unescape('%3Cscript src="{{ media_url("js/jquery-1.5.1.min.js")}}"%3E%3C/script%3E'))</script>
+   {{ js("js/page.js")}}
+
+   <script>
+   //http://api.twitter.com/1/statuses/user_timeline.json?screen_name=syrusakbary&count=1&trim_user=true
+   $('.tweet_timeline').tweet({
+        avatar_size: 32,
+        count: 1,
+        username: "syrusakbary",
+        template: function(i){return '<a href="'+i["tweet_url"]+'">'+i["tweet_raw_text"]+'</a>'}
+      });
+      $('#contact').click(function(){$(this).addClass('active')});
+   </script>
+   <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12613282-2']);
+  _gaq.push(['_setDomainName', '.syrusakbary.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+   {{ js("scripts/joined.js")}}
+    {% endblock %}
+</body>

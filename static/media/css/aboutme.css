@@ -1,0 +1,14 @@
+#about-me {
+	margin-bottom: 25px;
+}
+.detailed_list li{
+	margin-bottom: 10px;
+}
+.detailed_list dt{
+	text-align: right;
+	color: #555;
+}
+.detailed_list dd{
+	float: right;
+	clear: right;
+}

@@ -1,0 +1,232 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    }
+    a{ outline: none!important;text-decoration: none;}
+
+@font-face {
+	font-family: "Museo Sans 500";
+	src: url("type/MuseoSans_500.eot");
+	src: local("Museo Sans 500"), local("MuseoSans-500"),
+		url("type/MuseoSans_500.woff") format("woff"),
+		url("type/MuseoSans_500.otf") format("opentype"),
+		url("type/MuseoSans_500.svg#MuseoSans-500") format("svg");
+	}
+	
+ul, li, dl, dt, dd {
+margin: 0;
+padding: 0;
+    list-style: none;
+}
+body {
+    background:url('../images/background.png') repeat;
+    font: 14px/1.5 "Lucida Grande", "Verdana", "Arial", sans-serif;
+    color: #222;
+}
+.flash {
+    background:url('../images/flash.png') no-repeat center center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 805px;
+    display: block;
+    z-index: -1;
+}
+
+#content {
+margin-top:100px;
+position: relative;
+}
+
+.hr {
+    height: 34px;
+    display: block;
+    width: 100%;
+    background:url('../images/hr.png') no-repeat center center;
+    margin: 60px 0 40px 0;
+}
+h1,h2, h3, h4, h5, h6, .hn {
+    font-family: "Museo 300";
+    font-weight: normal;
+    margin: 0;
+    color: #333;
+    text-shadow: rgba(255,255,255,.5) 0 1px 0;
+}
+
+h2.s, h2.s, h3.s {
+	width: 100%;
+	display: block;
+	border-bottom: 2px solid #818489;
+	text-align: right;
+	margin-bottom: 15px;
+	color: #666;
+    text-shadow: rgba(255,255,255,.25) 0 1px 0;
+}
+
+#content a.basic{
+	background:  rgba(0,0,0,.20);
+    text-shadow: rgba(0,0,0,.125) 0 -1px 0;
+	padding: 3px 6px;
+	border-radius: 8px;
+	color: #FFF;
+}
+.button {
+    padding: 6px 14px;
+    background: -webkit-linear-gradient(#6FA6DB, #2A71BA);
+    background: -moz-linear-gradient(#6FA6DB, #2A71BA);
+    border-radius: 2px;
+    text-shadow: rgba(0,0,0,.5) 0 -1px 0;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.5), 0 1px 2px rgba(0,0,0,.25);
+    color: #FFF;
+    font-size: 14px;
+}
+
+.main .button {
+clear: both;
+float: left;
+	margin-top: 15px;
+}
+.description{
+    font-size: 16px;
+    color: #333;
+/*     text-shadow: #DFE2E5 0 1px 0;     */
+    text-shadow: rgba(255,255,255,.25) 0 1px 0;
+}
+#section .description{
+    margin-top: -10px;
+}
+h1 {
+    font-size: 37px;
+    margin-bottom: 20px;
+}
+h2 {
+font-size: 23px;
+}
+
+.rot270 {
+/*
+-webkit-transform: rotate(-270deg); 
+-webkit-transform-origin: 0 0;
+*/
+}
+
+#i-am .prev, #i-am .next {
+z-index: 100;
+position: absolute;
+top:50%;
+margin-top:-24px;
+height: 48px;
+width:48px;
+text-indent: -5000px;
+opacity: 0;
+-webkit-transition: all 180ms ease-in-out;
+-moz-transition: all 180ms ease-in-out;
+}
+#i-am:hover .prev {
+opacity: .5;
+left: 0;
+}
+#i-am:hover .next {
+opacity: .5;
+right: 0;
+}
+#i-am .prev {
+    background:url('../images/br_prev.png') no-repeat center center;
+left:15px;
+}
+#i-am .next {
+    background:url('../images/br_next.png') no-repeat center center;
+right: 15px;
+}
+/*#i-am .prev:hover, #i-am .next:hover {
+    opacity: .5;
+}*/
+#i-am {
+height: 320px;
+overflow: hidden;
+}
+#i-am .what{
+position: absolute;
+height: 480px;
+/*-webkit-transition: all 1s ease-in-out;*/
+}
+#i-am .what:hover {
+/*-webkit-transform: rotate(-90deg); 
+top:-240px;*/
+}
+#i-am li{
+position: absolute;
+font-size: 26px;
+line-height: normal;
+color: #666;
+/* -webkit-transition: all 500ms ease-in-out; */
+}
+#i-am .hn {
+opacity: .2;
+font-size: 32px;
+}
+
+#i-am li.view {
+
+    opacity: 1;
+    }
+#i-am li div{
+    opacity: .08;
+    position: relative;
+    width: 100%;
+}
+#i-am .enterprising {
+    left: 60px;
+    width: 280px;
+    text-align: right;
+    top:0;
+}
+#i-am .curious {
+    top:120px;
+    left: 165px;
+    width: 200px;
+}
+#i-am .creative {
+    top:315px;
+    left: 360px;
+    width: 160px;
+    height: 180px;
+}
+#i-am .active {
+    top:300px;
+    left: 350px;
+    width: 160px;
+    height: 80px;
+}
+#i-am .creative .creative_box{
+    width:140px;
+    height: 140px;
+    border: 3px solid #333;
+}
+#i-am .programmer {
+    width:200px;
+    height: 100px;
+    top: 300px;
+    left: 370px;
+}
+
+#i-am .viewport {
+}
+/*
+#i-am .enterprising {
+opacity: 1;
+}
+#i-am:hover .enterprising {
+opacity: .1;
+}
+*/
+
+#i-am span {
+    text-shadow: rgba(255,255,255,.25) 0 1px 0;
+}
+#i-am .curious .newthings {
+    position: absolute;
+    font-size: 29px;
+top:88px;
+left: 120px;
+}

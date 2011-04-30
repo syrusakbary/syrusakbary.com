@@ -1,0 +1,21 @@
+.wallkit_post .wallkit_postcontent{margin-left:50px;padding-left:10px;color:#00FF00;}
+
+.wallkit_post .wallkit_postcontent h4{padding:0px 5px 3px 0px;font-weight:normal;color:#00FF00;}
+
+.wallkit_post .wallkit_postcontent h4 .wall_time{margin-left:1px;font-size:9px;padding:2px 0px 0px 4px;color:gray;color:#00FF00;}
+
+.wallkit_post .wallkit_postcontent h4 a{font-weight:bold; color:#00FF00;}
+
+.wallkit_post .wallkit_postcontent div{padding:3px 0px;color:#00FF00;}
+
+.wallkit_post .wallkit_profilepic img{display:block;float:left;color:#00FF00;}
+
+
+.wallkit_post div.wallkit_actionset{font-size:9px;padding-bottom:3px;color:#00FF00;}
+
+.wallkit_post{margin:10px 10px 5px 0px;padding-bottom:5px;border-bottom:1px solid #D8DFEA;color:#00FF00;}
+
+.wallkit_post .wallkit_profilepic{position:absolute ;width:50px;color:#00FF00;}
+
+
+.wallkit_form textarea {display:inline;height:100px;margin-top:5px;overflow:hidden;padding:3px;width:50%;}
