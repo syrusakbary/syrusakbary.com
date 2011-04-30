@@ -128,7 +128,7 @@ INSTALLED_APPS = (
     #'coffin',
     'website',
     'mediasync',
-    'apache2',
+    #'apache2',
     #'coffin.contrib.markup',
     'djinja.contrib.admin',
     'djinja.contrib.debug_toolbar',

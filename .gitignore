@@ -1,6 +1,7 @@
 *.pyc
 static/sketches/*
 .git2/*
+virtualenv/*
 syrusakbary.esproj/*
 apache2/*
 apache/*
