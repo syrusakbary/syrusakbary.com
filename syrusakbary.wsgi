@@ -13,5 +13,5 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 import django.core.handlers.wsgi
 application = django.core.handlers.wsgi.WSGIHandler()
 
-from apache2 import monitor
+import monitor
 monitor.start(interval=1.0)
