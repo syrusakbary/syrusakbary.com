@@ -27,13 +27,27 @@
               .creative_box
           
           %li.curious.rot270
+              %strong.hn curioso
+              %div
+                  %span
+                      me
+                      %br
+                      encanta
+                      %br
+                      aprender
+                  %span.newthings.rot90
+                      cosas
+                      %br
+                      nuevas
+          
+          %li.active.rot180
               %strong.hn activo
               %div
                   %span
-                      ...más bien
+                      %span ...más bien
                       %br
                       imparable
-          
+
           %li.programmer.rot90
               %strong.hn programador
               %div
@@ -72,4 +86,12 @@
 
 - block scripts
     = super()
-    = js("js/main.js")
+    - include_media "js/main.js"
+    :javascript
+        $('.tweet_timeline').tweet({
+            avatar_size: 32,
+            count: 1,
+            username: "syrusakbary",
+            template: function(i){return '<a href="'+i["tweet_url"]+'">'+i["tweet_raw_text"]+'</a>'}
+          });
+          $('#contact').click(function(){$(this).addClass('active')});

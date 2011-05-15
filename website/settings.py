@@ -102,6 +102,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
+    'mediagenerator.middleware.MediaMiddleware',
     #'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -127,9 +128,12 @@ INSTALLED_APPS = (
     #'jinja2',
     #'coffin',
     'website',
-    'mediasync',
+    #'mediasync',
     #'apache2',
     #'coffin.contrib.markup',
+    'mediagenerator',
+    'djinja.utilities',
+
     'djinja.contrib.admin',
     'djinja.contrib.debug_toolbar',
     'debug_toolbar',
@@ -168,19 +172,60 @@ LOGGING = {
     }
 }
 
-MEDIASYNC = {
-    'BACKEND': 'mediasync.backends.s3',
-    'AWS_KEY': "s3_key",
-    'AWS_SECRET': "s3_secret",
-    'AWS_BUCKET': "bucket_name",
-    'JOINED': {
-        'css/all.css': ['css/960.css','css/reset.css','css/text.css','css/fonts.css','css/main.css','css/aboutme.css','css/header.css','css/footer.css','css/blog.css','css/project.css','css/contact.css'],
-        #'js/tooltip.js': ['js/jquery.tooltip.js','js/jquery.tooltip.slide.js','js/jquery.tooltip.dynamic.js'],
-        'js/main.js': ['js/jquery.transform.js' ,'js/jquery.effects.core.js','js/pages.main.js'],
-        'js/page.js': ['js/jquery.tweet.js'],
-    },
-}
+# MEDIASYNC = {
+#     'BACKEND': 'mediasync.backends.s3',
+#     'AWS_KEY': "s3_key",
+#     'AWS_SECRET': "s3_secret",
+#     'AWS_BUCKET': "bucket_name",
+#     'JOINED': {
+#         'css/all.css': ['css/960.css','css/reset.css','css/text.css','css/fonts.css','css/main.css','css/aboutme.css','css/header.css','css/footer.css','css/blog.css','css/project.css','css/contact.css'],
+#         #'js/tooltip.js': ['js/jquery.tooltip.js','js/jquery.tooltip.slide.js','js/jquery.tooltip.dynamic.js'],
+#         'js/main.js': ['js/jquery.transform.js' ,'js/jquery.effects.core.js','js/pages.main.js'],
+#         'js/page.js': ['js/jquery.tweet.js'],
+#     },
+# }
 
+MEDIA_BUNDLES = (
+    ('css/all.css',
+        'css/960.css',
+        'css/reset.css',
+        'css/text.css',
+        'css/fonts.css',
+        'css/main.css',
+        'css/aboutme.css',
+        'css/header.css',
+        'css/footer.css',
+        'css/blog.css',
+        'css/project.css',
+        'css/contact.css'
+    ),
+    ('js/main.js',
+        'js/jquery.transform.js',
+        'js/jquery.tweet.js',
+        'js/jquery.effects.core.js',
+        'js/pages.main.js'
+    ),
+    #('js/page.js',
+    #    'js/jquery.tweet.js'
+    #),
+)
+
+GLOBAL_MEDIA_DIRS = (
+    os.path.join(ROOT_PATH,'../static/media'),
+)
+
+
+MEDIA_DEV_MODE = False
+DEV_MEDIA_URL = '/devmedia/'
+PRODUCTION_MEDIA_URL = 'http://static.syrusakbary.local/'
+
+YUICOMPRESSOR_PATH = os.path.join(
+    os.path.dirname(ROOT_PATH), 'yuicompressor-2.4.6.jar')
+if os.path.exists(YUICOMPRESSOR_PATH):
+    ROOT_MEDIA_FILTERS = {
+        'js': 'mediagenerator.filters.yuicompressor.YUICompressor',
+        'css': 'mediagenerator.filters.yuicompressor.YUICompressor',
+    }
 
 JINJA2_ENVIRONMENT_OPTIONS = {
     'autoescape': False,

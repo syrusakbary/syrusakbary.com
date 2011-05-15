@@ -2,5 +2,7 @@ Django
 Jinja2==2.5.5
 Djinja
 boto
+
 django-debug-toolbar
+-e git+https://github.com/jessemiller/HamlPy#egg=hamlpy
 -e git+https://github.com/sunlightlabs/django-mediasync.git/#egg=mediasync
