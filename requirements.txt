@@ -5,4 +5,4 @@ boto
 
 django-debug-toolbar
 -e git+https://github.com/jessemiller/HamlPy#egg=hamlpy
--e git+https://github.com/sunlightlabs/django-mediasync.git/#egg=mediasync
+django-mediagenerator
