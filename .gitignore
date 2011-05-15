@@ -5,6 +5,8 @@ virtualenv/*
 syrusakbary.esproj/*
 apache2/*
 apache/*
+_generated_media*.py
+_generated_media/*
 static/admin/*
 website/local_settings.py
 syrusakbary.conf
