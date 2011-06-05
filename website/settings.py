@@ -133,8 +133,7 @@ INSTALLED_APPS = (
     #'coffin.contrib.markup',
     'mediagenerator',
     'djinja.utilities',
-
-    'djinja.contrib.admin',
+    #'djinja.contrib.admin',
     'djinja.contrib.debug_toolbar',
     'debug_toolbar',
     'django.contrib.auth',
@@ -147,6 +146,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'gunicorn',
 )
 
 # A sample logging configuration. The only tangible logging
