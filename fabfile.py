@@ -25,13 +25,9 @@ def update(install_requirements=False,generate_media=True):
         with virtualenv():
             if install_requirements: run('pip install -r requirements.txt')
             if generate_media: 
-                generatemedia()
+                run('python manage.py generatemedia')
+                optimize_images()
 
-@hosts('syrus@syrusakbary.com')
-def generatemedia():
-    run('python manage.py generatemedia')
-    optimize_images()
-    
 @hosts('syrus@syrusakbary.com')
 def optimize_images():
     with cd('/var/www/vhosts/syrusakbary.com/_generated_media/images/'):
