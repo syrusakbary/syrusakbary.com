@@ -215,9 +215,9 @@ GLOBAL_MEDIA_DIRS = (
 )
 
 
-MEDIA_DEV_MODE = False
+MEDIA_DEV_MODE = True
 DEV_MEDIA_URL = '/devmedia/'
-PRODUCTION_MEDIA_URL = 'http://static.syrusakbary.local/'
+PRODUCTION_MEDIA_URL = '/media/'
 
 YUICOMPRESSOR_PATH = os.path.join(
     ROOT_PATH, '../yuicompressor-2.4.6.jar')
