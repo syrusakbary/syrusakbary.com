@@ -25,4 +25,3 @@ def update(install_requirements=False,generate_media=True):
         with virtualenv():
             if install_requirements: run('pip install -r requirements.txt')
             if generate_media: run('python manage.py generatemedia')
-        #if install_requirements: run('pip install -r requirements.txt')
