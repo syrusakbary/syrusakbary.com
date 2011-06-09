@@ -62,10 +62,15 @@
             %ul.connections
                 %li
                     %b.title.email Email
-                    %span.desc me@syrusakbary.com
+                    %span.desc 
+                      - filter trim|jsencode
+                        %a{'href':'mailto:me@syrusakbary.com'} me@syrusakbary.com
                 %li
                     %b.title.phone Teléfono
-                    %span.desc 625828468
+                    %span.desc 
+                      - filter trim|jsencode
+                        %a{'href':'tel:+34625828486'} 625828468
+
         .grid_5
             %h2.s últimos artículos
             %ul.last_posts

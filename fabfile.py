@@ -24,7 +24,9 @@ def update(install_requirements=False,generate_media=True):
         run('git pull')
         with virtualenv():
             if install_requirements: run('pip install -r requirements.txt')
-            if generate_media: run('python manage.py generatemedia')
+            if generate_media: 
+                run('python manage.py generatemedia')
+                optimize_images()
 
 @hosts('syrus@syrusakbary.com')
 def optimize_images():

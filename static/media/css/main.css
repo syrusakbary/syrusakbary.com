@@ -2,7 +2,7 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
 }
-a{ outline: none!important;text-decoration: none;}
+a{ outline: none!important;text-decoration: none; color:inherit;}
 
 	
 ul, li, dl, dt, dd {

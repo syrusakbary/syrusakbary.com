@@ -230,6 +230,11 @@ if os.path.exists(YUICOMPRESSOR_PATH):
 JINJA2_ENVIRONMENT_OPTIONS = {
     'autoescape': False,
 }
+JINJA2_EXTENSIONS = (
+    'jinja2.ext.autoescape',
+    'djinja.template.extensions.haml',
+    'mediagenerator.contrib.jinja2ext.MediaExtension'
+)
 
 SPRITIZE = {
     'BACKEND': 'spritize.backends.basic',
