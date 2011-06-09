@@ -9,6 +9,7 @@ Instalaci—n
 Para correr la web tu propio servidor tienes que seguir estos pasos:
 
 #. Instalar pip en el caso de no tenerlo instalado::
+
 	easy_install pip
 
 #. Instalar los requerimientos de la p‡gina::
