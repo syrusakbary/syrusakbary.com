@@ -14,12 +14,12 @@ from .models import *
 
 class ProjectDetailView(DetailView):
     template_name='projects/project_detail.haml'
-    queryset = Project.objects.all()
-
+    #queryset = Project.objects.all()
+    queryset = []
 class ProjectListView(ListView):
     template_name='projects/project_list.haml'
-    queryset = Project.objects.all()
-
+    #queryset = Project.objects.all()
+    queryset = []
 
 #def index(request):
 #    return render_to_response('projects/index.html',context_instance=RequestContext(request))
