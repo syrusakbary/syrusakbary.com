@@ -8,6 +8,11 @@ Instalaci—n
 ===========
 Para correr la web tu propio servidor tienes que seguir estos pasos:
 
+#. Descargar el repositorio::
+
+	git clone https://SyrusAkbary@github.com/SyrusAkbary/syrusakbary.com.git
+	cd syrusakbary.com
+
 #. Instalar pip en el caso de no tenerlo instalado::
 
 	easy_install pip
@@ -23,3 +28,5 @@ Para correr la web tu propio servidor tienes que seguir estos pasos:
 #. Ejecutar el servidor::
 
 	python manage.py runserver
+
+Y ya tendr‡s la p‡gina completamente funcional en tu ordenador.
