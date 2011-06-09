@@ -25,3 +25,10 @@ def update(install_requirements=False,generate_media=True):
         with virtualenv():
             if install_requirements: run('pip install -r requirements.txt')
             if generate_media: run('python manage.py generatemedia')
+
+@hosts('syrus@syrusakbary.com')
+def optimize_images():
+    with cd('/var/www/vhosts/syrusakbary.com/_generated_media/images/'):
+        run('mogrify -strip *.png')
+        run('mogrify -strip *.jpg')
+        run('optipng -o5 *.png')

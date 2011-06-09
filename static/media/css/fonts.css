@@ -1,16 +1,2 @@
-@font-face {
-    font-family: "Museo 300";
-    src: url("type/Museo300-Regular.eot");
-    src: local("Museo 300"), local("Museo-300"),
-        url("type/Museo300-Regular.woff") format("woff"),
-        url("type/Museo300-Regular.otf") format("opentype"),
-        url("type/Museo300-Regular.svg#Museo-300") format("svg");
-    }
-@font-face {
-    font-family: "Museo 500";
-    src: url("type/Museo500-Regular.eot");
-    src: local("Museo 500"), local("Museo-500"),
-        url("type/Museo500-Regular.woff") format("woff"),
-        url("type/Museo500-Regular.otf") format("opentype"),
-        url("type/Museo500-Regular.svg#Museo-500") format("svg");
-    }
+ @font-face {font-family: 'Museo-300';src: url('webfonts/eot/style_154926.eot');src: url('webfonts/eot/style_154926.eot?#iefix') format('embedded-opentype'),url('webfonts/woff/style_154926.woff') format('woff'),url('webfonts/ttf/style_154926.ttf') format('truetype'),url('webfonts/svg/style_154926.svg#Museo-300') format('svg');}
+ @font-face {font-family: 'Museo-500';src: url('webfonts/eot/style_154928.eot');src: url('webfonts/eot/style_154928.eot?#iefix') format('embedded-opentype'),url('webfonts/woff/style_154928.woff') format('woff'),url('webfonts/ttf/style_154928.ttf') format('truetype'),url('webfonts/svg/style_154928.svg#Museo-500') format('svg');}
