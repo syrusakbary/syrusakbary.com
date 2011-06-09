@@ -220,7 +220,7 @@ DEV_MEDIA_URL = '/devmedia/'
 PRODUCTION_MEDIA_URL = 'http://static.syrusakbary.local/'
 
 YUICOMPRESSOR_PATH = os.path.join(
-    ROOT_PATH, '../yuicompressor-2.4.6a.jar')
+    ROOT_PATH, '../yuicompressor-2.4.6.jar')
 if os.path.exists(YUICOMPRESSOR_PATH):
     ROOT_MEDIA_FILTERS = {
         'js': 'mediagenerator.filters.yuicompressor.YUICompressor',
