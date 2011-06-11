@@ -29,6 +29,12 @@ def update(install_requirements=False,generate_media=True):
                 optimize_images()
 
 @hosts('syrus@syrusakbary.com')
+def remote_install(name,upgrade=True):
+    with cd('/var/www/vhosts/syrusakbary.com'):
+        with virtualenv():
+            run('pip install %s %s'%(name,'--upgrade' if upgrade else ''))
+
+@hosts('syrus@syrusakbary.com')
 def optimize_images():
     with cd('/var/www/vhosts/syrusakbary.com/_generated_media/images/'):
         run('mogrify -strip *.png')
