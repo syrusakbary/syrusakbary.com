@@ -1,4 +1,4 @@
-Django
+Django==1.3
 Jinja2==2.5.5
 Djinja
 boto

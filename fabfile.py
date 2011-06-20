@@ -22,21 +22,22 @@ def update(install_requirements=False,generate_media=True):
     push()
     with cd('/var/www/vhosts/syrusakbary.com'):
         run('git pull')
-        with virtualenv():
-            if install_requirements: run('pip install -r requirements.txt')
-            if generate_media: 
-                run('python manage.py generatemedia')
-                optimize_images()
+    if install_requirements: pipinstall('-r requirements.txt')
+    if generate_media: generatemedia()
 
 @hosts('syrus@syrusakbary.com')
-def remote_install(name,upgrade=True):
+def pipinstall(name,upgrade=True):
     with cd('/var/www/vhosts/syrusakbary.com'):
         with virtualenv():
             run('pip install %s %s'%(name,'--upgrade' if upgrade else ''))
 
 @hosts('syrus@syrusakbary.com')
-def optimize_images():
+def generatemedia():
+    with cd('/var/www/vhosts/syrusakbary.com'):
+        with virtualenv():
+            run('python manage.py generatemedia')
     with cd('/var/www/vhosts/syrusakbary.com/_generated_media/images/'):
-        run('mogrify -strip *.png')
-        run('mogrify -strip *.jpg')
+        #run('mogrify -strip *.png')
+        run('for file in *.png ; do pngcrush -rem alla -rem gAMA -rem cHRM -rem iCCP -rem sRGB  "$file" "${file%.png}-crushed.png" && mv "${file%.png}-crushed.png" "$file" ; done')
+        #run('mogrify -strip *.jpg')
         run('optipng -o5 *.png')
