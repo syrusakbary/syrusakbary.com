@@ -3,7 +3,7 @@ from fabric.api import *
 from contextlib import contextmanager as _contextmanager
 
 env.activate = 'source virtualenv/bin/activate'
-
+#
 def commit():
     local("git add . && git commit")
     
