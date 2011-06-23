@@ -33,10 +33,6 @@
     float: left;
 }
 
-#navbar li img{
-    position: relative;
-    top: 2px;
-}
 #navbar a {
     color: #FFF;
     opacity: .75;
