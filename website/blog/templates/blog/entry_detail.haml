@@ -1,0 +1,10 @@
+- extends "blog/blog.haml"
+- block entries
+	= display_entry(entry)
+	- if more_like_this
+		%hr
+		%h3 Entradas relacionadas
+		%ul.bullet.related
+			- for related in more_like_this
+				%li
+					%a{'href':'{{related.object.get_absolute_url()}}'}= related.object.title

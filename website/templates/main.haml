@@ -7,7 +7,7 @@
 - block content
   #section.grid_5
       %h1 Hola!
-      .description Como ya habrás podido adivinar, mi nombre es Syrus Akbary y entre muchas -muchísimas- otras cosas soy...
+      .description Como ya habrás podido adivinar, mi nombre es Syrus Akbary y entre muchas -muchísimas- otras cosas soy&hellip;
       %a.button{'href':'{{ url("about_me") }}' } Más sobre mi
       %a.button ¡Contacta conmigo!
       
@@ -56,9 +56,9 @@
       %a.next Siguiente
 
 - block footer
-    #footer.container_16
+     #footer.container_16
         .grid_5
-            %h2.s contacta
+            %h3.a contacta
             %ul.connections
                 %li
                     %b.title.email Email
@@ -72,23 +72,16 @@
                         %a{'href':'tel:+34625828486'} 625828468
 
         .grid_5
-            %h2.s últimos artículos
+            %h3.a últimos artículos
             %ul.last_posts
+              -for entry in last_entries
                 %li
-                    .date
-                        %span.day 12
-                        %span.month ABR
-                    .title Lorem ipsum
-                %li
-                    .date
-                        %span.day 02
-                        %span.month MAR
-                    .title Estreno de la web
+                    %a{'href':'{{entry.get_absolute_url()}}'}
+                      .title= entry.title
                 
         .grid_6.last_tweet
-             %h2.s twitter
+             %h3.a twitter
              %span.desc.tweet_timeline
-
 - block scripts
     = super()
     - include_media "js/main.js"

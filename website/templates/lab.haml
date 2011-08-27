@@ -5,67 +5,11 @@
 
 - set body_class="lab"
 - block content
-  .grid_4.rotate
-    .red
-      %img.normal{'src':'{{ media_url("images/lab_tube_red.png") }}'}
-      %img.blur{'src':'{{ media_url("images/lab_tube_red_blur.png") }}'}
-   .blue
-      %img.normal{'src':'{{ media_url("images/lab_tube_blue.png") }}'}
-      %img.blur{'src':'{{ media_url("images/lab_tube_blue_blur.png") }}'}
-   .gray
-      %img.normal{'src':'{{ media_url("images/lab_tube_green.png") }}'}
-      %img.blur{'src':'{{ media_url("images/lab_tube_green_blur.png") }}'}
+  .grid_3
+    %img{'src':'{{ media_url("images/lab.png") }}'}
   #section.grid_12
     %h1 Lab
     .description
         Me encanta experimentar, probar cosas nuevas, crear y modificar, descubrir...
         %br
         Bienvenidos a mi patio de recreo
-- block scripts
-  = super()
-  :css
-    .blue, .red, .gray {position:absolute;top:0,left:0;width:133px;height:202px;}
-    .blue img, .red img, .gray img {position:absolute;top:0,left:0;width:133px;height:202px;}
-    .rotate {height:80px;display:block;position:relative;}
-  :javascript
-    theta = 0;
-    ob = $('.blue');
-    par = ob.parent();
-    w = par.width();
-    h = par.height();
-    var ob_w = ob.width();
-    var ob_h = ob.height();
-    rad_w = w/2;
-    rad_h = h/2;
-    function finc(p,z) {
-      var r = 4.0;
-      return (r-1)*z/r+p*z/r
-    }
-    var b = $('.blue');
-    var r = $('.red');
-    var g = $('.gray');
-    zindex = [100,101];
-    var over = false;
-    $('.rotate').hover(function() {
-      over=true;
-    },function(){over=false;});
-    function move (ob,i) {
-      if (over) return;
-      sin = Math.sin(theta+i);
-      cos = Math.cos(theta+i);
-      inc = -sin;
-      z = inc>=0?(cos<=0?101:99):90;
-      n_w = finc(inc,ob_w);
-      n_h = finc(inc,ob_h);
-      l = rad_w+(rad_w-n_w/2)*cos-n_w/2;
-      t = rad_h-rad_h*sin-n_h+ob_h-h;
-      ob.css({top:t,left:l,width:n_w,height:n_h,'z-index':z}).find('img').css({width:n_w,height:n_h});
-      a = (1+inc)/2;
-      a = Math.sqrt(a);
-      ob.find('.normal').css({opacity:a});
-      ob.find('.blur').css({opacity:1-a});
-      theta += 0.002;
-    }
-    var id = setInterval("move(b,0)",6);
-    var id = setInterval("move(r,2*Math.PI/3)",6);
-    var id = setInterval("move(g,4*Math.PI/3)",6);

@@ -3,6 +3,8 @@ Jinja2==2.5.5
 Djinja
 boto
 
+unicode-slugify
+django-taggit
 django-debug-toolbar
 -e git+https://github.com/jessemiller/HamlPy#egg=hamlpy
 django-mediagenerator

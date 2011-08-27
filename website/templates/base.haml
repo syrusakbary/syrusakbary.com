@@ -27,13 +27,13 @@
                                 %img{'src':'{{ media_url("images/home.png") }}','width':'16','height':'16','alt':'Pagina principal'}
         
                         %li
-                            %a{'href':'{{ url("blog") }}','class':'{{"active" if active("blog")}}'} Blog
+                            %a{'href':'{{ url("blog") }}','class':'{{"active" if active("blog","entry_detail")}}'} Blog
         
                         %li
                             %a{'href':'{{ url("portfolio_list") }}','class':'{{"active" if active("portfolio_list")}}'} Portfolio
                         
                         %li
-                            %a{'href':'{{ url("project_list") }}','class':'{{"active" if active("project_list")}}'} Proyectos
+                            %a{'href':'{{ url("opensource_list") }}','class':'{{"active" if active("opensource_list")}}'} Open Source
                         
                         %li
                             %a{'href':'{{ url("about_me") }}','class':'{{"active" if active("about_me")}}'} Sobre mi

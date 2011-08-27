@@ -1,0 +1,6 @@
+- extends "blog/blog.haml"
+- block entries
+    -for entry in entry_list
+        = display_entry(entry)
+    -if not entry_list and search.query
+    	%p No se han encontrado entradas para la búsqueda

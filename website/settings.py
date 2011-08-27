@@ -96,7 +96,7 @@ TEMPLATE_LOADERS = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-#    'django.contrib.auth.context_processors.auth',
+    'django.contrib.auth.context_processors.auth',
     'djinja.utilities.context_processors.request_path',
 )
 
@@ -124,7 +124,7 @@ INTERNAL_IPS = ('127.0.0.1',)
 
 INSTALLED_APPS = (
     'blog',
-    'projects',
+    'opensource',
     #'jinja2',
     #'coffin',
     'website',
@@ -132,6 +132,7 @@ INSTALLED_APPS = (
     #'apache2',
     #'coffin.contrib.markup',
     'mediagenerator',
+    'taggit',
     'djinja.utilities',
     #'djinja.contrib.admin',
     'djinja.contrib.debug_toolbar',
@@ -143,6 +144,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     #'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
+    'djinja.contrib.admin',
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
@@ -245,5 +247,5 @@ SPRITIZE = {
 
 try:
     from local_settings import *
-except:
-    pass
+except ImportError, e:
+    print 'Unable to load local_settings.py:', e

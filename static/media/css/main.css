@@ -26,7 +26,7 @@ body {
 }
 
 #content {
-margin-top:100px;
+margin-top:90px;
 position: relative;
 }
 
@@ -49,10 +49,17 @@ h2.s, h2.s, h3.s {
 	width: 100%;
 	display: block;
 	border-bottom: 2px solid #818489;
-	text-align: right;
+/*    border-bottom: 2px solid rgba(129, 132, 137,.5);
+*/	text-align: right;
 	margin-bottom: 15px;
 	color: #666;
     text-shadow: rgba(255,255,255,.25) 0 1px 0;
+}
+h2.a, h3.a {
+/*    border-bottom: 2px solid rgba(129, 132, 137,.5);
+*/  text-align: left;
+    margin-bottom: 15px;
+    color: #666;
 }
 
 #content a.basic{
@@ -91,11 +98,10 @@ float: left;
     margin-top: -10px;
 }
 h1 {
-    font-size: 37px;
+    font-size: 30px;
     margin-bottom: 20px;
 }
 h2 {
-font-size: 23px;
 }
 
 .rot270 {
@@ -224,4 +230,11 @@ opacity: .1;
     font-size: 29px;
 top:88px;
 left: 120px;
+}
+
+ul.bullet {
+    padding-left:20px;
+}
+ul.bullet li{
+    list-style-image:url('../images/list-bullet.png');
 }

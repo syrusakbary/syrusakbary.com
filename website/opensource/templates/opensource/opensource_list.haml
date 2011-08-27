@@ -1,0 +1,17 @@
+- extends "base.haml"
+- set title="Proyectos"
+- set body_class="project_list"
+- block content
+    .grid_16
+        #section.prefix_2.grid_4.alpha
+            -#%img{'src':'{{ media_url("images/projects.png") }}'}
+            -#http://cdn1.iconfinder.com/data/icons/DarkGlass_Reworked/128x128/apps/kthememgr.png
+            %img{'src':'http://cdn3.iconfinder.com/data/icons/macosxstyle/macosxstyle_png/128/Application.png'}
+            %h1 Open Source
+            -#.description Mi pequeño granito de arena
+        %ul#projects.grid_8.omega
+          - for project in project_list
+            %li
+                %h3
+                    %a{'href':'{{project.url}}'}= project
+                .desc= project.description
