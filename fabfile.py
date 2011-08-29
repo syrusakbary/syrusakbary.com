@@ -22,7 +22,7 @@ def update(install_requirements=False,generate_media=True):
     push()
     with cd('/var/www/vhosts/syrusakbary.com'):
         run('git pull')
-    if install_requirements: pipinstall('-r requirements.txt')
+    if install_requirements: pipinstall('-r requirements.pip')
     if generate_media: generatemedia()
 
 @hosts('syrus@syrusakbary.com')
