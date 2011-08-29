@@ -7,7 +7,6 @@ unicode-slugify
 django-taggit
 django-debug-toolbar
 -e git+https://github.com/jessemiller/HamlPy#egg=hamlpy
--e git+https://github.com/jessemiller/HamlPy#egg=hamlpy
 -e git://github.com/notanumber/xapian-haystack.git@2.0.X#egg=xapian-haystack
 -e git://github.com/toastdriven/django-haystack.git#egg=django-haystack
 django-mediagenerator
