@@ -246,13 +246,7 @@ SPRITIZE = {
     }
 }
 
-HAYSTACK_CONNECTIONS = {
-        'default': {
-        # For Xapian (requires the third-party install):
-        'ENGINE': 'xapian_backend.XapianEngine',
-        'PATH': os.path.join(ROOT_PATH, 'xapian_index'),
-    }
-}
+
 try:
     from local_settings import *
 except ImportError, e:
