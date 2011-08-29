@@ -15,6 +15,11 @@ body {
     font: 14px/1.5 "Lucida Grande", "Verdana", "Arial", sans-serif;
     color: #222;
 }
+
+
+
+
+
 .flash {
     background:url('../images/flash.png') no-repeat center center;
     position: fixed;
@@ -26,7 +31,7 @@ body {
 }
 
 #content {
-margin-top:90px;
+margin-top:80px;
 position: relative;
 }
 
@@ -40,7 +45,6 @@ position: relative;
 h1,h2, h3, h4, h5, h6, .hn {
     font-family: "Museo 300";
     font-weight: normal;
-    margin: 0;
     color: #333;
     text-shadow: rgba(255,255,255,.5) 0 1px 0;
 }
@@ -74,7 +78,8 @@ h2.a, h3.a {
     background: -webkit-linear-gradient(#6FA6DB, #2A71BA);
     background: linear-gradient(#6FA6DB, #2A71BA);
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6FA6DB), to(#2A71BA));
-    
+    background: -moz-linear-gradient(#6FA6DB, #2A71BA);
+
     border-radius: 2px;
     text-shadow: rgba(0,0,0,.5) 0 -1px 0;
     box-shadow: inset 0 -1px 0 rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.5), 0 1px 2px rgba(0,0,0,.25);

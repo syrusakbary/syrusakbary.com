@@ -54,9 +54,8 @@
                   %span metodico y modular
       
       %a.next Siguiente
-
 - block footer
-     #footer.container_16
+     #footer.container_16.intro-top
         .grid_5
             %h3.a contacta
             %ul.connections
@@ -70,18 +69,20 @@
                     %span.desc 
                       - filter trim|jsencode
                         %a{'href':'tel:+34625828486'} 625828468
-
+            .clear
         .grid_5
             %h3.a últimos artículos
-            %ul.last_posts
+            %ul.bullet
               -for entry in last_entries
                 %li
                     %a{'href':'{{entry.get_absolute_url()}}'}
-                      .title= entry.title
-                
+                      .title= entry.title|capitalize
+            .clear
         .grid_6.last_tweet
+             -#.box
              %h3.a twitter
-             %span.desc.tweet_timeline
+             %span.desc.tweet_timeline.linkable
+      .clear
 - block scripts
     = super()
     - include_media "js/main.js"
@@ -90,6 +91,6 @@
             avatar_size: 32,
             count: 1,
             username: "syrusakbary",
-            template: function(i){return '<a href="'+i["tweet_url"]+'">'+i["tweet_raw_text"]+'</a>'}
+            template: function(i){return i["tweet_text"]}
           });
           $('#contact').click(function(){$(this).addClass('active')});

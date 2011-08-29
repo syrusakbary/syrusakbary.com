@@ -201,6 +201,7 @@ MEDIA_BUNDLES = (
         'css/project.css',
         'css/contact.css'
     ),
+    ('css/new.css','css/new.css'),
     ('js/main.js',
         'js/jquery.transform.js',
         'js/jquery.tweet.js',

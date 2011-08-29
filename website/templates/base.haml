@@ -8,12 +8,15 @@
                     Syrus Akbary
             %meta{'property':"og:site_name",'content':"Syrus Akbary"}
             %meta{'property':"og:image",'content':'{{ media_url("images/logo128-black.png") }}'}
-            - include_media "css/all.css"
+            -block styles
+                - include_media "css/all.css"
+                - if True
+                    - include_media "css/new.css"
             -#<!--[if IE 8]>{{ css("css/ie.css") }}<![endif]-->#
             %link{'rel':"shortcut icon",'href':'{{ media_url("images/favicon.png") }}'}
     
     %body{'class':'{{body_class}}'}
-        .flash
+        -#.flash
     
         - block header
             #header

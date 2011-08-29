@@ -5,8 +5,7 @@
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), 0 1px 3px rgba(17, 37, 50, .25);
     -webkit-box-shadow:  inset 0 1px 0  rgba(255, 255, 255, .75), 0 1px 4px  rgba(17, 37, 50, .2);
 /*     box-shadow: 0 2px 3px rgba(0,0,0,.4);   */
-    -moz-box-shadow: inset 0 1px 0  rgba(255, 255, 255, .75), 0 1px 3px  rgba(17, 37, 50, .25);  
-
+    -moz-box-shadow: inset 0 1px 0  rgba(255, 255, 255, .75), 0 1px 3px  rgba(17, 37, 50, .25);
 }
 .date {
 	width: 40px;
@@ -170,7 +169,7 @@ margin-top: -2px;}
 hr {
 }
 
-a.tag{text-transform:lowercase; margin-right:4px;}a.tag.subtle{background-position:0 -69px;color:#fff;text-shadow:0 1px 1px rgba(0,0,0,0.2)}a.tag.subtle:before{background-position:0 -23px}a.tag.subtle:after{background-position:right -23px}a.tag,a.tag.subtle:hover{display:inline-block;position:relative;height:23px;line-height:22px;font-size:13px;color:#996839;margin-left:20px;text-decoration:none;text-shadow:0 1px 1px #fff5e2;font-weight:500;padding:0 6px 0 2px;}a.tag,a.tag.subtle:hover{background:url(../images/tag.png) 0 -46px repeat-x}a.tag:before,a.tag:after{content:'';top:0;bottom:0;display:block;position:absolute;background:url(../images/tag.png) 0 0 no-repeat}a.tag:before,a.tag:hover:before{width:20px;left:-20px;background-position:0 0}a.tag:after,a.tag:hover:after{width:4px;right:-4px;background-position:right 0}a.tag:active{top:1px}
+a.tag{text-transform:lowercase; margin-right:4px;}a.tag.subtle{background-position:0 -69px;color:#fff;text-shadow:0 1px 1px rgba(0,0,0,0.2)}a.tag.subtle:before{background-position:0 -23px}a.tag.subtle:after{background-position:right -23px}a.tag,a.tag.subtle:hover{display:inline-block;position:relative;height:23px;line-height:22px;font-size:13px;color:#EEE;margin-left:20px;text-decoration:none;text-shadow:0 1px -1px #666;font-weight:500;padding:0 6px 0 2px;}a.tag,a.tag.subtle:hover{background:url(../images/tag.png) 0 -46px repeat-x}a.tag:before,a.tag:after{content:'';top:0;bottom:0;display:block;position:absolute;background:url(../images/tag.png) 0 0 no-repeat}a.tag:before,a.tag:hover:before{width:20px;left:-20px;background-position:0 0}a.tag:after,a.tag:hover:after{width:4px;right:-4px;background-position:right 0}a.tag:active{top:1px}
 
 a.tag:active:before, a.tag.pin:before{background-position:0 -92px}
 
@@ -178,3 +177,4 @@ a.tag:active:before, a.tag.pin:before{background-position:0 -92px}
 display: inline;
 margin-right: .4em;
 }
+
