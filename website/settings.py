@@ -246,6 +246,7 @@ SPRITIZE = {
     }
 }
 
+HAYSTACK_CONNECTIONS = {}
 try:
     from local_settings import *
 except ImportError, e:
