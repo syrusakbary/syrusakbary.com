@@ -8,6 +8,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from slugify import slugify
 
 from taggit.managers import TaggableManager
+from markupfield.fields import MarkupField
 
 STATUS_DRAFT = 0
 STATUS_HIDDEN = 1
@@ -93,10 +94,11 @@ class Entry(Slugged):
                       (STATUS_PUBLISHED, _('published')))
     status = models.IntegerField(choices=STATUS_CHOICES, default=STATUS_DRAFT)
     tags = TaggableManager()
-    content = models.TextField(_("Content"))
+    #content = models.TextField(_("Content"))
     authors = models.ManyToManyField(User, verbose_name=_('authors'),
                                      related_name='entries',
                                      blank=True, null=False)
+    body = MarkupField(default_markup_type='restructuredtext')
     publish_date = models.DateTimeField(_("Published from"),
         help_text=_("With published checked, won't be shown until this time"),
         blank=True, null=True, auto_now_add=True)

@@ -1,5 +1,5 @@
 - load 'media','active'
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//{{ LANGUAGE_CODE }}">
+<!DOCTYPE html>
 %html{'xmlns':"http://www.w3.org/1999/xhtml",'lang':"{{ LANGUAGE_CODE }}"}
     %head
         - block head
@@ -39,7 +39,7 @@
                             %a{'href':'{{ url("opensource_list") }}','class':'{{"active" if active("opensource_list")}}'} Open Source
                         
                         %li
-                            %a{'href':'{{ url("about_me") }}','class':'{{"active" if active("about_me")}}'} Sobre mi
+                            %a{'href':'{{ url("about_me") }}','class':'{{"active" if active("about_me")}}'} Sobre mí
                         
                         %li
                             %a{'href':'{{ url("lab") }}','class':'{{"active" if active("lab")}}'} Lab

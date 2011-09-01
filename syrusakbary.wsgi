@@ -3,6 +3,7 @@ ROOT_PATH = os.path.dirname(__file__)
 
 sys.path.append(ROOT_PATH)
 sys.path.append(os.path.join(ROOT_PATH,'website/'))
+sys.path.append(os.path.join(ROOT_PATH,'../'))
 
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'

@@ -1,0 +1,312 @@
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7056 2011-06-17 10:50:48Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+.format-restructuredtext Default cascading style sheet for the HTML output of Docutils.
+
+.format-restructuredtext See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+.format-restructuredtext customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.format-restructuredtext .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+.format-restructuredtext table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.format-restructuredtext .first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.format-restructuredtext .last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.format-restructuredtext .hidden {
+  display: none }
+
+.format-restructuredtext a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+.format-restructuredtext blockquote.epigraph {
+  margin: 2em 5em ; }
+
+.format-restructuredtext dl.docutils dd {
+  margin-bottom: 0.5em }
+
+.format-restructuredtext object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+.format-restructuredtext dl.docutils dt {
+  font-weight: bold }
+*/
+
+.format-restructuredtext div.abstract {
+  margin: 2em 5em }
+
+.format-restructuredtext div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+.format-restructuredtext div.admonition, div.attention, div.caution, div.danger, div.error,
+.format-restructuredtext div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+.format-restructuredtext div.admonition p.admonition-title, div.hint p.admonition-title,
+.format-restructuredtext div.important p.admonition-title, div.note p.admonition-title,
+.format-restructuredtext div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+.format-restructuredtext div.attention p.admonition-title, div.caution p.admonition-title,
+.format-restructuredtext div.danger p.admonition-title, div.error p.admonition-title,
+.format-restructuredtext div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+.format-restructuredtext div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+.format-restructuredtext div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+.format-restructuredtext div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+.format-restructuredtext div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+.format-restructuredtext div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+.format-restructuredtext div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+.format-restructuredtext div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+.format-restructuredtext div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+.format-restructuredtext div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+.format-restructuredtext div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+.format-restructuredtext div.system-messages {
+  margin: 5em }
+
+.format-restructuredtext div.system-messages h1 {
+  color: red }
+
+.format-restructuredtext div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+.format-restructuredtext div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+.format-restructuredtext div.topic {
+  margin: 2em }
+
+.format-restructuredtext h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+.format-restructuredtext h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+.format-restructuredtext h1.title {
+  text-align: center }
+
+.format-restructuredtext h2.subtitle {
+  text-align: center }
+
+.format-restructuredtext hr.docutils {
+  width: 75% }
+
+.format-restructuredtext img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+.format-restructuredtext img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+.format-restructuredtext img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.format-restructuredtext .align-left {
+  text-align: left }
+
+.format-restructuredtext .align-center {
+  clear: both ;
+  text-align: center }
+
+.format-restructuredtext .align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+.format-restructuredtext div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.format-restructuredtext ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+.format-restructuredtext ol.arabic {
+  list-style: decimal }
+
+.format-restructuredtext ol.loweralpha {
+  list-style: lower-alpha }
+
+.format-restructuredtext ol.upperalpha {
+  list-style: upper-alpha }
+
+.format-restructuredtext ol.lowerroman {
+  list-style: lower-roman }
+
+.format-restructuredtext ol.upperroman {
+  list-style: upper-roman }
+
+.format-restructuredtext p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+.format-restructuredtext p.caption {
+  font-style: italic }
+
+.format-restructuredtext p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+.format-restructuredtext p.label {
+  white-space: nowrap }
+
+.format-restructuredtext p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+.format-restructuredtext p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+.format-restructuredtext p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+.format-restructuredtext p.topic-title {
+  font-weight: bold }
+
+.format-restructuredtext pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+.format-restructuredtext pre.literal-block, pre.doctest-block, pre.math {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+.format-restructuredtext span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+.format-restructuredtext span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+.format-restructuredtext span.interpreted {
+  font-family: sans-serif }
+
+.format-restructuredtext span.option {
+  white-space: nowrap }
+
+.format-restructuredtext span.pre {
+  white-space: pre }
+
+.format-restructuredtext span.problematic {
+  color: red }
+
+.format-restructuredtext span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+.format-restructuredtext table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+.format-restructuredtext table.docinfo {
+  margin: 2em 4em }
+
+.format-restructuredtext table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+.format-restructuredtext table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+.format-restructuredtext table.docutils td, table.docutils th,
+.format-restructuredtext table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+.format-restructuredtext table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+.format-restructuredtext h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+.format-restructuredtext h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+.format-restructuredtext ul.auto-toc {
+  list-style-type: none }
+
+.format-restructuredtext ul {
+list-style-type: disc;
+padding-left:40px;
+}
+.format-restructuredtext ul li {
+  list-style:disc;
+}
+

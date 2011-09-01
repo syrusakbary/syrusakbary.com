@@ -199,19 +199,23 @@ MEDIA_BUNDLES = (
         'css/footer.css',
         'css/blog.css',
         'css/project.css',
-        'css/contact.css'
+        'css/contact.css',
+        'css/portfolio.css',
+        'css/rst.css'
     ),
     ('css/new.css','css/new.css'),
     ('js/main.js',
         'js/jquery.transform.js',
         'js/jquery.tweet.js',
         'js/jquery.effects.core.js',
+        'js/modernizr.js',
         'js/pages.main.js'
     ),
     #('js/page.js',
     #    'js/jquery.tweet.js'
     #),
 )
+#COPY_MEDIA_FILETYPES = ('gif', 'jpg', 'jpeg', 'png', 'svg', 'svgz', 'ico', 'swf', 'ttf', 'otf', 'eot','woff')
 
 GLOBAL_MEDIA_DIRS = (
     os.path.join(ROOT_PATH,'../static/media'),
@@ -221,6 +225,7 @@ GLOBAL_MEDIA_DIRS = (
 MEDIA_DEV_MODE = True
 DEV_MEDIA_URL = '/devmedia/'
 PRODUCTION_MEDIA_URL = '/media/'
+
 
 YUICOMPRESSOR_PATH = os.path.join(
     ROOT_PATH, '../yuicompressor-2.4.6.jar')
