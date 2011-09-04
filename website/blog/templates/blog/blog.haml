@@ -8,7 +8,7 @@
                     -#   %span.month {{article.publish_date|date("M")}}
                     .article-body.box
                         %h2.title
-                            %a{'href':'{{entry.get_absolute_url()}}'}= entry.title|capitalize
+                            %a{'href':'{{entry.get_absolute_url()}}'}= entry.title|capfirst
                         -#.meta
                             -#%span.published Publicado el {{entry.publish_date|date("d \de F \d\e Y | H:i")}}
                             -#.share

@@ -103,7 +103,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'mediagenerator.middleware.MediaMiddleware',
-    #'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -190,6 +190,7 @@ LOGGING = {
 MEDIA_BUNDLES = (
     ('css/all.css',
         'css/960.css',
+        'css/shadows.css',
         'css/reset.css',
         'css/text.css',
         'css/fonts.css',
@@ -203,7 +204,6 @@ MEDIA_BUNDLES = (
         'css/portfolio.css',
         'css/rst.css'
     ),
-    ('css/new.css','css/new.css'),
     ('js/main.js',
         'js/jquery.transform.js',
         'js/jquery.tweet.js',
@@ -239,7 +239,7 @@ JINJA2_ENVIRONMENT_OPTIONS = {
     'autoescape': False,
 }
 JINJA2_EXTENSIONS = (
-    'jinja2.ext.autoescape',
+#    'jinja2.ext.autoescape',
     'djinja.template.extensions.haml',
     'mediagenerator.contrib.jinja2ext.MediaExtension'
 )
@@ -249,6 +249,10 @@ SPRITIZE = {
     'SPRITES': {
         'css/sprites.css': ['images/sprite1.png']
     }
+}
+
+RESTRUCTUREDTEXT_FILTER_SETTINGS = {
+    'initial_header_level':3
 }
 
 

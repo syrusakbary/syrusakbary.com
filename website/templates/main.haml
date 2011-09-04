@@ -76,7 +76,7 @@
               -for entry in last_entries
                 %li
                     %a{'href':'{{entry.get_absolute_url()}}'}
-                      .title= entry.title|capitalize
+                      .title= entry.title|capfirst
             .clear
         .grid_6.last_tweet
              -#.box

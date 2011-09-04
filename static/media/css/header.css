@@ -13,7 +13,9 @@
     z-index: 1000;
     top:0;
 /*    position:fixed;
-*/}
+*/
+  height:44px;
+}
 #header .wrapper {
 }
 #logo {
@@ -38,7 +40,7 @@
     color: #FFF;
     opacity: .75;
     font-size: 17px;
-    padding: 15px 13px 11px;
+    padding: 13px 13px 11px;
     text-shadow: #000 0px -1px 1px;
 /*     background: black; */
     display: block;

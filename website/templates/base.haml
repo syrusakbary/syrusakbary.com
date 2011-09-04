@@ -10,8 +10,6 @@
             %meta{'property':"og:image",'content':'{{ media_url("images/logo128-black.png") }}'}
             -block styles
                 - include_media "css/all.css"
-                - if True
-                    - include_media "css/new.css"
             -#<!--[if IE 8]>{{ css("css/ie.css") }}<![endif]-->#
             %link{'rel':"shortcut icon",'href':'{{ media_url("images/favicon.png") }}'}
     
