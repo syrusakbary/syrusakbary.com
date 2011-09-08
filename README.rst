@@ -21,9 +21,14 @@ Para correr la web tu propio servidor tienes que seguir estos pasos:
 
 	pip install -r requirements.pip
 
-#. Instalar el módulo de MySQL para Python (en el caso de no tenerlo instalado)::
+#. Instalar el servidor de MySQL y sus bindings para Python (en el caso de no tenerlo instalado)::
 
-	pip install mysql-python
+	sudo apt-get install mysql-server python-mysqldb
+
+#. Crear la base de datos que luego utilizaremos::
+
+	mysql> CREATE DATABASE {Nombre de la Base de Datos};
+
 
 #. Crear el archivo local_settings.py en la carpeta website que defina las variables de entorno (BBDD). Ejemplo::
 
@@ -42,10 +47,6 @@ Para correr la web tu propio servidor tienes que seguir estos pasos:
 #. Sincronizar la base de datos::
 
 	python manage.py syncdb
-
-#. Generar los archivos js y css::
-
-	python manage.py generatemedia
 
 #. Ejecutar el servidor::
 
