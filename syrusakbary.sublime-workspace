@@ -92,210 +92,10 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/blog.haml",
-			"settings":
-			{
-				"buffer_size": 4116,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/static/media/css/blog.css",
-			"settings":
-			{
-				"buffer_size": 3956,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/projects/templates/projects/project_list.haml",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/entrysearch_list.haml",
-			"settings":
-			{
-				"buffer_size": 197,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/entry_detail.haml",
-			"settings":
-			{
-				"buffer_size": 429,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/static/media/css/main.css",
-			"settings":
-			{
-				"buffer_size": 4471,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/opensource/templates/opensource/opensource_list.haml",
-			"settings":
-			{
-				"buffer_size": 727,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/templates/main.haml",
-			"settings":
-			{
-				"buffer_size": 2791,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "/Users/syrus/Sites/syrusakbary/static/media/css/footer.css",
 			"settings":
 			{
-				"buffer_size": 1192,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/opensource/views.py",
-			"settings":
-			{
-				"buffer_size": 930,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/opensource/admin.py",
-			"settings":
-			{
-				"buffer_size": 84,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/blog/models.py",
-			"settings":
-			{
-				"buffer_size": 4106,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/opensource/models.py",
-			"settings":
-			{
-				"buffer_size": 459,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/blog/urls.py",
-			"settings":
-			{
-				"buffer_size": 365,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/static/media/css/header.css",
-			"settings":
-			{
-				"buffer_size": 1486,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/templates/about_me.haml",
-			"settings":
-			{
-				"buffer_size": 2978,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/templates/base.haml",
-			"settings":
-			{
-				"buffer_size": 3432,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/static/media/css/new.css",
-			"settings":
-			{
-				"buffer_size": 7372,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/settings.py",
-			"settings":
-			{
-				"buffer_size": 8224,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/static/media/css/fonts.css",
-			"settings":
-			{
-				"buffer_size": 47896,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/static/media/js/jquery.tweet.js",
-			"settings":
-			{
-				"buffer_size": 12667,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/static/media/css/project.css",
-			"settings":
-			{
-				"buffer_size": 811,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/fabfile.py",
-			"settings":
-			{
-				"buffer_size": 2786,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/requirements.pip",
-			"settings":
-			{
-				"buffer_size": 394,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/README.rst",
-			"settings":
-			{
-				"buffer_size": 1800,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/.gitignore",
-			"settings":
-			{
-				"buffer_size": 211,
+				"buffer_size": 1119,
 				"line_ending": "Unix"
 			}
 		},
@@ -303,56 +103,39 @@
 			"file": "/Users/syrus/Sites/syrusakbary/website/local_settings.py",
 			"settings":
 			{
-				"buffer_size": 1070,
+				"buffer_size": 1096,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/syrus/Sites/syrusakbary/syrusakbary.wsgi",
+			"file": "/Users/syrus/Sites/syrusakbary/website/blog/views.py",
 			"settings":
 			{
-				"buffer_size": 373,
+				"buffer_size": 3596,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "# encoding: utf-8\nimport datetime\nfrom south.db import db\nfrom south.v2 import SchemaMigration\nfrom django.db import models\n\nclass Migration(SchemaMigration):\n\n    def forwards(self, orm):\n        \n        # Adding model 'Entry'\n        db.create_table('blog_entry', (\n            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),\n            ('title', self.gf('django.db.models.fields.CharField')(max_length=100)),\n            ('slug', self.gf('django.db.models.fields.CharField')(max_length=100, unique=True, null=True, blank=True)),\n            ('status', self.gf('django.db.models.fields.IntegerField')(default=0)),\n            ('content', self.gf('django.db.models.fields.TextField')()),\n            ('body', self.gf('markupfield.fields.MarkupField')(rendered_field=True)),\n            ('body_markup_type', self.gf('django.db.models.fields.CharField')(default='restructuredtext', max_length=30)),\n            ('publish_date', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, null=True, blank=True)),\n            ('_body_rendered', self.gf('django.db.models.fields.TextField')()),\n        ))\n        db.send_create_signal('blog', ['Entry'])\n\n        # Adding M2M table for field authors on 'Entry'\n        db.create_table('blog_entry_authors', (\n            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),\n            ('entry', models.ForeignKey(orm['blog.entry'], null=False)),\n            ('user', models.ForeignKey(orm['auth.user'], null=False))\n        ))\n        db.create_unique('blog_entry_authors', ['entry_id', 'user_id'])\n\n\n    def backwards(self, orm):\n        \n        # Deleting model 'Entry'\n        db.delete_table('blog_entry')\n\n        # Removing M2M table for field authors on 'Entry'\n        db.delete_table('blog_entry_authors')\n\n\n    models = {\n        'auth.group': {\n            'Meta': {'object_name': 'Group'},\n            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),\n            'name': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '80'}),\n            'permissions': ('django.db.models.fields.related.ManyToManyField', [], {'to': \"orm['auth.Permission']\", 'symmetrical': 'False', 'blank': 'True'})\n        },\n        'auth.permission': {\n            'Meta': {'ordering': \"('content_type__app_label', 'content_type__model', 'codename')\", 'unique_together': \"(('content_type', 'codename'),)\", 'object_name': 'Permission'},\n            'codename': ('django.db.models.fields.CharField', [], {'max_length': '100'}),\n            'content_type': ('django.db.models.fields.related.ForeignKey', [], {'to': \"orm['contenttypes.ContentType']\"}),\n            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),\n            'name': ('django.db.models.fields.CharField', [], {'max_length': '50'})\n        },\n        'auth.user': {\n            'Meta': {'object_name': 'User'},\n            'date_joined': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime.now'}),\n            'email': ('django.db.models.fields.EmailField', [], {'max_length': '75', 'blank': 'True'}),\n            'first_name': ('django.db.models.fields.CharField', [], {'max_length': '30', 'blank': 'True'}),\n            'groups': ('django.db.models.fields.related.ManyToManyField', [], {'to': \"orm['auth.Group']\", 'symmetrical': 'False', 'blank': 'True'}),\n            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),\n            'is_active': ('django.db.models.fields.BooleanField', [], {'default': 'True'}),\n            'is_staff': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),\n            'is_superuser': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),\n            'last_login': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime.now'}),\n            'last_name': ('django.db.models.fields.CharField', [], {'max_length': '30', 'blank': 'True'}),\n            'password': ('django.db.models.fields.CharField', [], {'max_length': '128'}),\n            'user_permissions': ('django.db.models.fields.related.ManyToManyField', [], {'to': \"orm['auth.Permission']\", 'symmetrical': 'False', 'blank': 'True'}),\n            'username': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '30'})\n        },\n        'blog.entry': {\n            'Meta': {'ordering': \"('title',)\", 'object_name': 'Entry'},\n            '_body_rendered': ('django.db.models.fields.TextField', [], {}),\n            'authors': ('django.db.models.fields.related.ManyToManyField', [], {'symmetrical': 'False', 'related_name': \"'entries'\", 'blank': 'True', 'to': \"orm['auth.User']\"}),\n            'body': ('markupfield.fields.MarkupField', [], {'rendered_field': 'True'}),\n            'body_markup_type': ('django.db.models.fields.CharField', [], {'default': \"'restructuredtext'\", 'max_length': '30'}),\n            'content': ('django.db.models.fields.TextField', [], {}),\n            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),\n            'publish_date': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'null': 'True', 'blank': 'True'}),\n            'slug': ('django.db.models.fields.CharField', [], {'max_length': '100', 'unique': 'True', 'null': 'True', 'blank': 'True'}),\n            'status': ('django.db.models.fields.IntegerField', [], {'default': '0'}),\n            'title': ('django.db.models.fields.CharField', [], {'max_length': '100'})\n        },\n        'contenttypes.contenttype': {\n            'Meta': {'ordering': \"('name',)\", 'unique_together': \"(('app_label', 'model'),)\", 'object_name': 'ContentType', 'db_table': \"'django_content_type'\"},\n            'app_label': ('django.db.models.fields.CharField', [], {'max_length': '100'}),\n            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),\n            'model': ('django.db.models.fields.CharField', [], {'max_length': '100'}),\n            'name': ('django.db.models.fields.CharField', [], {'max_length': '100'})\n        },\n        'taggit.tag': {\n            'Meta': {'object_name': 'Tag'},\n            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),\n            'name': ('django.db.models.fields.CharField', [], {'max_length': '100'}),\n            'slug': ('django.db.models.fields.SlugField', [], {'unique': 'True', 'max_length': '100', 'db_index': 'True'})\n        },\n        'taggit.taggeditem': {\n            'Meta': {'object_name': 'TaggedItem'},\n            'content_type': ('django.db.models.fields.related.ForeignKey', [], {'related_name': \"'taggit_taggeditem_tagged_items'\", 'to': \"orm['contenttypes.ContentType']\"}),\n            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),\n            'object_id': ('django.db.models.fields.IntegerField', [], {'db_index': 'True'}),\n            'tag': ('django.db.models.fields.related.ForeignKey', [], {'related_name': \"'taggit_taggeditem_items'\", 'to': \"orm['taggit.Tag']\"})\n        }\n    }\n\n    complete_apps = ['blog']\n",
-			"file": "/Users/syrus/Sites/syrusakbary/website/blog/migrations/0001_initial.py",
+			"file": "/Users/syrus/Sites/syrusakbary/website/settings.py",
 			"settings":
 			{
-				"buffer_size": 7114,
+				"buffer_size": 8212,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/syrus/Sites/syrusakbary/static/media/css/rst.css",
+			"file": "/Users/syrus/Sites/syrusakbary/requirements.pip",
 			"settings":
 			{
-				"buffer_size": 8268,
+				"buffer_size": 468,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/syrus/Sites/syrusakbary/static/media/css/text.css",
+			"file": "/Users/syrus/Sites/syrusakbary/website/blog/models.py",
 			"settings":
 			{
-				"buffer_size": 994,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/website/templates/portfolio.haml",
-			"settings":
-			{
-				"buffer_size": 277,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/syrus/Sites/syrusakbary/static/media/css/portfolio.css",
-			"settings":
-			{
-				"buffer_size": 201,
+				"buffer_size": 4080,
 				"line_ending": "Unix"
 			}
 		}
@@ -381,38 +164,57 @@
 	},
 	"file_history":
 	[
+		"/Users/syrus/Sites/syrusakbary/static/media/css/portfolio.css",
+		"/Users/syrus/Sites/syrusakbary/website/templates/portfolio.haml",
+		"/Users/syrus/Sites/syrusakbary/static/media/css/text.css",
+		"/Users/syrus/Sites/syrusakbary/static/media/css/rst.css",
+		"/Users/syrus/Sites/syrusakbary/website/blog/migrations/0001_initial.py",
+		"/Users/syrus/Sites/syrusakbary/syrusakbary.wsgi",
+		"/Users/syrus/Sites/syrusakbary/website/local_settings.py",
+		"/Users/syrus/Sites/syrusakbary/.gitignore",
+		"/Users/syrus/Sites/syrusakbary/README.rst",
+		"/Users/syrus/Sites/syrusakbary/requirements.pip",
+		"/Users/syrus/Sites/syrusakbary/fabfile.py",
+		"/Users/syrus/Sites/syrusakbary/static/media/css/project.css",
+		"/Users/syrus/Sites/syrusakbary/static/media/js/jquery.tweet.js",
+		"/Users/syrus/Sites/syrusakbary/static/media/css/fonts.css",
+		"/Users/syrus/Sites/syrusakbary/website/settings.py",
+		"/Users/syrus/Sites/syrusakbary/static/media/css/shadows.css",
+		"/Users/syrus/Sites/syrusakbary/static/media/css/new.css",
+		"/Users/syrus/Sites/syrusakbary/website/templates/base.haml",
+		"/Users/syrus/Sites/syrusakbary/website/templates/about_me.haml",
+		"/Users/syrus/Sites/syrusakbary/static/media/css/header.css",
+		"/Users/syrus/Sites/syrusakbary/website/blog/urls.py",
+		"/Users/syrus/Sites/syrusakbary/website/opensource/models.py",
+		"/Users/syrus/Sites/syrusakbary/website/blog/models.py",
+		"/Users/syrus/Sites/syrusakbary/website/opensource/admin.py",
+		"/Users/syrus/Sites/syrusakbary/website/opensource/views.py",
+		"/Users/syrus/Sites/syrusakbary/static/media/css/footer.css",
+		"/Users/syrus/Sites/syrusakbary/website/templates/main.haml",
+		"/Users/syrus/Sites/syrusakbary/website/opensource/templates/opensource/opensource_list.haml",
+		"/Users/syrus/Sites/syrusakbary/static/media/css/main.css",
+		"/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/entry_detail.haml",
+		"/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/entrysearch_list.haml",
+		"/Users/syrus/Sites/syrusakbary/website/projects/templates/projects/project_list.haml",
+		"/Users/syrus/Sites/syrusakbary/static/media/css/blog.css",
+		"/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/blog.haml",
 		"/Users/syrus/Sites/syrusakbary/requirements.txt",
 		"/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/entry_list.haml",
 		"/Users/syrus/Sites/syrusakbary/website/blog/templatetags/blog.py",
 		"/Users/syrus/Sites/syrusakbary/website/blog/templatetags/__init__.py",
 		"/Users/syrus/Sites/syrusakbary/website/blog/views.py",
-		"/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/entrysearch_list.haml",
-		"/Users/syrus/Sites/syrusakbary/website/settings.py",
 		"/Users/syrus/Sites/syrusakbary/website/blog/templates/search/indexes/blog/entry_text.txt",
 		"/Users/syrus/Sites/syrusakbary/website/blog/search_indexes.py",
-		"/Users/syrus/Sites/syrusakbary/website/local_settings.py",
 		"/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/entry.html",
-		"/Users/syrus/Sites/syrusakbary/website/opensource/templates/opensource/opensource_list.haml",
-		"/Users/syrus/Sites/syrusakbary/static/media/css/main.css",
-		"/Users/syrus/Sites/syrusakbary/website/templates/about_me.haml",
-		"/Users/syrus/Sites/syrusakbary/website/opensource/models.py",
 		"/Users/syrus/Sites/syrusakbary/website/templates/lab.haml",
-		"/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/entry_detail.haml",
-		"/Users/syrus/Sites/syrusakbary/website/blog/urls.py",
-		"/Users/syrus/Sites/syrusakbary/website/blog/models.py",
-		"/Users/syrus/Sites/syrusakbary/website/templates/main.haml",
 		"/Users/syrus/Sites/syrusakbary/website/urls.py",
-		"/Users/syrus/Sites/syrusakbary/website/templates/base.haml",
 		"/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/explore.haml",
 		"/Users/syrus/Sites/syrusakbary/website/views.py",
 		"/Users/syrus/Sites/syrusakbary/website/opensource/urls.py",
-		"/Users/syrus/Sites/syrusakbary/website/opensource/views.py",
 		"/Users/syrus/Sites/syrusakbary/website/projects/urls.py",
 		"/Users/syrus/Sites/syrusakbary/website/blog/admin.py",
 		"/Users/syrus/Sites/mediante/settings.py",
-		"/Users/syrus/Sites/syrusakbary/static/media/css/header.css",
 		"/Users/syrus/Proyectos/mediante.com/website/settings.py",
-		"/Users/syrus/Sites/syrusakbary/.gitignore",
 		"/Users/syrus/Downloads/jinja.vim",
 		"/Users/syrus/Sites/exercita/website/documents/admin.py",
 		"/Users/syrus/Sites/exercita/website/documents/forms.py",
@@ -452,6 +254,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"haystack",
+			"SearchQuerySet",
+			"debug_tool",
 			" #4283D1",
 			"#54AAF1",
 			".format-rst",
@@ -491,27 +296,28 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/blog.haml",
+					"file": "/Users/syrus/Sites/syrusakbary/static/media/css/footer.css",
 					"settings":
 					{
-						"buffer_size": 4116,
+						"buffer_size": 1119,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								442,
-								442
+								269,
+								271
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -523,105 +329,107 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/Users/syrus/Sites/syrusakbary/static/media/css/blog.css",
+					"file": "/Users/syrus/Sites/syrusakbary/website/local_settings.py",
 					"settings":
 					{
-						"buffer_size": 3956,
+						"buffer_size": 1096,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1472,
-								1534
+								1096,
+								1096
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/Python/Python.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 756,
+						"translation.y": 0,
 						"zoom_level": 1
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/Users/syrus/Sites/syrusakbary/website/projects/templates/projects/project_list.haml",
+					"file": "/Users/syrus/Sites/syrusakbary/website/blog/views.py",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 3596,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1232,
+								1232
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"syntax": "Packages/Python/Python.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 0,
+						"translation.y": 50,
 						"zoom_level": 1
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/entrysearch_list.haml",
+					"file": "/Users/syrus/Sites/syrusakbary/website/settings.py",
 					"settings":
 					{
-						"buffer_size": 197,
+						"buffer_size": 8212,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								142,
-								142
+								4326,
+								4326
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 0,
+						"translation.y": 1411,
 						"zoom_level": 1
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/entry_detail.haml",
+					"file": "/Users/syrus/Sites/syrusakbary/requirements.pip",
 					"settings":
 					{
-						"buffer_size": 429,
+						"buffer_size": 468,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								261,
-								261
+								468,
+								468
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0,
 						"translation.y": 0,
@@ -631,182 +439,18 @@
 				},
 				{
 					"buffer": 5,
-					"file": "/Users/syrus/Sites/syrusakbary/static/media/css/main.css",
-					"settings":
-					{
-						"buffer_size": 4471,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1330,
-								1330
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 776,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/Users/syrus/Sites/syrusakbary/website/opensource/templates/opensource/opensource_list.haml",
-					"settings":
-					{
-						"buffer_size": 727,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								727,
-								727
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/Users/syrus/Sites/syrusakbary/website/templates/main.haml",
-					"settings":
-					{
-						"buffer_size": 2791,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1040,
-								1040
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/Users/syrus/Sites/syrusakbary/static/media/css/footer.css",
-					"settings":
-					{
-						"buffer_size": 1192,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								414,
-								444
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/Users/syrus/Sites/syrusakbary/website/opensource/views.py",
-					"settings":
-					{
-						"buffer_size": 930,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								782,
-								782
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/Users/syrus/Sites/syrusakbary/website/opensource/admin.py",
-					"settings":
-					{
-						"buffer_size": 84,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								84,
-								84
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
 					"file": "/Users/syrus/Sites/syrusakbary/website/blog/models.py",
 					"settings":
 					{
-						"buffer_size": 4106,
+						"buffer_size": 4080,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								332,
-								350
+								2941,
+								2941
 							]
 						],
 						"settings":
@@ -814,575 +458,6 @@
 							"syntax": "Packages/Python/Python.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "/Users/syrus/Sites/syrusakbary/website/opensource/models.py",
-					"settings":
-					{
-						"buffer_size": 459,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								204,
-								215
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "/Users/syrus/Sites/syrusakbary/website/blog/urls.py",
-					"settings":
-					{
-						"buffer_size": 365,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "/Users/syrus/Sites/syrusakbary/static/media/css/header.css",
-					"settings":
-					{
-						"buffer_size": 1486,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								586,
-								608
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "/Users/syrus/Sites/syrusakbary/website/templates/about_me.haml",
-					"settings":
-					{
-						"buffer_size": 2978,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1384,
-								1429
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "/Users/syrus/Sites/syrusakbary/website/templates/base.haml",
-					"settings":
-					{
-						"buffer_size": 3432,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2798,
-								2798
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "/Users/syrus/Sites/syrusakbary/static/media/css/new.css",
-					"settings":
-					{
-						"buffer_size": 7372,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								456,
-								264
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "/Users/syrus/Sites/syrusakbary/website/settings.py",
-					"settings":
-					{
-						"buffer_size": 8224,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8086,
-								8106
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 2425,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "/Users/syrus/Sites/syrusakbary/static/media/css/fonts.css",
-					"settings":
-					{
-						"buffer_size": 47896,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								24371,
-								24371
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0,
-						"translation.y": 2161,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "/Users/syrus/Sites/syrusakbary/static/media/js/jquery.tweet.js",
-					"settings":
-					{
-						"buffer_size": 12667,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3389,
-								3389
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 1812,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 21,
-					"file": "/Users/syrus/Sites/syrusakbary/static/media/css/project.css",
-					"settings":
-					{
-						"buffer_size": 811,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								638,
-								662
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 22,
-					"file": "/Users/syrus/Sites/syrusakbary/fabfile.py",
-					"settings":
-					{
-						"buffer_size": 2786,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								558,
-								573
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 23,
-					"file": "/Users/syrus/Sites/syrusakbary/requirements.pip",
-					"settings":
-					{
-						"buffer_size": 394,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								329,
-								340
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 24,
-					"file": "/Users/syrus/Sites/syrusakbary/README.rst",
-					"settings":
-					{
-						"buffer_size": 1800,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1587,
-								1587
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/RestructuredText/reStructuredText.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 25,
-					"file": "/Users/syrus/Sites/syrusakbary/.gitignore",
-					"settings":
-					{
-						"buffer_size": 211,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								211,
-								211
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 26,
-					"file": "/Users/syrus/Sites/syrusakbary/website/local_settings.py",
-					"settings":
-					{
-						"buffer_size": 1070,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1070,
-								1070
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 27,
-					"file": "/Users/syrus/Sites/syrusakbary/syrusakbary.wsgi",
-					"settings":
-					{
-						"buffer_size": 373,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								184,
-								184
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 28,
-					"file": "/Users/syrus/Sites/syrusakbary/website/blog/migrations/0001_initial.py",
-					"settings":
-					{
-						"buffer_size": 7114,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2901,
-								2901
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 29,
-					"file": "/Users/syrus/Sites/syrusakbary/static/media/css/rst.css",
-					"settings":
-					{
-						"buffer_size": 8268,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8072,
-								8072
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 3126,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 30,
-					"file": "/Users/syrus/Sites/syrusakbary/static/media/css/text.css",
-					"settings":
-					{
-						"buffer_size": 994,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								988,
-								988
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 31,
-					"file": "/Users/syrus/Sites/syrusakbary/website/templates/portfolio.haml",
-					"settings":
-					{
-						"buffer_size": 277,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								277,
-								277
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 32,
-					"file": "/Users/syrus/Sites/syrusakbary/static/media/css/portfolio.css",
-					"settings":
-					{
-						"buffer_size": 201,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								93,
-								93
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0,
 						"translation.y": 0,

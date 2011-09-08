@@ -32,7 +32,7 @@ class PublishedManager(Manager):
         return super(PublishedManager, self).get_query_set().filter(
             Q(publish_date__lte=datetime.now()) | Q(publish_date__isnull=True),
 #            Q(expiry_date__gte=datetime.now()) | Q(expiry_date__isnull=True),
-            Q(status=STATUS_PUBLISHED))
+            Q(status=STATUS_PUBLISHED)).order_by('-publish_date')
 
     # def get_by_natural_key(self, slug):
     #     return self.get(slug=slug)
@@ -43,7 +43,7 @@ class Slugged(models.Model):
     """
 
     title = models.CharField(_("title"), max_length=100)
-    slug = models.CharField(_("slug"), max_length=100, blank=True, null=True,unique=True)
+    slug = models.CharField(_("slug"), max_length=100, blank=True, null=True) #,unique=True
 
     class Meta:
         abstract = True
@@ -56,25 +56,26 @@ class Slugged(models.Model):
         """
         Create a unique slug by appending an index.
         """
-        if not self.slug and self.status == STATUS_PUBLISHED:
-            # For custom content types, use the ``Page`` instance for
-            # slug lookup.
-            self.slug = self.get_slug()
-        concrete_model = base_concrete_model(Slugged, self)
-        i = 0
-        while True:
-            if i > 0:
-                if i > 1:
-                    self.slug = self.slug.rsplit("-", 1)[0]
-                self.slug = "%s-%s" % (self.slug, i)
-            qs = concrete_model.objects.all()
-            if self.id is not None:
-                qs = qs.exclude(id=self.id)
-            try:
-                qs.get(slug=self.slug)
-            except ObjectDoesNotExist:
-                break
-            i += 1
+        if self.status == STATUS_PUBLISHED:
+            if not self.publish_date:
+                self.publish_date = datetime.now()
+            if not self.slug:
+                self.slug = self.get_slug()
+            concrete_model = base_concrete_model(Slugged, self)
+            i = 0
+            while True:
+                if i > 0:
+                    if i > 1:
+                        self.slug = self.slug.rsplit("-", 1)[0]
+                    self.slug = "%s-%s" % (self.slug, i)
+                qs = concrete_model.objects.all()
+                if self.id is not None:
+                    qs = qs.exclude(id=self.id)
+                try:
+                    qs.get(slug=self.slug)
+                except ObjectDoesNotExist:
+                    break
+                i += 1
         super(Slugged, self).save(*args, **kwargs)
 
     def natural_key(self):
@@ -89,6 +90,9 @@ class Slugged(models.Model):
 
 class Entry(Slugged):
     # ... fields here
+    class Meta:
+        ordering = ("-publish_date",)
+
     STATUS_CHOICES = ((STATUS_DRAFT, _('draft')),
                       (STATUS_HIDDEN, _('hidden')),
                       (STATUS_PUBLISHED, _('published')))
@@ -101,7 +105,7 @@ class Entry(Slugged):
     body = MarkupField(default_markup_type='restructuredtext')
     publish_date = models.DateTimeField(_("Published from"),
         help_text=_("With published checked, won't be shown until this time"),
-        blank=True, null=True, auto_now_add=True)
+        blank=True, null=True)
     # expiry_date = models.DateTimeField(_("Expires on"),
     #     help_text=_("With published checked, won't be shown after this time"),
     #     blank=True, null=True)
@@ -109,7 +113,8 @@ class Entry(Slugged):
     published = PublishedManager()
     def __unicode__ (self):
         return self.title
-    
+
+
     @models.permalink
     def get_absolute_url(self):
         return ('entry_detail',(),{'slug':self.slug})

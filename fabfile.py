@@ -11,8 +11,8 @@ def commit():
 def push():
     local("git push origin master")
             
-def createfixtures():
-    for app in ['opensource']:
+def createfixtures(*args):
+    for app in args:
         local('mkdir -p website/%(app)s/fixtures/'%{'app':app})
         local("python manage.py dumpdata %(app)s > website/%(app)s/fixtures/initial_data.json"%{'app':app})
 

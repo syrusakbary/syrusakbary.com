@@ -227,8 +227,7 @@ DEV_MEDIA_URL = '/devmedia/'
 PRODUCTION_MEDIA_URL = '/media/'
 
 
-YUICOMPRESSOR_PATH = os.path.join(
-    ROOT_PATH, '../yuicompressor-2.4.6.jar')
+YUICOMPRESSOR_PATH = os.path.join(ROOT_PATH, '../yuicompressor-2.4.6.jar')
 if os.path.exists(YUICOMPRESSOR_PATH):
     ROOT_MEDIA_FILTERS = {
         'js': 'mediagenerator.filters.yuicompressor.YUICompressor',
@@ -254,6 +253,7 @@ SPRITIZE = {
 RESTRUCTUREDTEXT_FILTER_SETTINGS = {
     'initial_header_level':3
 }
+
 
 
 try:
