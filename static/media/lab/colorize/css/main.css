@@ -1,89 +1,120 @@
-html, body {
-  height: 100%;
-  margin: 0;
+html,
+body {
+    height: 100%;
+    margin: 0;
 }
 body {
-  color: #fff;
-  font: 10pt 'Droid Sans', Arial;
-  background: #333;
+    color: #fff;
+    font: 10pt 'Droid Sans', Arial;
+    background: #333;
 }
-.hover #box {
-    -webkit-box-shadow: 0px 0px 25px rgba(255,0,0,.8);
-}
-
+.hover #box { -webkit-box-shadow: 0px 0px 25px rgba(255,0,0,.8) }
 #box {
-  width: 400px;
-  height:400px;
-  background:#000;
-/*  border:1px solid black;
-border-radius: 40px 0 40px 0;*/
+    width: 400px;
+    height: 400px;
+    background: #000;
     -webkit-box-shadow: 0px 0px 25px rgba(0,0,0,.7);
-    
-    overflow:hidden;
-    position:relative;
-    border:1px solid black;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid black;
+}
+#box.loading canvas { display: none }
+#box .spinner {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -24px 0 0 -24px;
+    height: 48px;
+    width: 48px;
+    text-indent: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #999;
+    -webkit-mask-image: url(../images/spinner.png);
+    -webkit-animation-name: spinnerRotate;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+#box.loading .spinner { display: block }
+.playorpause {
+    float: left;
+    clear: both;
+    margin-left: 200px;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #555;
+    text-shadow: 0 0 2px #00;
+    bottom: 2px;
+    left: 4px;
 }
 .options {
     -webkit-transition: all .2s linear;
-    margin-right:20px;
-    width:200px;
-    height:400px;
-    font-size:16px;
-    color:#CCC;
-    bottom:100%;
-    text-shadow:0px 1px 0 #000;
-    float:left;
+    margin-right: 20px;
+    width: 180px;
+    height: 400px;
+    font-size: 16px;
+    color: #CCC;
+    bottom: 100%;
+    text-shadow: 0px 1px 0 #000;
+    float: left;
 }
-.logo {
-text-align:center;
-}
+.logo { text-align: center }
 #logo {
-  width:320px;
-  margin-bottom:40px;
-  margin-top:20px;
+    width: 320px;
+    margin-bottom: 40px;
+    margin-top: 20px;
 }
 #fft {
-    width:400px;
-    height:400px;
-
-    }
-
+    width: 400px;
+    height: 400px;
+}
 h1 {
-
-text-align:center;
-margin-top:50px;
-margin-bottom:-50px;
-text-shadow:0px -1px 0 #000;
-font-weight:normal;
-    }
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: -50px;
+    text-shadow: 0px -1px 0 #000;
+    font-weight: normal;
+}
 #container {
-  display: -webkit-box;
-  -webkit-box-align: center;
-  -webkit-box-pack: center;
-  height: 100%;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    height: 100%;
 }
-
 #speech {
--webkit-appearance: none;
-background: none;
-border: none;
-font-size: 16px;
-border-bottom: 1px solid #666;
-color: #CCC;
-padding: 10px;
+    -webkit-appearance: none;
+    background: none;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid #444;
+    color: #CCC;
+    padding: 10px 0px;
 }
-
 .options a {
-color:#53899c;
-text-decoration:none;
+    color: #53899c;
+    text-decoration: none;
 }
 .youcan {
-    list-style:none;
-    padding:0;
-    margin:0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #999;
 }
 .youcan li {
-border-left: 2px solid #999;
-padding-left: 10px;
-margin-bottom: 20px;
+    border-left: 2px solid #999;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+@-webkit-keyframes spinnerRotate { 
+    from { -webkit-transform: rotate(0deg) }
+    to { -webkit-transform: rotate(360deg) }
+}
+.fb_iframe_widget {
+    display: block!important;
+    margin-right: 2px;
+    float: left;
 }

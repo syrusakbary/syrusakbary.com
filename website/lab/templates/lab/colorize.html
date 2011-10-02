@@ -1,555 +1,154 @@
-{% load 'media' %}
-<!DOCTYPE html>
+{% load 'media' %}<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-<title>Colorize - Syrus Akbary [Labs]</title>
-{% include_media "lab/colorize/css/all.css" %}
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+  <title>Colorize - Syrus Akbary Labs</title>
+  {% include_media "lab/colorize/css/all.css" %}
 </head>
 <body>
-
-
-
 <div id="container">
-    <div>
+  <div>
     <div class="logo">
-        <img id="logo" src="{{ media_url("lab/colorize/images/logo.png")}}" title="Colorize" />
+      <img id="logo" src="{{ media_url("lab/colorize/images/logo.png")}}" title="Colorize"/>
     </div>
     <div>
-        <div class="options">
-            <p>Para reproducir una cancion puedes:</p>
-            <ul class="youcan">
-            <li>Arrastrar un archivo directamente, o...
-                </li>
-            <li>Seleccionar alguna de estas canciones,
-            <a href="" onclick="sound.load('{{ url("colorize_song",song="estopa") }}');">Estopa</a>,
-            <a href="" onclick="sound.load('{{ url("colorize_song",song="scorpions") }}');">Scorpions</a>, 
-            <a href="" onclick="sound.load('{{ url("colorize_song",song="queen") }}');">Queen</a>,
-            <a href="" onclick="sound.load('{{ url("colorize_song",song="mecano") }}');">Mecano</a> o...
-            </li>
-            <li>Hablar un poco!<input name="speech" id="speech" type="text" x-webkit-speech speech error onwebkitspeechchange="sound.query(this.value);" />
-            </li>
-            </ul>
-            <div class="likes">
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
+      <div class="options">
+        <p>
+          Para reproducir una cancion tienes que:
+        </p>
+        <ul class="youcan">
+          <li>Arrastrar un archivo directamente, o... </li>
+          <li>Seleccionar alguna de estas canciones,
+            <a class="song" href="{{ url("colorize",song="estopa") }}">Estopa</a>,
+            <a class="song" href="{{ url("colorize",song="scorpions") }}">Scorpions</a>,
+            <a class="song" href="{{ url("colorize",song="queen") }}">Queen</a>,
+            <a class="song" href="{{ url("colorize",song="mecano") }}">Mecano</a> o...
+          </li>
+          <li>Solicitar canciones, pruébalo hablando!
+            <form>
+            <input name="speech" id="speech" type="text" x-webkit-speech/>
+            </form>
+          </li>
+        </ul>
+        <div class="likes">
+          <div id="fb-root">
+          </div>
+          <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) {return;}
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+          <div class="fb-like" data-href="http://syrusakbary.com/lab/colorize/" data-send="false" data-layout="box_count" data-width="50" data-show-faces="true" data-colorscheme="light">
+          </div>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="syrusakbary" data-lang="es">Tweet</a>
+          <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+        </div>
+      </div>
+      <div id="box">
+        <div class="spinner">
+        </div>
 
-<div class="fb-like" data-href="http://syrusakbary.com/lab/colorize/" data-send="false" data-layout="box_count" data-width="50" data-show-faces="true" data-colorscheme="light"></div>
-            
-<a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="syrusakbary" data-lang="es">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-        </div>
-        </div>
-        <div id="box">        <canvas id="fft" onClick="randomDrawer();"></canvas>
-        </div>
+        <canvas id="fft" onclick="randomDrawer();"></canvas>
+      </div>
+      <div class="playorpause">*Doble click para pausar o reanudar la reproducción</div>
     </div>
-    </div>
+  </div>
 </div>
-{% include_media "lab/colorize/js/all.js" %}
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js' type='text/javascript'></script>
+ {% include_media "lab/colorize/js/all.js" %}
 <script>
-window.util = window.url || {};
 
-var FREQUENCY =1, TIMEDOMAIN=2;
-function alpha (a) {
-    ctx.fillStyle = 'rgba(0,0,0,'+a+')';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-}
-function blur (b) {
-stackBlurCanvasRGBA( 'fft', 0, 0, canvas.width, canvas.height,b);
-}
-
-function rotozoom(angle, zoom) {
-	var w = canvas.width, h = canvas.height;
-	tmpCanvas.width = w; tmpCanvas.height = h;
-	tmpCtx.drawImage(canvas,0,0);
-	ctx.save();
-	ctx.globalCompositeOperation = "copy";
-	ctx.clearRect(0,0,w,h);
-	ctx.translate(w/2, h/2);
-	ctx.rotate(angle);
-	ctx.scale(zoom,zoom);
-	ctx.drawImage(tmpCanvas,-w/2,-h/2);
-	ctx.restore();
-	ctx.globalCompositeOperation = "source-over";
-}
-function rotate(angle) {
-	var w = canvas.width, h = canvas.height;
-	tmpCanvas.width = w; tmpCanvas.height = h;
-	tmpCtx.drawImage(canvas,0,0);
-	ctx.save();
-	ctx.globalCompositeOperation = "copy";
-	ctx.clearRect(0,0,w,h);
-	ctx.translate(w/2, h/2);
-	ctx.rotate(angle);
-	ctx.drawImage(tmpCanvas,-w/2,-h/2);
-	ctx.restore();
-	ctx.globalCompositeOperation = "source-over";
-}
-
-function zoom(z) {
-	stretch(z,z,0.5,0.5);
-}
-
-function stretch(x, y, ox, oy) {
-	if (typeof ox == "undefined") ox = 0;
-	if (typeof oy == "undefined") oy = 0;
-	var w = canvas.width, h = canvas.height;
-	tmpCanvas.width = w; tmpCanvas.height = h;
-	ox *= w;
-	oy *= h;
-	tmpCtx.clearRect(0,0,w,h);
-	tmpCtx.drawImage(canvas,0,0);
-	ctx.globalCompositeOperation = "copy";
-	ctx.clearRect(0,0,screenWidth(),screenHeight());
-	ctx.drawImage(tmpCanvas, -(x-1)*ox, -(y-1)*oy, screenWidth() * x, screenHeight() * y);
-	ctx.globalCompositeOperation = "source-over";
+function getURLforSongView(song) {
+    return "{{ url('colorize','__song__') }}".replace('__song__', encodeURIComponent(song));
 }
 
 
-util.max = function(array) {
-  var max = array[0];
-  var len = array.length;
-  for (var i = 0; i < len; ++i) {
-    if (array[i] > max) {
-      max = array[i];
+function getURLforSong(song) {
+    return "{{ url('colorize_song','__song__') }}".replace('__song__', encodeURIComponent(song));
+}
+
+$(document).ready(function () {
+    $("a.song").click(function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        song = this.href.match(getURLforSongView('(.*)'))[1];
+        history.pushState({
+            path: this.path,
+            song: song
+        }, '', this.href);
+        sound.query(song);
+    });
+
+    speech = $('#speech');
+    var submit_form = function () {
+            var song = $('#speech').val();
+            history.pushState({
+                song: song
+            }, '', getURLforSongView(song));
+            sound.query(song);
+            return false;
+        };
+    speech.parent().submit(submit_form)
+    speech.bind('webkitspeechchange', submit_form);
+    navigator.registerProtocolHandler("web+colorize", location.origin+"{{ url('colorize_song','%s') }}", "Colorize Song");
+
+    $(window).bind('popstate', function (e) {
+        song = location.pathname.match(getURLforSongView('(.*)'))[1]
+        if (song != '') {
+            sound.query(song);
+        };
+    })
+
+    var fft = $('#fft');
+    var canvas = fft[0];
+    var ctx = canvas.getContext('2d');
+    canvas.width = 210;
+    canvas.height = 210;
+    ctx.fillStyle = 'rgb(0,0,0)'; //rgba(68,0,3,0.2)
+    tmpCanvas = document.createElement("canvas");
+    tmpCanvas.widht = canvas.width;
+    tmpCanvas.height = canvas.height;
+    tmpCtx = tmpCanvas.getContext("2d")
+    var sound = new Sound([new BasicWave(), new BasicWave1(), new Circle(), new RotateWave()]);
+    var stats = new Stats();
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    var play_or_pause = function () {
+      if (sound.playing) sound.stop();
+      else sound.play();
     }
-  }
-  return max;
-}
+    fft.click(sound.randomDrawer).dblclick(play_or_pause);
 
-util.average = function(array) {
-  var sum = 0;
-  var len = array.length;
-  for (var i = 0; i < len; ++i) {
-    sum += array[i];
-  }
-  return sum / len;
-}
-function setPixel(imageData, x, y, r, g, b, a) {
-    index = (x + y * imageData.width) * 4;
-    imageData.data[index+0] = r;
-    imageData.data[index+1] = g;
-    imageData.data[index+2] = b;
-    imageData.data[index+3] = a;
-}
+    {% if song %}sound.query('{{song}}'); {% endif %}
+    window.ctx = ctx;
+    window.canvas = canvas;
+    window.sound = sound;
+    window.tmpCanvas = tmpCanvas;
+    window.tmpCtx = tmpCtx;
+    window.stats = stats;
 
 
-var Drawer1 = function() {
-  var self_ = this;
-  this.z = 0;
-  this.draw = function(ctx,freqByteData) {
-      const SPACER_WIDTH = 1;
-      const BAR_WIDTH = 1;
-      const numBars = Math.round(canvas.width / SPACER_WIDTH);
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-
-      // Draw rectangle for each frequency bin.
-      var y = (canvas.height / 2) + 3;
-      for (var i = 0; i < numBars; ++i) {
-        var magnitude = freqByteData[i];
-        var height = magnitude / (canvas.height / 50);
-        ctx.fillRect(i * SPACER_WIDTH, y, BAR_WIDTH, -height);
-        ctx.fillRect(i * SPACER_WIDTH, y, BAR_WIDTH, height);
-      }
-
-      blur(10);
-  }
-}
-
-var Tunel = function() {
-  var self_ = this;
-  this.z = 0;
-  this.r = 0;
-  this.draw = function(ctx,freqByteData) {
-      const inc=.5;
-      //ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      rotozoom(0.01,1.1);
-      alpha('0.1');
-      //console.log(canvas.width, canvas.height);
-      //var imageData = ctx.createImageData(canvas.width, canvas.height);
-      var imageData = ctx.getImageData(0,0,canvas.width,canvas.height);
-      //console.log(freqByteData.length);
-for (i = 0; i < freqByteData.length; i++) {
-    var l = freqByteData[i];
-    //console.log(l);
-    x = Math.sin(i/(freqByteData.length/2)*Math.PI)*inc*l + Math.sin(self_.z)*inc + canvas.width/2;
-    y = Math.cos(i/(freqByteData.length/2)*Math.PI)*inc*l + Math.cos(self_.z)*inc + canvas.height/2;
-    x = parseInt(x);
-    y = parseInt(y);
-    //console.log(x,y);
-    r = 255;
-    g = (1-2*i/freqByteData.length)*255;
-    b = i/freqByteData.length*255;
-    setPixel(imageData, x, y, r, g, b, 0xff); // 0xff opaque
-
-}
-  self_.z += 0.015
-  self_.r += 0.015
-  ctx.putImageData(imageData, 0, 0); 
-  blur(4);
-  
-  }
-}
-
-var Basic = function() {
-  var self_ = this;
-  this.draw = function(ctx,freqByteData) {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-/*      rotozoom(0.01,1.1);
-      alpha('0.1');*/
-for (i = 0; i < freqByteData.length; i++) {
-    var l = freqByteData[i];
-}
-  /*blur(4);*/
-  
-  }
-}
-
-var Circle = function() {
-  var self_ = this;
-  this.draw = function(ctx,freqByteData) {
-    const inc = .3;
-      //ctx.clearRect(0, 0, canvas.width, canvas.height);
-      center = [canvas.width/2,canvas.height/2];
-      rotozoom(0,1.1);
-      alpha('0.05');
-      blur(2);
-    gradObj = ctx.createLinearGradient(0,0,canvas.width, canvas.height);
-    gradObj.addColorStop(0.2,'#A00');
-    gradObj.addColorStop(0.8,'#3D6');
-    ctx.strokeStyle = gradObj;
-    ctx.beginPath();
-    //ctx.moveTo(center[0], center[1]); 
-/*      rotozoom(0.01,1.1);
-      alpha('0.1');*/
-for (i = 0; i < freqByteData.length; i++) {
-    var l = freqByteData[i];
-    x = Math.sin(i/(freqByteData.length/2)*Math.PI)*inc*l + center[0];
-    y = Math.cos(i/(freqByteData.length/2)*Math.PI)*inc*l + center[1];
-
-    ctx.lineTo(parseInt(x), parseInt(y));
-}
-    ctx.closePath();
-    ctx.stroke();
-
-  /*blur(4);*/
-  
-  }
-}
-
-var Explosion = function() {
-  var self_ = this;
-  this.type = FREQUENCY;
-  this.draw = function(ctx,freqByteData) {
-    const inc = .4;
-blur(2);
-alpha(.2);
-//rotate(.2);
-//rotozoom(0.02,.99);
-      center = [canvas.width/2,canvas.height/2];
-    gradObj = ctx.createRadialGradient(center[0], center[1], 0, center[0], center[1], 300);
-    gradObj.addColorStop(0.1,'#000');
-    gradObj.addColorStop(0.2,'#3D6');
-    gradObj.addColorStop(0.2,'#D34');
-    ctx.strokeStyle = gradObj;
-    ctx.beginPath();
-    //ctx.moveTo(center[0], center[1]); 
-/*      rotozoom(0.01,1.1);
-      alpha('0.1');*/
-for (i = 0; i < freqByteData.length; i++) {
-    var l = freqByteData[i];
-    x = Math.sin(i/(freqByteData.length/16)*Math.PI)*inc*l + center[0];
-    y = Math.cos(i/(freqByteData.length/16)*Math.PI)*inc*l + center[1];
-    ctx.lineTo(center[0], center[1]); 
-    ctx.lineTo(parseInt(x), parseInt(y));
-}
-    ctx.closePath();
-    ctx.stroke();
-
-    
-  }
-}
-
-var BasicWave = function() {
-  var self_ = this;
-  this.rotation = .095;
-  this._r = 0;
-  this.draw = function(ctx,freqByteData) {
-      //ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      a = Math.max((util.max(freqByteData)-128)/128, 1);
-      alpha(.1);
-      rotate(self_.rotation);
-      blur(2);
-    var step = parseInt(freqByteData.length / canvas.width);
-    gradObj = ctx.createLinearGradient(0,0,canvas.width, canvas.height);
-    gradObj.addColorStop(0.3,'#A00');
-    gradObj.addColorStop(0.6,'#3D6');
-    ctx.strokeStyle = gradObj;
-ctx.beginPath();
-ctx.moveTo(0, freqByteData[0]*canvas.height/256); 
-/*      rotozoom(0.01,1.1);
-      alpha('0.1');*/
-for (i =1; i < canvas.width; i++) {
-    ctx.lineTo(i, freqByteData[i*step]*canvas.height/256);
-}
-
-    self_.r += .1;
-    ctx.stroke();
-    rotate(self_.r);
-      /*blur(4);*/
-  
-  }
-}
-
-var RotateWave = function() {
-  var self_ = this;
-  this.rotation = 0;
-
-  this.draw = function(ctx,freqByteData) {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      a = Math.max((util.max(freqByteData)-128)/128, 1);
-      //alpha(.1);
-      //rotate(-self_.rotation);
-      //blur(2);
-    var step = parseInt(freqByteData.length / canvas.width);
-    gradObj = ctx.createLinearGradient(0,0,canvas.width, canvas.height);
-    gradObj.addColorStop(0.3,'#A00');
-    gradObj.addColorStop(0.6,'#3D6');
-    ctx.strokeStyle = gradObj;
-ctx.beginPath();
-ctx.moveTo(canvas.width/2, freqByteData[0]*canvas.height/256); 
-/*      rotozoom(0.01,1.1);
-      alpha('0.1');*/
-for (i =1; i < canvas.width/2; i++) {
-    ctx.lineTo(canvas.width/2+i, freqByteData[i*step*2]*canvas.height/256);
-}
-    self_.rotation += .1;
-    rotate(.2);
-    //self_.r += .1;
-    ctx.stroke();
-    //rotate(self_.r);
-      /*blur(4);*/
-  
-  }
-}
-var BasicWave1 = function() {
-  var self_ = this;
-  this.rotation = .15;
-  this.draw = function(ctx,freqByteData) {
-      //ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      a = Math.max((util.max(freqByteData)-128)/128, 1);
-
-      rotozoom(self_.rotation,.9);
-      alpha(.2);
-      blur(4);
-      var step = parseInt(freqByteData.length / canvas.width);
-    gradObj = ctx.createLinearGradient(0,0,canvas.width, canvas.height);
-    gradObj.addColorStop(0.3,'#A00');
-    gradObj.addColorStop(0.6,'#3D6');
-    ctx.strokeStyle = gradObj;
-ctx.beginPath();
-ctx.moveTo(0, freqByteData[0]*canvas.height/256); 
-/*      rotozoom(0.01,1.1);
-      alpha('0.1');*/
-for (i =1; i < canvas.width; i++) {
-    ctx.lineTo(i, freqByteData[i*step]*canvas.height/256);
-}
-    ctx.stroke();
-  /*blur(4);*/
-  
-  }
-}
-
-function Sound() {
-  const MIX_TO_MONO = false;
-  const NUM_SAMPLES = 2048;
-  const FFT_SIZE = 1024;
-  var self_ = this;
-  var context_ = new (window.AudioContext || window.webkitAudioContext)();
-  var source_ = null;
-  var analyser_ = null;
-  var reqId_ = null;
-  this.drawer = null;
-  this.drawers = [new BasicWave(), new BasicWave1(), new Circle()];
-  this.drawers = [new RotateWave()];
-  this.drawer_index =null;
-  this.playing = false;
-
-  var processAudio_ = function(time) {
-    //console.log(analyser_.fftSize);
-    analyser_.fftSize = 1024;
-    //console.log(analyser_.frequencyBinCount);
-    var freqByteData = new Uint8Array(analyser_.frequencyBinCount); //analyser_.frequencyBinCount
-    switch (self_.drawer.type) {
-        default:
-        case TIMEDOMAIN:
-            analyser_.getByteTimeDomainData(freqByteData);
-        break;
-        case FREQUENCY:
-        analyser_.getByteFrequencyData(freqByteData);
-        break;
-    }
-
-    var percent = Math.min((util.max(freqByteData) / 150) * 100, 105);
-    if (!self_.playing) {
-      percent = 100;
-    }
-    //gradient.style.backgroundSize = '76% 41%, 55% 100%, ' + percent + '%, ' + percent + '%';
-
-    self_.drawer.draw(ctx,freqByteData);
-  };
-
-  this.changeDrawer = function (index) {
-    self_.drawer_index = index;
-    self_.drawer = self_.drawers[index];
-  }
-  this.randomDrawer = function () {
-    index = Math.floor(Math.random()*self_.drawers.length);
-    self_.changeDrawer(index);
-}
-  this.initAudio = function(arrayBuffer) {
-    if (source_) {
-      self_.stop();
-      source_ = null;
-    }
-    
-
-    source_ = context_.createBufferSource();
-    source_.looping = true;
-
-    // Use async decoder if it is available (M14).
-    if (context_.decodeAudioData && false) {
-      context_.decodeAudioData(arrayBuffer, function(buffer) {
-        source_.buffer = buffer;
-      }, function(e) {
-        console.log(e);
-      });
-    } else {
-      source_.buffer = context_.createBuffer(arrayBuffer, true /*mixToMono*/);
-    }
-    self_.randomDrawer();
-    self_.play();
-  };
-
-  this.query = function(song) {
-    var url = "http://syrusakbary.com/lab/colorize/song/"+encodeURIComponent(song);
-    self_.load(url);
-  };
-  this.load = function(url) {
-    if (source_) {
-      self_.stop();
-      source_ = null;
-    }
-    var request = new XMLHttpRequest();
-    request.open('GET', url, false);
-    request.responseType = 'arraybuffer';
-    request.onload = function(e) {
-//      document.querySelector("[data-func='play']").disabled = false;
-      self_.initAudio(request.response);
-      self_.randomDrawer();
-    };
-    request.send();
-  };
-
-  this.play = function() {
-    analyser_ = context_.createAnalyser();
-
-    // Connect the processing graph: source -> analyser -> destination
-    source_.connect(analyser_);
-    analyser_.connect(context_.destination);
-
-    source_.noteOn(0);
-    this.playing = true;
-
-    (function callback(time) {
-      processAudio_(time);
-      stats.update();
-      reqId_ = window.webkitRequestAnimationFrame(callback);
-    })();
-  };
-
-  this.stop = function() {
-    source_.disconnect(0);
-    analyser_.disconnect(0);
-    this.playing = false;
-    window.webkitCancelRequestAnimationFrame(reqId_);
-  };
-}
-
-function runCmd(el) {
-  if (typeof el == 'string') {
-    var func = el;
-  } else {
-    var func = el.dataset.func.toLowerCase();
-  }
-  console.log(el);
-  sound[func]();
-  el.disabled = !el.disabled;
-  switch (func) {
-    case 'play':
-      document.querySelector("[data-func='stop']").disabled = false;
-      break;
-    case 'stop':
-      document.querySelector("[data-func='play']").disabled = false;
-      break;
-    default:
-      // noop
-  }
-}
-
-function randomDrawer() {
-    
-    sound.randomDrawer();
-}
-var canvas = document.getElementById('fft');
-var ctx = canvas.getContext('2d');
-canvas.width=200;
-canvas.height = 200;
-ctx.fillStyle = 'rgb(0,0,0)'; //rgba(68,0,3,0.2)
-//ctx.globalCompositeOperation = "lighter";
-
-tmpCanvas = document.createElement("canvas");
-tmpCanvas.widht = canvas.width;
-tmpCanvas.height = canvas.height;
-tmpCtx = tmpCanvas.getContext("2d")
-
-var sound = new Sound();
-
-var stats = new Stats();
-
-// Align top-left
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
-
-document.body.appendChild( stats.domElement );
+});
 
 
-
-(function init() {
-  //sound.load('');
-  
-//navigator.registerProtocolHandler('web+colorize', 'http://localhost/%s', 'Colorize music');
- /*
-  showCanvas.addEventListener('change', function(e) {
-    canvas.classList.toggle('hidden');
-  }, false);*/
-})();
-
-    
-
+</script>
+<script type='text/javascript'>
+// <![CDATA[
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', 'UA-12613282-2']);
+              _gaq.push(['_setDomainName', '.syrusakbary.com']);
+              _gaq.push(['_trackPageview']);
+              (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              })();
+// ]]>
 </script>
 </body>
 </html>

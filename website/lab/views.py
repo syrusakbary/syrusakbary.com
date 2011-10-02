@@ -47,8 +47,8 @@ def download (s):
 # import StringIO
 
 # stdins = StringIO.StringIO(stdout)
-def colorize(request):
-    return render_to_response('lab/colorize.html',context_instance=RequestContext(request))
+def colorize(request,song=False):
+    return render_to_response('lab/colorize.html',context_instance=RequestContext(request,{'song':song}))
 
 def colorize_song(request,song):
 	d = download(song)
