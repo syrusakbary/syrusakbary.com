@@ -135,7 +135,23 @@
 			"file": "/Users/syrus/Sites/syrusakbary/website/blog/models.py",
 			"settings":
 			{
-				"buffer_size": 4080,
+				"buffer_size": 4235,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/syrus/Sites/syrusakbary/fabfile.py",
+			"settings":
+			{
+				"buffer_size": 2781,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/syrus/Sites/syrusakbary/README.rst",
+			"settings":
+			{
+				"buffer_size": 1880,
 				"line_ending": "Unix"
 			}
 		}
@@ -254,6 +270,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ebug_",
+			"debug_toolbar",
 			"haystack",
 			"SearchQuerySet",
 			"debug_tool",
@@ -296,7 +314,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -367,8 +385,8 @@
 						"selection":
 						[
 							[
-								1232,
-								1232
+								2305,
+								2319
 							]
 						],
 						"settings":
@@ -378,7 +396,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 50,
+						"translation.y": 242,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -395,8 +413,8 @@
 						"selection":
 						[
 							[
-								4326,
-								4326
+								3766,
+								3771
 							]
 						],
 						"settings":
@@ -406,7 +424,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 1411,
+						"translation.y": 865,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -442,15 +460,15 @@
 					"file": "/Users/syrus/Sites/syrusakbary/website/blog/models.py",
 					"settings":
 					{
-						"buffer_size": 4080,
+						"buffer_size": 4235,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2941,
-								2941
+								1044,
+								1044
 							]
 						],
 						"settings":
@@ -458,6 +476,61 @@
 							"syntax": "Packages/Python/Python.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/syrus/Sites/syrusakbary/fabfile.py",
+					"settings":
+					{
+						"buffer_size": 2781,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								377,
+								377
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/syrus/Sites/syrusakbary/README.rst",
+					"settings":
+					{
+						"buffer_size": 1880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								352,
+								352
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/RestructuredText/reStructuredText.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0,
 						"translation.y": 0,

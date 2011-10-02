@@ -1,0 +1,63 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  color: #fff;
+  font: 10pt 'Droid Sans', Arial;
+  background: #333;
+}
+.hover #box {
+    -webkit-box-shadow: 0px 0px 25px rgba(255,0,0,.8);
+}
+
+#box {
+  width: 400px;
+  height:400px;
+  background:#000;
+/*  border:1px solid black;
+border-radius: 40px 0 40px 0;*/
+    -webkit-box-shadow: 0px 0px 25px rgba(0,0,0,.7);
+    
+    overflow:hidden;
+    position:relative;
+    border:1px solid black;
+}
+.options {
+    -webkit-transition: all .2s linear;
+    margin-right:20px;
+    width:200px;
+    height:400px;
+    font-size:16px;
+    color:#CCC;
+    bottom:100%;
+    text-shadow:0px 1px 0 #000;
+}
+#logo {
+  width:320px;
+  position:absolute;
+  left:50%;
+  top:20%;
+  margin-top:-80px;
+  margin-left:-160px;
+}
+#fft {
+    width:400px;
+    height:400px;
+
+    }
+
+h1 {
+
+text-align:center;
+margin-top:50px;
+margin-bottom:-50px;
+text-shadow:0px -1px 0 #000;
+font-weight:normal;
+    }
+#container {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  height: 100%;
+}

@@ -103,7 +103,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'mediagenerator.middleware.MediaMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    #'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -124,6 +124,7 @@ INTERNAL_IPS = ('127.0.0.1',)
 
 INSTALLED_APPS = (
     'blog',
+    'lab',
     'opensource',
     #'jinja2',
     #'coffin',
@@ -135,8 +136,8 @@ INSTALLED_APPS = (
     'taggit',
     'djinja.utilities',
     #'djinja.contrib.admin',
-    'djinja.contrib.debug_toolbar',
-    'debug_toolbar',
+    #'djinja.contrib.debug_toolbar',
+    #'debug_toolbar',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -204,6 +205,14 @@ MEDIA_BUNDLES = (
         'css/portfolio.css',
         'css/rst.css'
     ),
+    ('lab/colorize/css/all.css',
+        'lab/colorize/css/main.css',
+    ),
+    ('lab/colorize/js/all.js',
+        'lab/colorize/js/stackblur.js',
+        'lab/colorize/js/Stats.js',
+        'lab/colorize/js/filedrag.js',
+    ),
     ('js/main.js',
         'js/jquery.transform.js',
         'js/jquery.tweet.js',
@@ -215,7 +224,7 @@ MEDIA_BUNDLES = (
     #    'js/jquery.tweet.js'
     #),
 )
-#COPY_MEDIA_FILETYPES = ('gif', 'jpg', 'jpeg', 'png', 'svg', 'svgz', 'ico', 'swf', 'ttf', 'otf', 'eot','woff')
+COPY_MEDIA_FILETYPES = ('gif', 'jpg', 'jpeg', 'png', 'svg', 'svgz', 'ico', 'swf', 'ttf', 'otf', 'eot','woff','ogg','mp3')
 
 GLOBAL_MEDIA_DIRS = (
     os.path.join(ROOT_PATH,'../static/media'),
