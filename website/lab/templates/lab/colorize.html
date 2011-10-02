@@ -20,7 +20,7 @@
             <li>Arrastrar un archivo directamente, o...
                 </li>
             <li>Seleccionar alguna de estas canciones, o...</li>
-            <li>Hablar un poco!</li>
+            <li>Hablar un poco!<input name="speech" id="speech" type="text" x-webkit-speech speech error onwebkitspeechchange="sound.query(this.value);" /></li>
             </ul>
         </div>
     <div id="box">        <canvas id="fft" onClick="randomDrawer();"></canvas>
@@ -385,6 +385,10 @@ function Sound() {
     self_.play();
   };
 
+  this.query = function(song) {
+    var url = "http://syrusakbary.com/lab/colorize/song/"+encodeURIComponent(song);
+    self_.load(url);
+  };
   this.load = function(url) {
     var request = new XMLHttpRequest();
     request.open('GET', url, false);

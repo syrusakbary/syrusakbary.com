@@ -61,3 +61,13 @@ font-weight:normal;
   -webkit-box-pack: center;
   height: 100%;
 }
+
+#speech {
+-webkit-appearance: none;
+background: none;
+border: none;
+font-size: 16px;
+border-bottom: 1px solid #666;
+color: #CCC;
+padding: 10px;
+}
