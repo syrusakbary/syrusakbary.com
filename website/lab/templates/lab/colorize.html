@@ -19,7 +19,11 @@
             <ul>
             <li>Arrastrar un archivo directamente, o...
                 </li>
-            <li>Seleccionar alguna de estas canciones, o...</li>
+            <li>Seleccionar alguna de estas canciones,
+            <a href="" onclick="sound.load('{{ url("colorize_song",song="estopa") }}');">Estopa</a> <br />
+            <a href="" onclick="sound.load('{{ url("colorize_song",song="scorpions") }}');">Scorpions</a> <br />
+            <a href="" onclick="sound.load('{{ url("colorize_song",song="queen") }}');">Queen</a> <br />
+            <a href="" onclick="sound.load('{{ url("colorize_song",song="mecano") }}');">Mecano</a> <br />            o...</li>
             <li>Hablar un poco!<input name="speech" id="speech" type="text" x-webkit-speech speech error onwebkitspeechchange="sound.query(this.value);" /></li>
             </ul>
         </div>
@@ -390,6 +394,9 @@ function Sound() {
     self_.load(url);
   };
   this.load = function(url) {
+    if (source_) {
+      self_.stop();
+    }
     var request = new XMLHttpRequest();
     request.open('GET', url, false);
     request.responseType = 'arraybuffer';
@@ -477,7 +484,7 @@ document.body.appendChild( stats.domElement );
 
 
 (function init() {
-  sound.load('{{ url("colorize_song",song="estopa") }}');
+  //sound.load('');
   
 //navigator.registerProtocolHandler('web+colorize', 'http://localhost/%s', 'Colorize music');
  /*
