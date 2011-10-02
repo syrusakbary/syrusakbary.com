@@ -9,25 +9,46 @@
 </head>
 <body>
 
-    <img id="logo" src="{{ media_url("lab/colorize/images/logo.png")}}" title="Colorize" />
+
 
 <div id="container">
-
-
+    <div>
+    <div class="logo">
+        <img id="logo" src="{{ media_url("lab/colorize/images/logo.png")}}" title="Colorize" />
+    </div>
+    <div>
         <div class="options">
             <p>Para reproducir una cancion puedes:</p>
-            <ul>
+            <ul class="youcan">
             <li>Arrastrar un archivo directamente, o...
                 </li>
             <li>Seleccionar alguna de estas canciones,
-            <a href="" onclick="sound.load('{{ url("colorize_song",song="estopa") }}');">Estopa</a> <br />
-            <a href="" onclick="sound.load('{{ url("colorize_song",song="scorpions") }}');">Scorpions</a> <br />
-            <a href="" onclick="sound.load('{{ url("colorize_song",song="queen") }}');">Queen</a> <br />
-            <a href="" onclick="sound.load('{{ url("colorize_song",song="mecano") }}');">Mecano</a> <br />            o...</li>
-            <li>Hablar un poco!<input name="speech" id="speech" type="text" x-webkit-speech speech error onwebkitspeechchange="sound.query(this.value);" /></li>
+            <a href="" onclick="sound.load('{{ url("colorize_song",song="estopa") }}');">Estopa</a>,
+            <a href="" onclick="sound.load('{{ url("colorize_song",song="scorpions") }}');">Scorpions</a>, 
+            <a href="" onclick="sound.load('{{ url("colorize_song",song="queen") }}');">Queen</a>,
+            <a href="" onclick="sound.load('{{ url("colorize_song",song="mecano") }}');">Mecano</a> o...
+            </li>
+            <li>Hablar un poco!<input name="speech" id="speech" type="text" x-webkit-speech speech error onwebkitspeechchange="sound.query(this.value);" />
+            </li>
             </ul>
+            <div class="likes">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="http://syrusakbary.com/lab/colorize/" data-send="false" data-layout="box_count" data-width="50" data-show-faces="true" data-colorscheme="light"></div>
+            
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="syrusakbary" data-lang="es">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
         </div>
-    <div id="box">        <canvas id="fft" onClick="randomDrawer();"></canvas>
+        </div>
+        <div id="box">        <canvas id="fft" onClick="randomDrawer();"></canvas>
+        </div>
+    </div>
     </div>
 </div>
 {% include_media "lab/colorize/js/all.js" %}
@@ -369,6 +390,7 @@ function Sound() {
   this.initAudio = function(arrayBuffer) {
     if (source_) {
       self_.stop();
+      source_ = null;
     }
     
 
@@ -396,6 +418,7 @@ function Sound() {
   this.load = function(url) {
     if (source_) {
       self_.stop();
+      source_ = null;
     }
     var request = new XMLHttpRequest();
     request.open('GET', url, false);
@@ -494,7 +517,7 @@ document.body.appendChild( stats.domElement );
 })();
 
     
-sound["play"]();
+
 </script>
 </body>
 </html>
