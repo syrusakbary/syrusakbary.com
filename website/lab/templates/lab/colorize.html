@@ -51,7 +51,7 @@
         <div class="spinner">
         </div>
 
-        <canvas id="fft" onclick="randomDrawer();"></canvas>
+        <canvas id="fft"></canvas>
       </div>
       <div class="playorpause">*Doble click para pausar o reanudar la reproducción</div>
     </div>
@@ -64,7 +64,6 @@
 function getURLforSongView(song) {
     return "{{ url('colorize','__song__') }}".replace('__song__', encodeURIComponent(song));
 }
-
 
 function getURLforSong(song) {
     return "{{ url('colorize_song','__song__') }}".replace('__song__', encodeURIComponent(song));
@@ -123,7 +122,6 @@ $(document).ready(function () {
       else sound.play();
     }
     fft.click(sound.randomDrawer).dblclick(play_or_pause);
-
     {% if song %}sound.query('{{song}}'); {% endif %}
     window.ctx = ctx;
     window.canvas = canvas;
@@ -132,7 +130,7 @@ $(document).ready(function () {
     window.tmpCtx = tmpCtx;
     window.stats = stats;
 
-
+    timer = setInterval(sound.randomDrawer, 15000);
 });
 
 

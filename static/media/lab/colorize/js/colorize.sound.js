@@ -48,7 +48,7 @@ function Sound(drawers) {
             source_ = null;
         }
         source_ = context_.createBufferSource();
-        source_.looping = true;
+        source_.looping = false;
         // Use async decoder if it is available (M14).
         if (context_.decodeAudioData) {
             context_.decodeAudioData(arrayBuffer, function (buffer) {
