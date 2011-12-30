@@ -211,6 +211,9 @@ MEDIA_BUNDLES = (
         'css/fonts.css',
         'lab/cuponea/css/main.css'
     ),
+    ('lab/cuponea/js/all.js',
+        'js/jquery.placeholder.min.js',
+    ),
     ('lab/colorize/css/all.css',
         'lab/colorize/css/main.css',
     ),

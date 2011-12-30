@@ -28,8 +28,10 @@ html(xmlns="http://www.w3.org/1999/xhtml" lang="{{ LANGUAGE_CODE }}" xmlns:fb="h
             | o compártelo
       - block scripts
         script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js")
+        - include_media "lab/cuponea/js/all.js"
         script
             $(document).ready(function onReady() {
+                $('input[placeholder], textarea[placeholder]').placeholder();
                 submit_button = $('.go_back').click(function onBackClick() {
                     _ = $(this);
                     _.addClass('disabled')
