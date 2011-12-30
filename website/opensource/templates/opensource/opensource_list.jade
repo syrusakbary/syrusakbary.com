@@ -1,0 +1,14 @@
+- extends "base.jade"
+- set title="Proyectos"
+- set body_class="project_list"
+- block content
+    .grid_16
+        #section.prefix_2.grid_4.alpha
+            img(src='{{ media_url("images/projects.png") }}')
+            h1 Open Source
+        ul#projects.grid_8.omega.intro-left
+          - for project in project_list
+            li
+                h3
+                    a(href='{{project.url}}')= project
+                .desc= project.description

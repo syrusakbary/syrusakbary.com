@@ -205,6 +205,12 @@ MEDIA_BUNDLES = (
         'css/portfolio.css',
         'css/rst.css'
     ),
+    ('lab/cuponea/css/main.css',
+        'css/reset.css',
+        'css/text.css',
+        'css/fonts.css',
+        'lab/cuponea/css/main.css'
+    ),
     ('lab/colorize/css/all.css',
         'lab/colorize/css/main.css',
     ),
@@ -251,7 +257,7 @@ JINJA2_ENVIRONMENT_OPTIONS = {
 }
 JINJA2_EXTENSIONS = (
 #    'jinja2.ext.autoescape',
-    'djinja.template.extensions.haml',
+    'pyjade.ext.jinja.PyJadeExtension',
     'mediagenerator.contrib.jinja2ext.MediaExtension'
 )
 

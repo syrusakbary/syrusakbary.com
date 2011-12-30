@@ -1,0 +1,65 @@
+- load 'media','active'
+!!! 5
+html(xmlns="http://www.w3.org/1999/xhtml" lang="{{ LANGUAGE_CODE }}")
+    head
+        - block head
+            title: block title
+                | Syrus Akbary
+            meta(property="og:site_name" content="Syrus Akbary")
+            meta(property="og:image" content='{{ media_url("images/logo128-black.png") }}')
+            block styles
+                - include_media "css/all.css"
+            //[if IE 8] - include_media "css/ie.css"
+            link(rel="shortcut icon" href='{{ media_url("images/favicon.png") }}')
+    
+    body(class='{{body_class}}')
+        - block header
+            #header
+                .container_16.wrapper
+                    a#logo(href='/' title='Pagina principal')
+                        img(width='203' height='30' src='{{ media_url("images/logo-small.png") }}' alt='Syrus Akbary')
+    
+                    ul#navbar
+                        li
+                            a(href='{{ url("main") }}' class='{{"active" if active("main")}}')
+                                img(src='{{ media_url("images/home.png") }}' width='16' height='16' alt='Pagina principal')
+        
+                        li
+                            a(href='{{ url("blog") }}' class='{{"active" if active("blog","entry_detail")}}') Blog
+        
+                        li
+                            a(href='{{ url("portfolio_list") }}' class='{{"active" if active("portfolio_list")}}') Portfolio
+                        
+                        li
+                            a(href='{{ url("opensource_list") }}' class='{{"active" if active("opensource_list")}}') Open Source
+                        
+                        li
+                            a(href='{{ url("about_me") }}' class='{{"active" if active("about_me")}}') Sobre mí
+                        
+                        li
+                            a(href='{{ url("lab") }}' class='{{"active" if active("lab")}}') Lab
+                        
+                    .clear
+        #content.container_16
+            - block content
+        - if messages
+            ul.messagelist
+                - for message in messages
+                    li message
+                
+        .clear
+        - block footer
+        - block scripts
+            script(type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js")            
+            script
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', 'UA-12613282-2']);
+              _gaq.push(['_setDomainName', '.syrusakbary.com']);
+              _gaq.push(['_trackPageview']);
+            
+              (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              })();
+    

@@ -1,0 +1,80 @@
+- extends "base.jade"
+- set title="Blog"
+- load 'blog'
+- macro display_entry(entry)
+                .article
+                    .article-body.box
+                        h2.title
+                            a(href='{{entry.get_absolute_url()}}')= entry.title|capfirst
+                        .story.linkable(class='format-{{entry.body.markup_type}}')= entry.body.rendered
+                    p.article-meta
+                        span.tags
+                          - for tag in entry.tags.all()
+                            a.tag.subtle(href='{{url("entrysearch_list",tags=tag.slug)}}')
+                                = tag
+                        span.pubdate {{entry.publish_date|date("d \de F \d\e Y")}}
+                        span.comments 0 comentarios
+
+- block content
+    #section.grid_16
+        h1 Blog
+    .grid_12
+        #articles
+            - block entries
+    #side.grid_4
+        form.section
+           span.glass.left
+               i
+           input(type='search' placeholder='Buscar' name='q' value='{{search.query}}')
+    
+        .section
+            h3.a etiquetas
+            ul.tags
+              -for tag in tags
+                li
+                    a.tag(href='{{tag_url(tag,search.tags)+("?q=%s"|format(search.query) if search.query else "")}}' class='{{"pin" if tag.slug in search.tags}}')= tag
+           
+- block scripts
+    = super()
+    script
+        $(document).ready(function(){
+        var element = $('.tag-clouda li');;
+        var offset = 0; 
+        var stepping = 0;
+        var list = $('.tag-clouda');
+        var $list = $(list)
+        $list.mousemove(function(e){
+            var topOfList = $list.eq(0).offset().top
+            var listHeight = $list.height()
+            stepping = -((e.clientY - topOfList) /  listHeight - 0.5)*0.15;
+        });
+        $list.mouseleave(function(e){
+            stepping = 0
+        });
+
+        for (var i = element.length - 1; i >= 0; i--)
+        {
+            element[i].elemAngle = i * Math.PI * 2 / element.length;
+        }
+        setInterval(render, 20);
+        function render(){
+            for (var i = element.length - 1; i >= 0; i--){
+                var angle = element[i].elemAngle + offset;
+                x = 130 + Math.sin(angle) * 30;
+                y = 45 + Math.cos(angle) * 40;
+                size = Math.round(40 - Math.sin(angle) * 40);
+                var s = 1
+                scale = s - Math.sin(angle) * s;
+                var elementCenter = $(element[i]).width() / 2;
+                var leftValue = (($list.width()/2) * x / 100 - elementCenter) + "px"
+                //$(element[i]).css("fontSize", size + "pt");
+                $(element[i]).css("-webkit-transform", "scale("+scale+")");
+                $(element[i]).css("opacity",size/100);
+                $(element[i]).css("zIndex" ,size);
+                $(element[i]).css("left" ,leftValue);
+                $(element[i]).css("top", y + "%");
+            }
+            offset += stepping;
+        }
+
+        });

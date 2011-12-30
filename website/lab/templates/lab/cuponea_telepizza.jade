@@ -1,0 +1,11 @@
+if not back:
+    h1 5€ descuento en Telepizza
+    span.desc gentileza del 
+        a(href="http://paqueteria.correos.es/concursotelepizza/") Correos y Telepizza
+    form(action="{{request_path}}" method='POST')
+        - csrf_token
+        input(type="text" placeholder="tu email" name="email")
+        input.button.go_back(type="submit" value="vamos!")
+else
+    h2 Cupón enviado!
+    .desc Aprovecha el descuento YA :)

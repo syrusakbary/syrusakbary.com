@@ -13,11 +13,11 @@ from django.views.generic import ListView, DetailView
 from .models import Project
 
 class OpenSourceDetailView(DetailView):
-    template_name='opensource/opensource_detail.haml'
+    template_name='opensource/opensource_detail.jade'
     #queryset = Project.objects.all()
     queryset = []
 class OpenSourceListView(ListView):
-    template_name='opensource/opensource_list.haml'
+    template_name='opensource/opensource_list.jade'
     queryset = Project.objects.all()
     context_object_name = "project_list"
     #queryset = []

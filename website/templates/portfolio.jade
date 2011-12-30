@@ -1,0 +1,14 @@
+- extends "base.jade"
+
+- block title
+  = super()
+
+- set body_class="portfolio"
+- block content
+  #section.grid_16
+    h1 Portfolio
+
+  ul.portfolio
+    li.grid_7
+        a(href='http://www.medinalia.com/')
+            img(src='{{ media_url("projects/medinalia.png")}}')

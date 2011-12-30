@@ -1,0 +1,77 @@
+extends "base.jade"
+set title="Sobre mi"
+block content
+    #section.grid_11
+        h1 Sobre mí
+    
+    #about-me.grid_11.linkable
+        p Nací el 7 de Noviembre de 1988 en Madrid, España.
+        p
+            | Desde pequeño me sentí atraído por la reina de las ciencias abstractas: las matemáticas.
+            br
+            | Siempre he sido muy curioso, me encanta aprender y crecer, defiendo el derecho a equivocarse y la obligación de aprender de ello. Me encanta hacerlo, equivoquémonos pues&hellip; ya que si no sería imposible el aprendizaje.
+        p 
+            | Dí los primeros pasos en Internet cuando comenzó a implantarse en España, allá por 1999. Vi en esta nueva forma de comunicación una enorme utilidad (las cosas son lo que son para nosotros de la forma en que nos pueden ser útiles, a excepción, obviamente, de lo
+            a(href='http://es.wikipedia.org/wiki/El_principito') invisible a los ojos
+            | ).
+        p
+            | Disfruto de lo que hago. Soy inquieto, atrevido, entusiasta y seguramente la persona con la que
+            a(href='{{url("portfolio_list")}}') contactarás
+            | después de haber visto alguno de
+            a(href='{{url("portfolio_list")}}') mis geniales trabajos
+            | .
+    .grid_5
+        img(src='{{ media_url("images/me.png")}}')
+    
+    .clear
+    .grid_6
+        h3 conocimientos
+        ul.detailed_list
+            li
+                dl
+                    dt.grid_3.alpha Lenguajes de programación
+                    dd PHP
+                    dd Python
+                    dd Java
+                    dd Javascript
+                    dd Actionscript
+                    dd C++
+                    dd Haskell
+                    dd Matlab
+                    dd Maple
+                .clear
+            li
+                dl
+                    dt.grid_3.alpha Semánticas
+                    dd HTML5
+                    dd HAML
+                    dd CSS2 & CSS 3
+                    dd LaTeX
+                .clear
+            li
+                dl
+                    dt.grid_3.alpha Plataformas
+                    dd Django
+                    dd jQuery
+                    dd Kohana
+                    dd Moodle
+                .clear
+            li
+                dl
+                    dt.grid_3.alpha Bases de datos
+                    dd MySQL
+                    dd PostgreSQL
+                    dd MongoDB
+                    dd Redis
+                .clear
+            li
+                dl
+                    dt.grid_3.alpha Software
+                    dd Apache
+                    dd GIT
+                    dd Fireworks
+                    dd Flash
+                    dd Coda
+                    dd Eclipse
+                    dd Office 2011
+                .clear

@@ -2,7 +2,7 @@ from django.views.generic import TemplateView
 from blog.models import Entry
 class MainView(TemplateView):
 
-    template_name = "main.haml"
+    template_name = "main.jade"
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context

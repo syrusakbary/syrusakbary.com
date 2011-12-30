@@ -1,0 +1,22 @@
+- extends "base.jade"
+
+- block title
+  = super()
+
+- set body_class="lab"
+- block content
+  .grid_3
+    img(src='{{ media_url("images/lab.png") }}')
+  #section.grid_12
+    h1 Lab
+    .description
+        Me encanta experimentar, probar cosas nuevas, crear y modificar, descubrir...
+        br
+        Bienvenidos a mi patio de recreo
+  .grid_16
+    h2 Proyectos
+  	ul.lab_projects
+      li
+        a(href='{{ url("colorize",song="") }}') Colorize
+      li
+        a(href='{{ url("cuponea",cupon='') }}') Cuponea

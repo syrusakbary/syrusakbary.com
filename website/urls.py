@@ -12,9 +12,9 @@ urlpatterns = patterns('',
     # Example:
     url(r'^$',  MainView.as_view(),name='main'),
     (r'^blog/', include('blog.urls')),
-    url(r'^sobremi$',  TemplateView.as_view(template_name='about_me.haml'),name='about_me'),
+    url(r'^sobremi$',  TemplateView.as_view(template_name='about_me.jade'),name='about_me'),
     (r'^opensource/', include('opensource.urls')),
-    url(r'^portfolio/',  TemplateView.as_view(template_name='portfolio.haml'),name='portfolio_list'),
+    url(r'^portfolio/',  TemplateView.as_view(template_name='portfolio.jade'),name='portfolio_list'),
     (r'^lab/', include('lab.urls')),
     #(r'^lab/static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': (os.path.join(settings.ROOT_PATH,'../static/lab/')),'show_indexes': True}),
     # Uncomment the admin/doc line below to enable admin documentation:

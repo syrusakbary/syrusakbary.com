@@ -19,7 +19,7 @@ except:
     print "Haystack No encontrado"
 
 def explore(request):
-    return render_to_response('blog/explore.haml',context_instance=RequestContext(request))
+    return render_to_response('blog/explore.jade',context_instance=RequestContext(request))
 
 class Blog:
     sqs = None
@@ -41,7 +41,7 @@ class Blog:
 class EntryListView(ListView):
 
     context_object_name = "entry_list"
-    template_name = "blog/entry_list.haml"
+    template_name = "blog/entry_list.jade"
 
     def get_queryset(self):
         return Entry.published.all()
@@ -55,7 +55,7 @@ class EntryListView(ListView):
 class EntrySearchListView(Blog,ListView):
 
     context_object_name = "entry_list"
-    template_name = "blog/entrysearch_list.haml"
+    template_name = "blog/entrysearch_list.jade"
     def dispatch(self, *args, **kwargs):
         self.tags = kwargs['tags'].split('+') if 'tags' in kwargs else []
         request = args[0]
@@ -89,7 +89,7 @@ class EntrySearchListView(Blog,ListView):
 class EntryDetailView(Blog,DetailView):
 
     context_object_name = "entry"
-    template_name = "blog/entry_detail.haml"
+    template_name = "blog/entry_detail.jade"
 
     def get_queryset(self):
         return Entry.published.all()
