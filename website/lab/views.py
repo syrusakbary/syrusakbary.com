@@ -103,7 +103,7 @@ def cuponea_tortitas(request):
         }
         r = requests.post(url, data=d)
         if r.content.find('img/fondo_resultado1.jpg') == -1:
-            raise CuponeaException('Email invalido')
+            raise CuponeaException('Email invalido o ya utilizado')
     return POST, render_to_string(template, context_instance=RequestContext(request,{'back':POST}))
 
 def cuponea_telepizza(request):

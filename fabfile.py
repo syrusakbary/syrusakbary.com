@@ -51,6 +51,12 @@ def generatemedia():
         run('for file in *.png ; do pngcrush -rem alla -rem gAMA -rem cHRM -rem iCCP -rem sRGB  "$file" "${file%.png}-crushed.png" && mv "${file%.png}-crushed.png" "$file" ; done')
         run('optipng -o5 *.png')
 
+@hosts('syrus@syrusakbary.com')
+def optimizedir(directory):
+    with cd('/var/www/vhosts/syrusakbary.com/_generated_media/%s'%directory):
+        run('for file in *.png ; do pngcrush -rem alla -rem gAMA -rem cHRM -rem iCCP -rem sRGB  "$file" "${file%.png}-crushed.png" && mv "${file%.png}-crushed.png" "$file" ; done')
+        run('optipng -o5 *.png')
+
 from fabric.contrib.project import rsync_project
 
 def migrate(apps=['blog']):
