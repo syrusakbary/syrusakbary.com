@@ -22,7 +22,7 @@ def virtualenv():
         yield
             
 @hosts('syrus@syrusakbary.com')
-def update(install_requirements=False,generate_media=True):
+def update(install_requirements=False,generate_media=False):
     commit()
     push()
     with cd('/var/www/vhosts/syrusakbary.com'):

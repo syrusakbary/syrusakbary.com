@@ -27,7 +27,7 @@ def download (s):
     global songs_dir
     f = urllib2.urlopen('http://www.goear.com/search/%s/'%quote(s))
     content = f.read()
-    groups = re.search("http:\/\/www.goear.com\/listenwin\.php\?v=([^\s\W]*)",content).groups()
+    groups = re.search("http:\/\/www.goear.com\/listen_popup\.php\?v=([^\s\W]*)",content).groups()
     v = groups[0]
     if not os.path.exists(os.path.join(songs_dir,'%s-no.mp3'%v)):
         f1 = urllib2.urlopen('http://www.goear.com/tracker758.php?f=%s'%v)
