@@ -1,12 +1,12 @@
-- extends "base.jade"
+extends "base.jade"
 
-- block title
+block title
   = super()
 
-- set body_class="lab"
-- block content
+body_class = "lab"
+block content
   .grid_3
-    img(src='{{ media_url("images/lab.png") }}')
+    img(src=media_url("images/lab.png"))
   #section.grid_12
     h1 Lab
     .description
@@ -15,8 +15,8 @@
         Bienvenidos a mi patio de recreo
   .grid_16
     h2 Proyectos
-  	ul.lab_projects
+    ul.lab_projects
       li
-        a(href='{{ url("colorize",song="") }}') Colorize
+        a(href=url("colorize",song="")) Colorize
       li
-        a(href='{{ url("cuponea",cupon='') }}') Cuponea
+        a(href=url("cuponea",cupon='')) Cuponea

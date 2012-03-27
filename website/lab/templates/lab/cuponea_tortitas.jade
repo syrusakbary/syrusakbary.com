@@ -2,10 +2,10 @@ if not back:
     h1 Tortitas Gratis para todos!
     span.desc gentileza del 
         a(href="http://www.vips.es/tortitas_gratis/") Club VIPS
-    form(action="{{request_path}}" method='POST')
+    form(action=request_path, method='POST')
         - csrf_token
-        input(type="text" placeholder="tu email" name="email")
-        input.button.go_back(type="submit" value="quiero mi tortita!")
+        input(type="text", placeholder="tu email", name="email")
+        input.button.go_back(type="submit", value="quiero mi tortita!")
 else
     h2 Cupón enviado!
     .desc Que aproveche :)

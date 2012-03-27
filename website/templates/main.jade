@@ -1,14 +1,11 @@
 extends "base.jade"
 
-block title
-  = super()
-
-set body_class="main"
+body_class = "main"
 block content
   #section.grid_5
       h1 Hola!
       .description Como ya habrás podido adivinar, mi nombre es Syrus Akbary y entre muchas -muchísimas- otras cosas soy&hellip;
-      a.button(href='{{ url("about_me") }}') Más sobre mi
+      a.button(href=url("about_me")) Más sobre mi
       a.button ¡Contacta conmigo!
       
   #i-am.grid_10.push_1
@@ -75,7 +72,7 @@ block footer
           ul.bullet
             -for entry in last_entries
               li
-                  a(href='{{entry.get_absolute_url()}}')
+                  a(href=entry.get_absolute_url())
                     .title= entry.title|capfirst
           .clear
       .grid_6.last_tweet
@@ -83,14 +80,13 @@ block footer
            span.desc.tweet_timeline.linkable
     .clear
 
-block scripts
-    = super()
+append scripts
     - include_media "js/main.js"
     script
         $('.tweet_timeline').tweet({
-            avatar_size: 32,
-            count: 1,
-            username: "syrusakbary",
-            template: function(i){return i["tweet_text"]}
-          });
-          $('#contact').click(function(){$(this).addClass('active')});
+          avatar_size: 32,
+          count: 1,
+          username: "syrusakbary",
+          template: function(i){return i["tweet_text"]}
+        });
+        $('#contact').click(function(){$(this).addClass('active')});

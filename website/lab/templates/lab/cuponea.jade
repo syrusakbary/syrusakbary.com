@@ -1,16 +1,16 @@
 - load 'media','active'
 !!! 5
-html(xmlns="http://www.w3.org/1999/xhtml" lang="{{ LANGUAGE_CODE }}")
+html(xmlns="http://www.w3.org/1999/xhtml", lang=LANGUAGE_CODE)
     head
-        - block head
+        block head
             title Cuponea - Syrus Akbary
-            meta(property="og:site_name" content="Syrus Akbary")
-            meta(property="og:image" content='{{ media_url("images/logo128-black.png") }}')
+            meta(property="og:site_name", content="Syrus Akbary")
+            meta(property="og:image", content=media_url("images/logo128-black.png"))
             block styles
                 - include_media "lab/cuponea/css/main.css"
             //[if IE 8] - include_media "css/ie.css"
-            link(rel="shortcut icon" href='{{ media_url("images/favicon.png") }}')
+            link(rel="shortcut icon", href=media_url("images/favicon.png"))
     
-    body(class='{{body_class}}')
+    body(class=body_class)
         ul.cupon-list: for cupon in cupones
-            li: a.cupon(href="{{url('cuponea',cupon=cupon)}}")= cupon|capitalize
+            li: a.cupon(href=url('cuponea',cupon=cupon))= cupon|capitalize
