@@ -156,26 +156,74 @@
 	"buffers":
 	[
 		{
-			"file": "website/lab/templates/lab/cuponea_tortitas.jade",
+			"file": "website/blog/templates/blog/entry_detail.jade",
 			"settings":
 			{
-				"buffer_size": 399,
+				"buffer_size": 469,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "requirements.pip",
+			"file": "website/blog/templates/blog/entrysearch_list.jade",
 			"settings":
 			{
-				"buffer_size": 421,
+				"buffer_size": 195,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "fabfile.py",
+			"file": "website/blog/templates/blog/entry_list.jade",
 			"settings":
 			{
-				"buffer_size": 3135,
+				"buffer_size": 99,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "website/blog/templates/blog/blog.jade",
+			"settings":
+			{
+				"buffer_size": 2909,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "website/opensource/templates/opensource/opensource_list.jade",
+			"settings":
+			{
+				"buffer_size": 422,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "website/lab/templates/lab.jade",
+			"settings":
+			{
+				"buffer_size": 478,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "website/lab/templates/lab/cuponea_telepizza.jade",
+			"settings":
+			{
+				"buffer_size": 416,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "website/lab/templates/lab/cuponea_detail.jade",
+			"settings":
+			{
+				"buffer_size": 3521,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "website/lab/templates/lab/cuponea.jade",
+			"settings":
+			{
+				"buffer_size": 676,
 				"line_ending": "Unix"
 			}
 		},
@@ -183,23 +231,7 @@
 			"file": "website/templates/portfolio.jade",
 			"settings":
 			{
-				"buffer_size": 508,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "static/media/css/portfolio.css",
-			"settings":
-			{
-				"buffer_size": 225,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "website/lab/views.py",
-			"settings":
-			{
-				"buffer_size": 5705,
+				"buffer_size": 823,
 				"line_ending": "Unix"
 			}
 		}
@@ -228,15 +260,22 @@
 	},
 	"file_history":
 	[
+		"/Users/syrus/Sites/syrusakbary/website/templates/about_me.jade",
+		"/Users/syrus/Sites/syrusakbary/website/templates/main.jade",
+		"/Users/syrus/Sites/syrusakbary/website/templates/base.jade",
+		"/Users/syrus/Sites/syrusakbary/website/lab/views.py",
+		"/Users/syrus/Sites/syrusakbary/static/media/css/portfolio.css",
+		"/Users/syrus/Sites/syrusakbary/website/templates/portfolio.jade",
+		"/Users/syrus/Sites/syrusakbary/fabfile.py",
+		"/Users/syrus/Sites/syrusakbary/requirements.pip",
+		"/Users/syrus/Sites/syrusakbary/website/lab/templates/lab/cuponea_tortitas.jade",
 		"/Users/syrus/Sites/syrusakbary/website/lab/templates/lab/cuponea.jade",
 		"/Users/syrus/Sites/syrusakbary/static/media/js/jquery.placeholder.min.js",
 		"/Users/syrus/Sites/syrusakbary/static/media/lab/cuponea/css/main.css",
-		"/Users/syrus/Sites/syrusakbary/website/lab/views.py",
 		"/Users/syrus/Sites/syrusakbary/website/lab/templates/lab/cuponea_detail_plain.json",
 		"/Users/syrus/Sites/syrusakbary/website/lab/templates/lab/cuponea_telepizza.jade",
 		"/Users/syrus/Sites/syrusakbary/website/lab/templates/lab/cuponea_detail.jade",
 		"/Users/syrus/Sites/syrusakbary/website/lab/templates/lab.jade",
-		"/Users/syrus/Sites/syrusakbary/website/templates/base.jade",
 		"/Users/syrus/Sites/syrusakbary/website/settings.py",
 		"/Users/syrus/Sites/syrusakbary/website/blog/views.py",
 		"/Users/syrus/Sites/syrusakbary/website/lab/urls.py",
@@ -248,9 +287,6 @@
 		"/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/entry_list.jade",
 		"/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/entry_detail.jade",
 		"/Users/syrus/Sites/syrusakbary/website/blog/templates/blog/blog.jade",
-		"/Users/syrus/Sites/syrusakbary/website/templates/portfolio.jade",
-		"/Users/syrus/Sites/syrusakbary/website/templates/main.jade",
-		"/Users/syrus/Sites/syrusakbary/website/templates/about_me.jade",
 		"/Users/syrus/Sites/syrusakbary/website/opensource/templates/opensource/opensource_list.jade",
 		"/Users/syrus/Sites/syrusakbary/website/opensource/templates/opensource/opensource_list.haml",
 		"/Users/syrus/Sites/syrusakbary/website/lab/templates/lab.haml",
@@ -269,12 +305,9 @@
 		"/Users/syrus/Sites/syrusakbary/website/lab/templates/lab/colorize.html",
 		"/Users/syrus/Sites/syrusakbary/.gitignore",
 		"/Users/syrus/Sites/syrusakbary/README.rst",
-		"/Users/syrus/Sites/syrusakbary/fabfile.py",
 		"/Users/syrus/Sites/syrusakbary/website/blog/models.py",
-		"/Users/syrus/Sites/syrusakbary/requirements.pip",
 		"/Users/syrus/Sites/syrusakbary/website/local_settings.py",
 		"/Users/syrus/Sites/syrusakbary/static/media/css/footer.css",
-		"/Users/syrus/Sites/syrusakbary/static/media/css/portfolio.css",
 		"/Users/syrus/Sites/syrusakbary/static/media/css/text.css",
 		"/Users/syrus/Sites/syrusakbary/static/media/css/rst.css",
 		"/Users/syrus/Sites/syrusakbary/website/blog/migrations/0001_initial.py",
@@ -341,6 +374,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"a",
+			"{{",
+			"media_url",
+			"{{",
 			"haystack",
 			"go_front",
 			"javascript",
@@ -384,7 +421,7 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 			"$1",
@@ -416,23 +453,76 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "website/lab/templates/lab/cuponea_tortitas.jade",
+					"file": "website/blog/templates/blog/entry_detail.jade",
 					"settings":
 					{
-						"buffer_size": 399,
+						"buffer_size": 469,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								399,
-								399
+								160,
+								160
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/jade-tmbundle/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "website/blog/templates/blog/entrysearch_list.jade",
+					"settings":
+					{
+						"buffer_size": 195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								103,
+								103
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/jade-tmbundle/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "website/blog/templates/blog/entry_list.jade",
+					"settings":
+					{
+						"buffer_size": 99,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								76,
+								76
 							]
 						],
 						"settings":
@@ -446,24 +536,26 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "requirements.pip",
+					"buffer": 3,
+					"file": "website/blog/templates/blog/blog.jade",
 					"settings":
 					{
-						"buffer_size": 421,
+						"buffer_size": 2909,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								421,
-								421
+								2491,
+								2491
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/jade-tmbundle/Syntaxes/Jade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -472,47 +564,47 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "fabfile.py",
+					"buffer": 4,
+					"file": "website/opensource/templates/opensource/opensource_list.jade",
 					"settings":
 					{
-						"buffer_size": 3135,
+						"buffer_size": 422,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2989,
-								2989
+								269,
+								269
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage",
+							"syntax": "Packages/jade-tmbundle/Syntaxes/Jade.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 295.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "website/templates/portfolio.jade",
+					"buffer": 5,
+					"file": "website/lab/templates/lab.jade",
 					"settings":
 					{
-						"buffer_size": 508,
+						"buffer_size": 478,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								497,
-								497
+								478,
+								478
 							]
 						],
 						"settings":
@@ -528,24 +620,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "static/media/css/portfolio.css",
+					"buffer": 6,
+					"file": "website/lab/templates/lab/cuponea_telepizza.jade",
 					"settings":
 					{
-						"buffer_size": 225,
+						"buffer_size": 416,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								93,
-								93
+								334,
+								334
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/jade-tmbundle/Syntaxes/Jade.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -554,29 +646,85 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "website/lab/views.py",
+					"buffer": 7,
+					"file": "website/lab/templates/lab/cuponea_detail.jade",
 					"settings":
 					{
-						"buffer_size": 5705,
+						"buffer_size": 3521,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1219,
-								1219
+								1562,
+								1562
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage",
+							"syntax": "Packages/jade-tmbundle/Syntaxes/Jade.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1275.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "website/lab/templates/lab/cuponea.jade",
+					"settings":
+					{
+						"buffer_size": 676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								487,
+								487
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/jade-tmbundle/Syntaxes/Jade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "website/templates/portfolio.jade",
+					"settings":
+					{
+						"buffer_size": 823,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								823,
+								823
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/jade-tmbundle/Syntaxes/Jade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

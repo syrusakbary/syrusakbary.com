@@ -43,19 +43,12 @@ def generatemedia():
             run('python manage.py generatemedia')
             run('cp static/media/css/PIE.htc _generated_media/css/')
     with cd('/var/www/vhosts/syrusakbary.com/_generated_media/images/'):
-        #run('mogrify -strip *.png')
-        run('for file in *.png ; do pngcrush -rem alla -rem gAMA -rem cHRM -rem iCCP -rem sRGB  "$file" "${file%.png}-crushed.png" && mv "${file%.png}-crushed.png" "$file" ; done')
-        #run('mogrify -strip *.jpg')
-        run('optipng -o5 *.png')
-    with cd('/var/www/vhosts/syrusakbary.com/_generated_media/projects/'):
-        run('for file in *.png ; do pngcrush -rem alla -rem gAMA -rem cHRM -rem iCCP -rem sRGB  "$file" "${file%.png}-crushed.png" && mv "${file%.png}-crushed.png" "$file" ; done')
-        run('optipng -o5 *.png')
+        run('for file in `find ./ -type f -name "*.png"` ; do pngcrush -rem alla -rem gAMA -rem cHRM -rem iCCP -rem sRGB  "$file" "${file%.png}-crushed.png" && mv "${file%.png}-crushed.png" "$file" && optipng -o5 "$file" ; done')
 
 @hosts('syrus@syrusakbary.com')
 def optimizedir(directory):
     with cd('/var/www/vhosts/syrusakbary.com/_generated_media/%s'%directory):
-        run('for file in *.png ; do pngcrush -rem alla -rem gAMA -rem cHRM -rem iCCP -rem sRGB  "$file" "${file%.png}-crushed.png" && mv "${file%.png}-crushed.png" "$file" ; done')
-        run('optipng -o5 *.png')
+        run('for file in `find ./ -type f -name "*.png"` ; do pngcrush -rem alla -rem gAMA -rem cHRM -rem iCCP -rem sRGB  "$file" "${file%.png}-crushed.png" && mv "${file%.png}-crushed.png" "$file" && optipng -o5 "$file" ; done')
 
 from fabric.contrib.project import rsync_project
 
