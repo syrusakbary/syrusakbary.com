@@ -1,0 +1,60 @@
+doctype html
+//
+    !{__('header')}
+html.no-js(lang=locale)
+  block vars
+    - header_class = ''
+    - header_active = null
+  head: block head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=0")
+    title Syrus Akbary
+    link(href="#{STATIC_URL}styles/main.css", type="text/css", rel="stylesheet", media="all")
+    link(href='http://fonts.googleapis.com/css?family=Lora:400,400italic|Gloria+Hallelujah', rel='stylesheet', type='text/css')
+    //- link(href="mediante.js/css/medianteplayer.css", type="text/css", rel="stylesheet", media="all")
+    link(rel="icon", type="image/x-icon", href="/favicon.ico")
+    block meta_og
+      meta(property="og:site_name", content="syrusakbary.com")
+      meta(property="og:type", content="website")
+      meta(property="og:image", content="#{STATIC_URL}images/logo.png")
+    block meta_fb
+    block meta_twitter
+      meta(name="twitter:site", content="@syrusakbary")
+      meta(name="twitter:title", content="Syrus Akbary")
+      meta(name="twitter:image", content="#{STATIC_URL}images/logo.png")
+    //- script(src="#{STATIC_URL}js/modernizr.js")
+  body
+     block header
+      header#header.turbo-replace(class=header_class)
+        a#nav
+        a#menu-close(href="#")
+        a#menu(href="#nav")
+          span.menu-top
+          span.menu-middle
+          span.menu-bottom
+
+        nav#site-nav
+          a.site-nav__link(href=__("/projects"), class=header_active=="projects"?"current":"")= __('Projects')
+          a.site-nav__link(href=__("/profile"), class=header_active=="profile"?"current":"")= __('Profile')
+          a.site-nav__link Lab
+        a#header__logo(href=__("/")) Syrus Akbary
+        a#header__connect(href!="mailto:&#x6d;&#x65;&#x40;&#x73;&#x79;&#x72;&#x75;&#x73;&#x61;&#x6b;&#x62;&#x61;&#x72;&#x79;&#x2e;&#x63;&#x6f;&#x6d;")= __('Connect')
+    #pages
+      .page
+        block content
+    #scripts.turbo-replace
+      block scripts
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js", data-turbolinks-eval="false")
+        script.
+          window.jQuery || document.write('<script src="#{STATIC_URL}vendor/jquery/dist/jquery.min.js" data-turbolinks-eval="false"><\/script>')
+        script(src="#{STATIC_URL}scripts/app.js", data-turbolinks-eval="false")
+        script.
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-12613282-2', 'auto');
+          ga('send', 'pageview');
+

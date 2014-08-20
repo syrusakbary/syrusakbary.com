@@ -1,0 +1,302 @@
+@import '_base'
+@import '_icons'
+@import 'partials/_animations'
+@import 'pages/_shared'
+@import 'partials/_buttons'
+
+// body
+//     position relative
+    // padding-top 77px
+
+.pages-animation
+    overflow hidden
+    pointer-events none
+
+#header
+    @extends $padder
+    position absolute
+    height 76px
+    padding-top 23px
+    padding-bottom 23px
+    overflow hidden
+    box-sizing border-box
+    top 0
+    left 0
+    right 0
+    color white
+    z-index 1000
+    animate(fadeInDown, .5s, .1s)
+    &.header--black
+        color #111
+
+#header__logo
+    float left
+    width 48px
+    height 28px
+    display block
+    +abs_icon("\e600")
+        font-size 28px
+        color white
+        transition all .2s ease-in-out
+        .header--black &
+            color black
+    // text-indent -1000px
+    z-index 1003
+    // position relative
+    transition all .3s ease-in-out
+    // transition transform $transition_style
+
+#header__connect
+    padding 8px 18px
+    float right
+    border-radius 37px
+    background #DC6459
+    color white
+    font-family $body-font
+    font-size 11px
+    letter-spacing 1px
+    text-transform uppercase
+    z-index 1002
+    position relative
+    transition transform .3s ease-in-out, opacity .3s ease-in-out
+    // transition all $transition_style
+    +icon("\e601", ':after')
+        color white
+        font-size 17px
+        display inline-block
+        margin-left 6px
+        vertical-align top
+        text-indent 0
+    &:hover
+        background #CF4B3F
+        box-shadow inset 0 1px rgba(255,255,255,.1)
+
+    // animate(rubberBand, 10s, 5s, linear infinite)
+
+#site-nav
+    position absolute
+    top 0
+    left 0
+    right 0
+    text-align center
+
+$transition_style = .3s ease-in-out
+.site-nav__link
+    display inline-block
+    text-transform uppercase
+    font-family $body-font
+    box-sizing border-box
+    letter-spacing 1px
+    font-size 12px
+    font-weight 300
+    padding 32px 30px 26px 30px
+    border-bottom 1px solid rgba(255,255,255, .6)
+    color white
+    cursor pointer
+    transition color $transition_style, border-color $transition_style
+    &:hover
+    &.current
+        padding-bottom 24px
+        border-bottom 3px solid white
+    .header--black &
+        // text-shadow 0 1px 0 rgba(255,255,255,.5)
+        border-color rgba(0,0,0, .6)
+        &:hover
+        &.current
+            border-color black
+        color #111
+
+
+#pages
+    display block
+    height 100%
+    min-height 100%
+    width 100%
+    background #767773
+    .pages-animation &
+        overflow hidden
+
+    // padding-bottom 80px
+    // &.animation
+    //     pointer-events none
+    //     &:before
+    //         content ''
+    //         min-height 100%
+    //         height 100%
+    //         background #767773
+    //         // background url('/images/background_pages.png') repeat
+    //         display block
+    //         position absolute
+    //         top 0
+    //         bottom -500px
+    //         right 0
+    //         left 0   
+
+.page
+    background white
+    min-height 100%
+    transform-origin 50% 0
+    overflow hidden
+    position relative
+    .pages-animation &
+        box-shadow 0 3px 25px rgba(0,0,0,.3)
+        // opacity 0
+        // display none
+        &.page--out
+            // display block
+            z-index 90
+            animate(page-unvisit, .6s, null, ease-in-out)
+
+        &.page--in
+            // transform translateY(104px) scale(.85) translateX(120%)
+            position absolute
+            z-index 100
+            top 0
+            width 100%
+            left 0
+            right 0
+            animate(page-visit, .6s, null, ease-in-out)
+            // *
+            //     animation none
+
+    .pages-animation.pages-animation--back &
+        &.page--out
+            z-index 100
+            animate(page-visit, .6s, null, ease-in-out, $direction: reverse)
+        &.page--in
+            z-index 90
+            animate(page-unvisit, .6s, null, ease-in-out, $direction: reverse)
+            // transform translateY(104px) scale(.85) translateX(-120%)
+
+
+// MENU
+
+animate_menu($init, $end)
+    animate($init, 0.5s, false, backwards, $direction: reverse, $fill:false)
+    #nav:target ~ #menu &
+    #nav.nav--active ~ #menu &
+        animate($end, 0.5s, false, forwards, $fill:false)
+
+
++media('lap+')
+    #menu
+        z-index 99
+
+    #menu
+    #menu-close
+        width 30px
+        height 30px
+        display inline-block
+        position absolute
+        left 23px
+        top 23px
+
+    .site-nav__link
+        transform translateX(-150px)
+        transition color $transition_style, border-color $transition_style, transform .3s ease-in-out, opacity $transition_style
+        transition-delay .0
+        opacity 0
+        pointer-events none
+
+    .site-nav__link
+        border-color transparent
+        margin-bottom -1px
+        padding-left 10px
+        padding-right 10px
+        font-size 14px
+
+    #site-nav
+        margin 0 20px
+        padding-left 30px
+        border-bottom 1px solid rgba(255,255,255, .6)
+        transition border-color $transition_style
+        .header--black &
+            border-color black
+
+    #header__connect
+        text-indent -100px
+        overflow hidden
+        &:after
+            position absolute
+            z-index 100
+            right 10px
+    #nav
+        position absolute
+        top 0
+        left 0
+        &:target ~
+        &.nav--active ~
+            #header__logo
+            #header__connect
+                transform translateX(150px)
+                transition-delay .0
+                opacity 0
+            #menu-close
+                z-index 100
+            #site-nav .site-nav__link
+                transition-delay .15s
+                transform translateX(0px)
+                opacity 1
+                pointer-events auto
+
+    .pages-animation
+        .site-nav__link
+        #header__logo
+            transition-delay 0!important
+
+    #header__logo
+    #header__connect
+        transition-delay .15s
+
+    #header__logo
+        left 50%
+        position absolute
+        top 23px
+        margin-left -25px
+
+    $menu_line
+        width 100%
+        height 2px
+        background white
+        transition background $transition_style
+        .header--black &
+            background black
+        position absolute
+        left 0
+        right 0
+        border-radius 1px
+
+    .menu-top
+        @extends $menu_line
+        top 6px
+        animate_menu(menuInTop, menuOutTop)
+            
+            
+    .menu-middle
+        @extends $menu_line
+        top 14px
+        animate_menu(menuInMiddle, menuOutMiddle)
+
+    .menu-bottom
+        @extends $menu_line
+        top 22px
+        animate_menu(menuInBottom, menuOutBottom)
+
+
+// EXTRA
+// .page
+//     // transform-origin 50% 50%
+//     .pages-animation &
+//         // &.page--out
+//         &.page--in
+
+//     .pages-animation--back &
+//         // &.page--visit
+//         //     position relative
+//         //     z-index 200
+//         &.page--out
+//         &.page--in
+
+@import 'pages/_intro'
+@import 'pages/_profile'
+@import 'pages/_projects'

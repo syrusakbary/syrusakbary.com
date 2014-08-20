@@ -1,0 +1,53 @@
+$media_cache = {}
+$media_aliases = {
+  mobile:       '(max-width: 479px)'
+  'mobile+':       '(min-width: 480px)'
+  fit:       '(max-height: 480px)'
+  lap:        '(min-width: 480px) and (max-width: 639px)'
+  'lap+':        '(max-width: 640px)'
+  desk:       '(min-width: 640px) and (max-width: 959px)'
+  'desk+':       '(max-width: 959px)'
+}
+
+// Mixin for caching the blocks with the given conditions
+// media($condition)
+//   helper($condition, $sel)
+//     unless $media_cache[$condition]
+//       $media_cache[$condition] = ()
+//     push($media_cache[$condition], block)
+//     @media $condition
+//       {selector()}
+//   s = selector()
+//   +helper($condition, s)
+//     {s+''}
+//         {block}
+
+
+// // Function we would use to call all the cached styles
+// apply_media_cache()
+//   for $media, $blocks in $media_cache
+//     $media = unquote($media_aliases[$media] || $media)
+//     $media = '(%s)' % $media unless match('\(', $media)
+//     $media = 'only screen and %s' % $media
+//     // @media $media
+//     for $block in $blocks
+//       {$block}
+
+media($condition)
+  $media = unquote($media_aliases[$condition] || $condition)
+  $media = '(%s)' % $media unless match('\(', $media)
+  $media = 'only screen and %s' % $media
+  @media $media
+    {block}
+
+
+$wrapper
+    max-width 960px
+    margin 0 auto
+    padding 0 0
+
+$wrapper_inner
+    @extends $wrapper
+    padding 0 10px
+
+

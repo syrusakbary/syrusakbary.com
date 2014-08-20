@@ -1,0 +1,32 @@
+button_white()
+    display inline-block
+    padding 11px 23px
+    border 1px solid black
+    border-radius 40px
+    color black
+    font-size 14px
+    letter-spacing .8px
+    cursor pointer
+    transition padding .2s ease-in-out
+    position relative
+    +icon("\e606", ':after')
+        transition opacity .2s ease-in-out, transform .1s ease-in-out
+        position absolute
+        right 16px
+        top 50%
+        margin-top -7px
+        opacity 0
+    &:hover
+        padding-right 38px
+        &:after
+            opacity 1
+    
+    &:active
+        &:after
+            transform translateX(4px)
+            opacity .2
+    // $button_white
+    //     @extends $button
+    border-color white
+    color white
+

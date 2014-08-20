@@ -1,0 +1,18 @@
+extends _base
+block vars
+  - header_class = "header--black"
+  - header_active = "profile"
+block content
+  section#profile
+    h1#profile__title Bio
+    #profile__description
+      p!= __('!profile.paragraph_1')
+      p!= __('!profile.paragraph_2')
+      //- blockquote Es más fácil pedir perdón que permiso
+      blockquote!= __('!profile.quote')
+      p!= __('!profile.paragraph_3')
+      p!= __('!profile.paragraph_4', __('/projects'))
+
+//- append scripts
+//-   script.
+//-     alert('a');

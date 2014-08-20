@@ -1,0 +1,15 @@
+extends _base
+block content
+  section#intro
+    #intro__background
+    img#intro__avatar(src="#{STATIC_URL}images/photo.jpg", width="123", height="123", alt="Syrus portrait photo")
+    p#intro__description!= __('!index.description')
+    a#intro__profile-link(href=__("/profile"))= __('View profile')
+
+  section#social
+    nav#social__links
+      h3#social__guide= __('My networks')
+      a#social__github(href="https://github.com/SyrusAkbary") Syrus Akbary on Github
+      a#social__twitter(href="https://twitter.com/syrusakbary") @syrusakbary
+      a#social__linkedin(href="https://www.linkedin.com/in/syrusakbary") Syrus Akbary on Linked in
+      a#social__facebook(href="https://www.facebook.com/syrusakbary") Facebook of Syrus Akbary

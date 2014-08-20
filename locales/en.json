@@ -1,0 +1,19 @@
+{
+	"/": "/en/",
+	"/profile": "/en/profile",
+	"Projects": "Projects",
+	"Profile": "Profile",
+	"/projects": "/en/projects/",
+	"My networks": "My networks",
+	"!index.description": "I’m <strong>Syrus Akbary</strong>, full stack developer, designer, entrepeneur and mathematician with over than 10 years experience in web development",
+	"Connect": "Connect",
+	"View profile": "View profile",
+	"!profile.paragraph_1": "Since childhood I've been attracted to the Queen of abstract sciences: mathematics.",
+	"!profile.paragraph_2": "I’ve always been curious, I love to learn and grow, I hold the right to be wrong and the responsibility to learn about it. I love to be wrong …learning would be impossible other way.",
+	"!profile.quote": "When a mystery is too overpowering, one dare not disobey",
+	"!profile.paragraph_3": "I take the first steps on the Internet world when it was at early stage in Spain, about 1999. I have seen an enormous potential in this new form of communication (things are as they are in the way they could be useful for us, with the innegable exception of <a href=\"http://en.wikipedia.org/wiki/The_Little_Prince\">those things invisible to the eye</a>).",
+	"!profile.paragraph_4": "I love what I do. I’m always eager to learn, intrepid, enthusiastic and surely the one you will <a href=\"mailto:&#x6d;&#x65;&#x40;&#x73;&#x79;&#x72;&#x75;&#x73;&#x61;&#x6b;&#x62;&#x61;&#x72;&#x79;&#x2e;&#x63;&#x6f;&#x6d;\">keep in touch</a> after seeing any of <a href=\"%s\">my amazing projects</a>.",
+	"<Projects>": "<Projects>",
+	"Choose a project": "Choose a project",
+	"header": "\n    Designed and crafted by Syrus Akbary with <3\n\n\n                                             ooooooo\n                                      ooooooooooooo\n                                   oooooo\n                                ooooo\n                              oooo\n                             ooo\n                            ooo            oooooooo\n                           ooo           ooooo  ooo\n                          ooo          ooo      ooo\n                         ooo         ooo        ooo\n                        ooo         ooo         ooo\n                       ooo         ooo          ooo\n                     oooo          oo           ooo\n                   oooo           ooo           ooo\n               oooooo             ooo           ooo\n      oooooooooooo                ooo           ooo\n      oooooo                      ooO           ooo\n\n\n    Designed with Sketch. Inspired in Medium & Google Material Design.\n\n    Technologies used:\n      * Frontend / gulp, jade, stylus, coffeescript, browserify, icomoon, jQuery\n      * Backend / nginx, docker, dokku, node.js, express.js\n\n    Check the source code at https://github.com/SyrusAkbary/syrusakbary.com/"
+}

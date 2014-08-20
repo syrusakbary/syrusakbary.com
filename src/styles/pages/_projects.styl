@@ -1,0 +1,176 @@
+#projects
+    @extends $padder
+    padding-top 76px
+    padding-bottom 63px
+    position relative
+    overflow hidden
+    text-align center
+
+.projects__background
+    position absolute
+    top 0px
+    bottom 0px
+    right 0px
+    left 0px
+    background #3e3e38 url(STATIC_URL+'images/projects/background.png') no-repeat center center
+    background-size cover
+    z-index 0
+    // animate(backgroundAppear, .3s, null, ease-in-out)
+
+#projects__title
+    font-family 'Consolas', monospace
+    font-size 54px
+    color #FFFFFF
+    line-height 1em
+    position relative
+    z-index 1000
+    margin-top 84px
+    animate(fadeInDown, .5s, .5s)
+    +media('lap+')
+        font-size 42px
+
+#project__list
+    position relative
+    z-index 1000
+    text-align center
+    // width 100%
+    overflow-x auto
+    overflow-y hidden
+    -webkit-overflow-scrolling touch
+    margin 0 -23px
+    padding 0 23px
+    box-sizing border-box
+    // overflow-y auto
+    white-space nowrap
+
+#project__line
+    position relative
+    z-index 1000
+    display block
+    margin 0 -23px
+    margin-top 160px
+    margin-bottom -@margin-top
+    border none
+    border-bottom 5px solid rgba(255,255,255,0.30)
+    animate(fade, .4s, .9s)
+
+.project__item
+    display inline-block
+    width 7%
+    min-width 55px
+    max-width 80px
+    margin-right -3%
+    margin-left 3%
+    margin-top 130px
+    box-sizing border-box
+
+$project
+    display inline-block
+    vertical-align bottom
+    text-align left
+    font-family: 'Helvetica Neue';
+    font-weight 300
+    font-size 22px
+    padding 15px 0
+    color #c3c3c1
+    line-height 24px
+    white-space nowrap
+    transform-origin 0 50%
+    transform rotate(315deg)
+    position relative
+    transition all .2s ease-in-out
+    padding-left 30px
+    cursor pointer
+    cursor hand
+    #project__list:hover &
+        color #999996
+    &:before
+        content ''
+        border-radius 20px
+        display block
+        position absolute
+        bottom 50%
+        width 18px
+        height 18px
+        left -@width*0.5
+        margin-bottom -@height*0.5
+        box-sizing border-box
+        border 3px solid #FFFFFF
+        box-shadow 0px 1px 3px 0px rgba(0,0,0,0.30)
+        transition all .2s ease-in-out
+        // border 1px solid rgba(255,255,255,0.30)
+    &:hover
+        color white!important
+        font-weight 400
+        transform scale(1.2) rotate(315deg)
+        // &:before
+        //     border 10px solid rgba(255,255,255,0.5)
+        // &:before
+        //     transform scale(1.2)
+
+$time = .9s
+$projects = 1, 2
+project($color)
+    @extends $project
+    $l = length($projects)
+    animate(showProject, .3s, $time+$l*0.12s, ease-in-out, $fill: backwards)
+    $projects[$l] = 1
+    &:before
+        background $color
+
+#project--medinalia
+    project(#6987C8)
+
+#project--exercita
+    project(#2A699C)
+
+#project--cineate
+    project(#C33917)
+
+#project--incentivalia
+    project(#F64A1F)
+
+#project--vclimo
+    project(#000000)
+
+#project--report
+    project(#00CCCC)
+
+#project--uspeak
+    project(#7B6A6A)
+
+#project--mediante
+    project(#D9472F)
+
+
+#projects__choose
+    position relative
+    z-index 100
+    margin 0 auto
+    display inline-block
+    font-family $comic-font
+    font-size 17px
+    white-space nowrap
+    text-transform lowercase
+    color #B9B7B7
+    margin-right 5px
+    // margin-left -50px
+    width 300px
+    margin-top 40px
+    animate(fadeInDown, .6s, 2.1s)
+    &:before
+        content ''
+        left 50%
+        bottom 100%
+        width 70px
+        height 42px
+        margin-bottom 10px
+        background url(STATIC_URL+'/images/arrow-tr.svg') no-repeat center center
+        display block
+        position absolute
+        // right 100%
+        left auto
+        bottom 0
+        margin-bottom 0px
+        margin-right 10px
+        transform rotate(230deg)
