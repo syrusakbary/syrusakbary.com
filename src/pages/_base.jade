@@ -35,9 +35,9 @@ html.no-js(lang=locale)
           span.menu-bottom
 
         nav#site-nav
-          a.site-nav__link(href=__("/projects"), class=header_active=="projects"?"current":"")= __('Projects')
-          a.site-nav__link(href=__("/profile"), class=header_active=="profile"?"current":"")= __('Profile')
-          a.site-nav__link Lab
+          a.site-nav__link(href=__("/projects"), class=header_active=="projects"?"current":""): span(data-hover=__('Projects'))= __('Projects')
+          a.site-nav__link(href=__("/profile"), class=header_active=="profile"?"current":""): span(data-hover=__('Profile'))= __('Profile')
+          a.site-nav__link: span(data-hover="Lab") Lab
         a#header__logo(href=__("/")) Syrus Akbary
         a#header__connect(href!="mailto:&#x6d;&#x65;&#x40;&#x73;&#x79;&#x72;&#x75;&#x73;&#x61;&#x6b;&#x62;&#x61;&#x72;&#x79;&#x2e;&#x63;&#x6f;&#x6d;")= __('Connect')
     #pages
