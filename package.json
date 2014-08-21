@@ -2,7 +2,7 @@
   "name": "syrusakbary_web",
   "version": "0.0.1",
   "description": "Syrus Akbary website",
-  "author": "Syrus Akbary",
+  "author": "Syrus Akbary <me@syrusakbary.com>",
   "license": "MIT",
   "dependencies": {
     "coffee-script": "~1.7.1",
