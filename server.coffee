@@ -3,11 +3,14 @@ slash   = require('express-slash')
 serveStatic = require("serve-static")
 favicon = require('serve-favicon')
 subdomain = require('subdomain')
+compression = require('compression')
 i18n = require("i18n")
 
 getApp = ->
   app = express()
+  
   app.use(subdomain(base:'syrusakbary.com', removeWWW:true))
+  app.use(compression())
 
   LANGUAGES = [
     "es"
