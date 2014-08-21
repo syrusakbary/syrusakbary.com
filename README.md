@@ -16,7 +16,7 @@ Just run `npm install` in the root of the repo.
 
 ## Development
 
-Once you have installed the required npm packages, you can developing with:
+Once you have installed the required npm packages you can start the development website:
 
 	gulp
 
