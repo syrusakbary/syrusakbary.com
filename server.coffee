@@ -9,7 +9,13 @@ i18n = require("i18n")
 getApp = ->
   app = express()
   
-  app.use(subdomain(base:'syrusakbary.com', removeWWW:true))
+  app.use (req, res, next) ->
+    if req.host != "localhost" and req.host.indexOf("www.") !== 0
+      res.redirect(301, req.protocol + "://www." + req.host + req.originalUrl);
+    else
+      next()
+
+  # app.use(subdomain(base:'syrusakbary.com', removeWWW:true))
   app.use(compression())
 
   LANGUAGES = [
