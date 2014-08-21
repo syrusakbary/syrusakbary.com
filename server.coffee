@@ -10,8 +10,8 @@ getApp = ->
   app = express()
   
   app.use((req, res, next) ->
-    if req.host != "localhost" and req.host.indexOf("www.") != 0
-      res.redirect(301, req.protocol + "://www." + req.host + req.originalUrl)
+    if req.hostname != "localhost" and req.hostname.indexOf("www.") != 0
+      res.redirect(301, req.protocol + "://www." + req.hostname + req.originalUrl)
     else
       next()
   )
@@ -23,6 +23,7 @@ getApp = ->
     "es"
     "en"
   ]
+  MAX_AGE = 60*60*24
 
   # use filesys
   i18n.configure
@@ -70,7 +71,10 @@ getApp = ->
   get_i18n "/projects", renderPage("projects")
   get_i18n "/profile", renderPage("profile")
 
-  app.use "/static/", serveStatic(__dirname + "/public/static/")
+  setHeaders = (res) ->
+    res.setHeader("Cache-Control", "s-maxage=#{MAX_AGE}")
+
+  app.use "/static/", serveStatic(__dirname + "/public/static/", setHeaders: setHeaders)
   app.get '/', (req, res) ->
     locale = req.getLocale()
     res.redirect("/#{locale}/")
