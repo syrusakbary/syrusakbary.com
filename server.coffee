@@ -2,10 +2,12 @@ express = require("express")
 slash   = require('express-slash')
 serveStatic = require("serve-static")
 favicon = require('serve-favicon')
+subdomain = require('subdomain')
 i18n = require("i18n")
 
 getApp = ->
   app = express()
+  app.use(subdomain(base:'syrusakbary.com', removeWWW:true))
 
   LANGUAGES = [
     "es"
