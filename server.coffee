@@ -23,7 +23,9 @@ getApp = ->
     "es"
     "en"
   ]
-  MAX_AGE = 60*60*24
+
+  MAX_AGE = 60*60*2
+  SURROGATE_MAX_AGE = 60*60*24
 
   # use filesys
   i18n.configure
@@ -72,7 +74,8 @@ getApp = ->
   get_i18n "/profile", renderPage("profile")
 
   setHeaders = (res) ->
-    res.setHeader("Cache-Control", "s-maxage=#{MAX_AGE}")
+    res.setHeader("Cache-Control", "public, maxage=#{MAX_AGE}")
+    res.setHeader("Surrogate-Control", "maxage=#{SURROGATE_MAX_AGE}")
 
   app.use "/static/", serveStatic(__dirname + "/public/static/", setHeaders: setHeaders)
   app.get '/', (req, res) ->
