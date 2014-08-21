@@ -116,7 +116,7 @@ changePage = (title, body, csrfToken, runScripts, onReplace, is_back) ->
     doFinish()
     return
   
-  runScripts = false
+  # runScripts = false
   pageAnimation(title, body, is_back, doFinish)
   null
 

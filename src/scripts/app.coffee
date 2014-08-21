@@ -29,10 +29,11 @@ pageAnimation = (title, body, is_back, doFinish) ->
       $this = $(@)
       id = $this.attr('id')
       old_this = $_body.find("##{id}.turbo-replace")
-      old = old_this.get(0)
-      # dif = dd.diff(old, @)
-      dd.apply(old, dd.diff(old, @))
-      # old_this.replaceWith($this)
+      if $this.hasClass('turbo-replace--diff')
+        old = old_this.get(0)
+        dd.apply(old, dd.diff(old, @))
+      else
+        old_this.replaceWith($this)
     )
   , 200
 
@@ -54,6 +55,9 @@ $(document).ready( ->
     e.preventDefault()
     e.stopPropagation()
     false
+  )
 )
 
-)
+# $(document).on('page:change', ->
+#   ga('send', 'pageview', window.location.pathname)
+# )

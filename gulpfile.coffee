@@ -20,7 +20,7 @@ uglify = require("gulp-uglify")
 size = require("gulp-size")
 csso = require("gulp-csso")
 gulpFilter = require("gulp-filter")
-server = require("./server")
+app_server = require("./server")
 
 # var svgstore = require('gulp-svgstore');
 # betterfonts = require("gulp-betterfonts")
@@ -118,16 +118,16 @@ gulp.task "images", ->
 # )
 
 gulp.task "serve", ["build"], ->
-  app = server.getApp()
+  app = app_server.getApp()
   port = Number(process.env.PORT || 5000);
   app.listen port, ->
     console.log "Listening on port #{port}"
 
 
 gulp.task "autoreload", ->
-  server = livereload()
+  liveserver = livereload()
   gulp.watch("public/**").on "change", (file) ->
-    server.changed file.path
+    liveserver.changed file.path
     return
 
   return
