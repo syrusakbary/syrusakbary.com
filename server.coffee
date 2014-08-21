@@ -31,6 +31,7 @@ getApp = ->
   i18n.configure
     # setup some locales - other locales default to en silently
     locales: LANGUAGES
+    defaultLocale: 'en'
     # where to store json files - defaults to './locales'
     directory: __dirname + "/locales"
 
@@ -82,6 +83,12 @@ getApp = ->
     locale = req.getLocale()
     res.redirect("/#{locale}/")
   app.use(favicon(__dirname + '/public/static/images/favicon.ico'));
+  # app.use (req, res, next) ->
+  #   if '/robots.txt' is req.url
+  #     res.type('text/plain')
+  #     res.send("User-agent: *\nAllow: /")
+  #   else 
+  #     next()
 
   # app.use(slash())
   app
