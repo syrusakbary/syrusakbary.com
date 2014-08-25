@@ -5,6 +5,7 @@ html.no-js(lang=locale)
   block vars
     - header_class = ''
     - header_active = null
+    - view_name = 'base'
   head: block head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
@@ -57,3 +58,5 @@ html.no-js(lang=locale)
 
           ga('create', 'UA-12613282-2', 'auto');
           ga('send', 'pageview', window.location.pathname);
+        script.
+          window._sharedData = {'view': '#{view_name}'};
