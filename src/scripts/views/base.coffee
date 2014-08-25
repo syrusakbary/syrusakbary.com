@@ -24,7 +24,7 @@ class BaseView
 		)
 		$('#header__connect').click ->
 			href = $(@).attr('href')
-			ga 'send', 'event', 'Header', 'click', 'Contact'
+			ga 'send', 'event', 'Header', 'click', 'Contact',
 				hitCallback: ->
 					document.location = href
 			false
