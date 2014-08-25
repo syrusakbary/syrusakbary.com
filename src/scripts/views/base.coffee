@@ -17,13 +17,17 @@ class BaseView
 		$('#menu, #menu-close').click( (e) ->
 			nav.toggleClass('nav--active')
 			action = if nav.hasClass('nav--active') then 'Open' else 'Close'
-			ga 'send', 'event', 'Navigation menu', action
+			ga 'send', 'event', 'Header', action, 'Navigation'
 			e.preventDefault()
 			e.stopPropagation()
 			false
 		)
 		$('#header__connect').click ->
-			ga 'send', 'event', 'Contact button', 'click'
+			href = $(@).attr('href')
+			ga 'send', 'event', 'Header', 'click', 'Contact'
+				hitCallback: ->
+					document.location = href
+			false
 	)
 
 module.exports = BaseView
