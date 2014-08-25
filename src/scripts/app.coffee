@@ -45,7 +45,7 @@ pageAnimation = (title, body, is_back, doFinish) ->
 
     # 
     doFinish()
-  , 820
+  , 900
 
 turbolinks.changePageAnimation pageAnimation
 nav = $('#nav')
