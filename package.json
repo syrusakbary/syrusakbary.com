@@ -4,6 +4,9 @@
   "description": "Syrus Akbary website",
   "author": "Syrus Akbary <me@syrusakbary.com>",
   "license": "MIT",
+  "scripts": {
+      "start": "./node_modules/gulp/bin/gulp.js serve"
+  },
   "dependencies": {
     "coffee-script": "~1.7.1",
     "express": "~4.8.5",
@@ -41,5 +44,8 @@
     "gulp-size": "~1.0.0",
     "gulp-iconfont": "~0.0.12",
     "gulp-util": "~2.2.14"
+  },
+  "engines": {
+    "node": "0.12"
   }
 }
