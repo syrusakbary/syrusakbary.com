@@ -20,8 +20,9 @@ export default function Home() {
             to be wrong and the responsibility to learn about it. I believe in
             the power of{" "}
             <a href="https://en.wikipedia.org/wiki/Yin_and_yang">balance</a>,{" "}
-            <a href="https://en.wikipedia.org/wiki/Mudita">empathy</a> and
-            <a href="https://en.wikipedia.org/wiki/V%C4%ABrya">perserverance</a> as key values for a fulfilling life.
+            <a href="https://en.wikipedia.org/wiki/Mudita">empathy</a> and{" "}
+            <a href="https://en.wikipedia.org/wiki/V%C4%ABrya">perserverance</a>{" "}
+            as key values for a fulfilling life.
           </p>
           <blockquote>
             When a mystery is too overpowering, one dare not disobey
