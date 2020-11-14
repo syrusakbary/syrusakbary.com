@@ -37,7 +37,7 @@ export default function Home() {
           <li class="project__item">
             <a
               id="project--mediante"
-              href="http://mediante.com"
+              href="https://mediante.com"
               target="_blank"
             >
               Mediante

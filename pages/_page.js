@@ -8,7 +8,7 @@ export default function Page({ children, blackHeader }) {
     <div>
       <Head>
         <link
-          href="http://fonts.googleapis.com/css?family=Lora:400,400italic|Gloria+Hallelujah"
+          href="https://fonts.googleapis.com/css?family=Lora:400,400italic|Gloria+Hallelujah"
           rel="stylesheet"
           type="text/css"
         />
