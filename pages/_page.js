@@ -1455,6 +1455,7 @@ export default function Page({ children, blackHeader }) {
         }
         #social__github:hover:after,
         #social__twitter:hover:after,
+        #social__linkedin:hover:after,
         #social__medium:hover:after,
         #social__facebook:hover:after,
         #social__instagram:hover:after {
