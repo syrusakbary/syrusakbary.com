@@ -17,8 +17,11 @@ export default function Home() {
           </p>
           <p>
             I’ve always been curious, I love to learn and grow, I hold the right
-            to be wrong and the responsibility to learn about it. I don't mind
-            to be wrong …learning would be impossible other way.
+            to be wrong and the responsibility to learn about it. I believe in
+            the power of{" "}
+            <a href="https://en.wikipedia.org/wiki/Yin_and_yang">balance</a>,{" "}
+            <a href="https://en.wikipedia.org/wiki/Mudita">empathy</a> and
+            persistence as key values for a fulfilling life.
           </p>
           <blockquote>
             When a mystery is too overpowering, one dare not disobey
