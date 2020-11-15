@@ -31,7 +31,7 @@ export default function Home() {
             I took my first steps on the Internet world when it was still early
             stage in Spain, about 1999. I saw an enormous potential in this new
             form of communication (things are as they are in the way they could
-            be useful for us, with the innegable exception of{" "}
+            be useful for us, with the undeniable exception of{" "}
             <a href="/books/TheLittlePrince.pdf">
               those things invisible to the eye
             </a>
