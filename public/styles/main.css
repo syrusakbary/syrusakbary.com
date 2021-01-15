@@ -2472,12 +2472,12 @@ body {
   color: #aaa;
   font-style: italic;
   line-height: 1.5em;
-  padding: 23px 2em;
-  border-left: 3px solid #d6d6d6;
+  padding: 1.25em;
+  border-left: 1px solid #d6d6d6;
 }
 @media only screen and (max-width: 640px) {
   #profile__description blockquote {
-    padding: 15px 1em;
+    padding: 1em;
   }
 }
 #profile__description a {
