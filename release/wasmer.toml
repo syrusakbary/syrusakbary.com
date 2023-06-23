@@ -1,0 +1,10 @@
+[package]
+name = "syrusakbary/web"
+version = "0.3.0"
+description = "Website for syrusakbary.com"
+
+[dependencies]
+"wasmer/static-web-server" = "1"
+
+[fs]
+public = "public"

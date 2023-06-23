@@ -1,0 +1,5 @@
+---
+kind: wasmer.io/App.v0
+name: syrusakbary-web
+app_id: da_v2dAIdtrUovK
+package: syrusakbary/web@0.3.0
